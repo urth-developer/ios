@@ -1,9 +1,9 @@
 {
   "images" : [
     {
+      "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "iconPadlock.png",
-      "idiom" : "universal"
+      "filename" : "iconPadlock.png"
     },
     {
       "scale" : "2x",
@@ -11,9 +11,9 @@
       "filename" : "iconPadlock@2x.png"
     },
     {
-      "filename" : "iconPadlock@3x.png",
+      "idiom" : "universal",
       "scale" : "3x",
-      "idiom" : "universal"
+      "filename" : "iconPadlock@3x.png"
     }
   ],
   "info" : {

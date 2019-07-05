@@ -180,5 +180,9 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
 // ImagePicker
 
 extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
-    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        dismiss(animated: false, completion: nil)
+        let vc = storyboard?.instantiateViewController(withIdentifier: "CertificateViewController") as! CertificateViewController
+        present(vc, animated: true, completion: nil)
+    }
 }
