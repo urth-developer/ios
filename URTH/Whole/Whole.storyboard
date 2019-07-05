@@ -9,6 +9,17 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="NanumSquareOTFBold.otf">
+            <string>NanumSquareOTFB</string>
+        </array>
+        <array key="NanumSquareOTFLight.otf">
+            <string>NanumSquareOTFL</string>
+        </array>
+        <array key="NanumSquareOTFRegular.otf">
+            <string>NanumSquareOTFR</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Whole View Controller-->
         <scene sceneID="nxY-QR-pG2">
@@ -23,7 +34,26 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vfb-Kt-yT9">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1200"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vs0-xv-WCP">
+                                                <rect key="frame" x="128" y="120" width="118" height="30"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="5kI-pt-Amm"/>
+                                                    <constraint firstAttribute="width" constant="118" id="m6k-je-kWh"/>
+                                                </constraints>
+                                                <state key="normal" title="Create Challenge"/>
+                                                <connections>
+                                                    <action selector="createChallenge:" destination="CJ8-p2-nJa" eventType="touchUpInside" id="RBD-CA-9Dq"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="vs0-xv-WCP" firstAttribute="leading" secondItem="vfb-Kt-yT9" secondAttribute="leading" constant="128" id="Cb5-sg-Nby"/>
+                                            <constraint firstItem="vs0-xv-WCP" firstAttribute="top" secondItem="vfb-Kt-yT9" secondAttribute="top" constant="120" id="O2A-B2-GER"/>
+                                            <constraint firstAttribute="bottom" secondItem="vs0-xv-WCP" secondAttribute="bottom" constant="1050" id="RTc-0X-hj6"/>
+                                            <constraint firstAttribute="trailing" secondItem="vs0-xv-WCP" secondAttribute="trailing" constant="129" id="gSw-Iu-HpH"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
@@ -51,5 +81,683 @@
             </objects>
             <point key="canvasLocation" x="-156" y="189.80509745127438"/>
         </scene>
+        <!--챌린지 개설-->
+        <scene sceneID="0SX-Kj-o92">
+            <objects>
+                <viewController storyboardIdentifier="Create1ViewController" id="trN-ub-vB6" customClass="Create1ViewController" customModule="URTH" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7jN-LB-lMa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="22" translatesAutoresizingMaskIntoConstraints="NO" id="fg9-8H-t9V">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="245"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="챌린지 이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tb7-31-i3U">
+                                <rect key="frame" x="116" y="101" width="72" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareOTFB" family="NanumSquareOTF" pointSize="15"/>
+                                <color key="textColor" red="0.28235294119999998" green="0.53725490200000003" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="692" translatesAutoresizingMaskIntoConstraints="NO" id="qFh-2n-Acy">
+                                <rect key="frame" x="180" y="133" width="15" height="3"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="은 무엇인가요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2mC-em-KX1">
+                                <rect key="frame" x="190" y="101" width="94" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareOTFR" family="NanumSquareOTF" pointSize="15"/>
+                                <color key="textColor" red="0.28235294119999998" green="0.53725490200000003" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="함께 실천하고자 하는 행동을" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qVx-ee-x76">
+                                <rect key="frame" x="123" y="144" width="129" height="13"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareOTFR" family="NanumSquareOTF" pointSize="11"/>
+                                <color key="textColor" red="0.28235294119999998" green="0.53725490200000003" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="모두가 잘 이해할 수 있도록 적어주세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Zc-19-BgR">
+                                <rect key="frame" x="100" y="165" width="174" height="13"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareOTFR" family="NanumSquareOTF" pointSize="11"/>
+                                <color key="textColor" red="0.28235294119999998" green="0.53725490200000003" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="brO-Od-YCK">
+                                <rect key="frame" x="155" y="194" width="65" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </pageControl>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="챌린지 이름" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZpH-yq-7gz">
+                                <rect key="frame" x="25" y="314" width="325" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lpM-oD-h6f">
+                                <rect key="frame" x="156" y="409" width="63" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="1618"/>
+                                <connections>
+                                    <action selector="next:" destination="trN-ub-vB6" eventType="touchUpInside" id="O1c-zY-XbS"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DpQ-aB-847">
+                                <rect key="frame" x="25" y="343" width="325" height="1"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Dz4-pH-TJz"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="챌린지 개설" id="srt-MN-2Jd">
+                        <barButtonItem key="rightBarButtonItem" systemItem="stop" id="40r-65-S5A">
+                            <color key="tintColor" red="0.28235294119999998" green="0.53725490200000003" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="close:" destination="trN-ub-vB6" id="NAu-cW-cq9"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="rQy-uW-tkl" kind="show" id="DFe-jT-KE3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hEE-1E-muw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1778.4000000000001" y="-39.130434782608695"/>
+        </scene>
+        <!--Create2 View Controller-->
+        <scene sceneID="qCv-VY-4w9">
+            <objects>
+                <viewController storyboardIdentifier="Create2ViewController" id="rQy-uW-tkl" customClass="Create2ViewController" customModule="URTH" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="y1w-Fq-MW7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="692" translatesAutoresizingMaskIntoConstraints="NO" id="XvH-cr-eKN">
+                                <rect key="frame" x="175" y="138" width="15" height="3"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="의 챌린지인가요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oAf-0P-gW6">
+                                <rect key="frame" x="185" y="106" width="108" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareOTFR" family="NanumSquareOTF" pointSize="15"/>
+                                <color key="textColor" red="0.28235294119999998" green="0.53725490200000003" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="적절한 카테고리를 선택해주세요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lgD-nf-MNH">
+                                <rect key="frame" x="113" y="154" width="149" height="13"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareOTFR" family="NanumSquareOTF" pointSize="11"/>
+                                <color key="textColor" red="0.28235294119999998" green="0.53725490200000003" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="NqO-6R-6XW">
+                                <rect key="frame" x="150" y="199" width="65" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </pageControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="어떤 카테고리" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TGx-W9-9mK">
+                                <rect key="frame" x="99" y="106" width="86" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareOTFB" family="NanumSquareOTF" pointSize="15"/>
+                                <color key="textColor" red="0.28235294119999998" green="0.53725490200000003" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="선택한 카테고리명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X8Y-Qz-EqB">
+                                <rect key="frame" x="16" y="405" width="113" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareOTFB" family="NanumSquareOTF" pointSize="15"/>
+                                <color key="textColor" red="0.28235294119999998" green="0.53725490200000003" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Inh-Wo-sri">
+                                <rect key="frame" x="16" y="430" width="314" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">선택한 카테고리에 대한 설명 텀블러 줄이기, 플라스틱 빨대 
+대신 종이빨대 쓰기 같은 챌린지가 있어요
+정확히 뭔지는 윤서언니에게 요청 반드시 다음을 눌러야 
+다음단계로 넘어감(개설 프로세스 화면 전체 다)</string>
+                                <fontDescription key="fontDescription" name="NanumSquareOTFR" family="NanumSquareOTF" pointSize="13"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lSU-NJ-Lj9">
+                                <rect key="frame" x="156" y="581" width="63" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="1618"/>
+                                <connections>
+                                    <action selector="next:" destination="rQy-uW-tkl" eventType="touchUpInside" id="xTb-0h-SGK"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="22" translatesAutoresizingMaskIntoConstraints="NO" id="FyI-0D-SkQ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="245"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="buzz" translatesAutoresizingMaskIntoConstraints="NO" id="shI-0Y-WPD">
+                                <rect key="frame" x="26" y="283" width="54" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="카테고리명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ye4-TY-RWz">
+                                <rect key="frame" x="30" y="345" width="46" height="12"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareOTFR" family="NanumSquareOTF" pointSize="10"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="buzz" translatesAutoresizingMaskIntoConstraints="NO" id="wKq-gg-LMY">
+                                <rect key="frame" x="95" y="283" width="54" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="카테고리명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fkL-Hf-egd">
+                                <rect key="frame" x="99" y="345" width="46" height="12"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareOTFR" family="NanumSquareOTF" pointSize="10"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="buzz" translatesAutoresizingMaskIntoConstraints="NO" id="2Tu-w1-jnp">
+                                <rect key="frame" x="161" y="283" width="54" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="카테고리명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="He4-9D-Kkv">
+                                <rect key="frame" x="165" y="345" width="46" height="12"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareOTFR" family="NanumSquareOTF" pointSize="10"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="buzz" translatesAutoresizingMaskIntoConstraints="NO" id="zlA-h2-1q7">
+                                <rect key="frame" x="228" y="283" width="54" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="카테고리명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U7c-my-zYD">
+                                <rect key="frame" x="232" y="345" width="46" height="12"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareOTFR" family="NanumSquareOTF" pointSize="10"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="buzz" translatesAutoresizingMaskIntoConstraints="NO" id="mXj-Q2-m3P">
+                                <rect key="frame" x="295" y="283" width="54" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="카테고리명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R5U-JX-Lpc">
+                                <rect key="frame" x="299" y="345" width="46" height="12"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareOTFR" family="NanumSquareOTF" pointSize="10"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" currentPage="1" translatesAutoresizingMaskIntoConstraints="NO" id="aQP-pY-KLn">
+                                <rect key="frame" x="150" y="192" width="65" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="pak-KJ-t5m"/>
+                    </view>
+                    <connections>
+                        <segue destination="Hhh-PH-pi6" kind="show" id="Inf-20-U4O"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q0M-RH-wW6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2511.1999999999998" y="-42.728635682158924"/>
+        </scene>
+        <!--Create3 View Controller-->
+        <scene sceneID="Pew-a6-l1K">
+            <objects>
+                <viewController storyboardIdentifier="Create3ViewController" id="Hhh-PH-pi6" customClass="Create3ViewController" customModule="URTH" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zJj-va-6jO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="22" translatesAutoresizingMaskIntoConstraints="NO" id="Y5u-F2-gIy">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="245"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="를 가지고 있는" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HKX-Fj-JKA">
+                                <rect key="frame" x="179" y="106" width="90" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareOTFR" family="NanumSquareOTF" pointSize="15"/>
+                                <color key="textColor" red="0.28235294119999998" green="0.53725490200000003" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="챌린지인가요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oeQ-BH-ihU">
+                                <rect key="frame" x="137" y="131" width="90" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareOTFR" family="NanumSquareOTF" pointSize="15"/>
+                                <color key="textColor" red="0.28235294119999998" green="0.53725490200000003" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" currentPage="2" translatesAutoresizingMaskIntoConstraints="NO" id="qF5-DG-6qK">
+                                <rect key="frame" x="150" y="199" width="65" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </pageControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="어떤 이야기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9el-5A-bx8">
+                                <rect key="frame" x="105" y="106" width="72" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareOTFB" family="NanumSquareOTF" pointSize="15"/>
+                                <color key="textColor" red="0.28235294119999998" green="0.53725490200000003" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="692" translatesAutoresizingMaskIntoConstraints="NO" id="ob5-h6-4JD">
+                                <rect key="frame" x="175" y="169" width="15" height="3"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0sA-mM-xER">
+                                <rect key="frame" x="16" y="267" width="343" height="236"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" name="NanumSquareOTFL" family="NanumSquareOTF" pointSize="13"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rAk-Rk-uFI">
+                                <rect key="frame" x="156" y="575" width="63" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="1618"/>
+                                <connections>
+                                    <action selector="next:" destination="Hhh-PH-pi6" eventType="touchUpInside" id="hFa-Qb-Gxo"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="F2v-bl-LBS"/>
+                    </view>
+                    <connections>
+                        <segue destination="bID-Vi-7Ob" kind="show" id="3QD-8r-Ash"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4lg-uT-EBv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3260" y="-38.23088455772114"/>
+        </scene>
+        <!--Create4 View Controller-->
+        <scene sceneID="1a9-jt-jwP">
+            <objects>
+                <viewController storyboardIdentifier="Create4ViewController" id="bID-Vi-7Ob" customClass="Create4ViewController" customModule="URTH" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WQE-dl-qEG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="22" translatesAutoresizingMaskIntoConstraints="NO" id="4gD-BU-PH6">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="245"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="챌린지를 가장 잘 설명하는" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fm2-oe-5aC">
+                                <rect key="frame" x="106" y="106" width="162" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareOTFR" family="NanumSquareOTF" pointSize="15"/>
+                                <color key="textColor" red="0.28235294119999998" green="0.53725490200000003" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="을 올려주세요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hic-pp-rFN">
+                                <rect key="frame" x="186" y="131" width="90" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareOTFR" family="NanumSquareOTF" pointSize="15"/>
+                                <color key="textColor" red="0.28235294119999998" green="0.53725490200000003" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" currentPage="3" translatesAutoresizingMaskIntoConstraints="NO" id="4bv-hx-HAo">
+                                <rect key="frame" x="150" y="199" width="65" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </pageControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="사진 한 장" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LXC-YA-wH1">
+                                <rect key="frame" x="124" y="131" width="63" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareOTFB" family="NanumSquareOTF" pointSize="15"/>
+                                <color key="textColor" red="0.28235294119999998" green="0.53725490200000003" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="692" translatesAutoresizingMaskIntoConstraints="NO" id="WcP-Ua-gZb">
+                                <rect key="frame" x="175" y="169" width="15" height="3"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ratatouille" translatesAutoresizingMaskIntoConstraints="NO" id="lM0-FB-WD6">
+                                <rect key="frame" x="52" y="262" width="270" height="270"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X10-E3-48j">
+                                <rect key="frame" x="77" y="559" width="94" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="btnReselect"/>
+                                <connections>
+                                    <action selector="reselect:" destination="bID-Vi-7Ob" eventType="touchUpInside" id="7rs-td-BeJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r9v-Xe-G20">
+                                <rect key="frame" x="228" y="559" width="94" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="btnNext"/>
+                                <connections>
+                                    <action selector="next:" destination="bID-Vi-7Ob" eventType="touchUpInside" id="BZZ-S6-gq4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="dVB-hz-sz6"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="lM0-FB-WD6" id="0Ry-z2-05I"/>
+                        <segue destination="E9k-Ih-bKi" kind="show" id="NMV-fW-akS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZUr-b7-5c2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4024.8000000000002" y="-38.23088455772114"/>
+        </scene>
+        <!--Create5 View Controller-->
+        <scene sceneID="jnF-ur-mmH">
+            <objects>
+                <viewController storyboardIdentifier="Create5ViewController" id="E9k-Ih-bKi" customClass="Create5ViewController" customModule="URTH" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="03z-iE-QEd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1200"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s2S-Je-4pn">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="1200"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8mp-75-VSH">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1200"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="22" translatesAutoresizingMaskIntoConstraints="NO" id="FH3-hl-qNs">
+                                                <rect key="frame" x="0.0" y="-65" width="375" height="245"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="375" id="1qy-CW-LYz"/>
+                                                    <constraint firstAttribute="height" constant="245" id="WFm-9c-svC"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="챌린지 개설 신청이 진행됩니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oDw-9P-Nbi">
+                                                <rect key="frame" x="91" y="41" width="193" height="17"/>
+                                                <fontDescription key="fontDescription" name="NanumSquareOTFR" family="NanumSquareOTF" pointSize="15"/>
+                                                <color key="textColor" red="0.28235294119999998" green="0.53725490200000003" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="692" translatesAutoresizingMaskIntoConstraints="NO" id="2gr-mV-Ta1">
+                                                <rect key="frame" x="180" y="104" width="15" height="3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="3" id="j6w-sA-c1h"/>
+                                                    <constraint firstAttribute="width" constant="15" id="t0W-JQ-CoY"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="내용을 확인해주세요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="81L-AL-zWc">
+                                                <rect key="frame" x="122" y="66" width="131" height="17"/>
+                                                <fontDescription key="fontDescription" name="NanumSquareOTFR" family="NanumSquareOTF" pointSize="15"/>
+                                                <color key="textColor" red="0.28235294119999998" green="0.53725490200000003" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="챌린지 이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfI-Hv-jJH">
+                                                <rect key="frame" x="25" y="244" width="72" height="17"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="17" id="5ka-iK-s3A"/>
+                                                    <constraint firstAttribute="width" constant="72" id="znP-rr-8gI"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="NanumSquareOTFB" family="NanumSquareOTF" pointSize="15"/>
+                                                <color key="textColor" red="0.28235294119999998" green="0.53725490200000003" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="챌린지 이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QyF-yy-gRX">
+                                                <rect key="frame" x="28" y="293" width="63" height="15"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="15" id="W4P-Pk-TyZ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="NanumSquareOTFR" family="NanumSquareOTF" pointSize="13"/>
+                                                <color key="textColor" red="0.32549019607843138" green="0.33725490196078434" blue="0.35686274509803922" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="692" translatesAutoresizingMaskIntoConstraints="NO" id="0ci-NF-mip">
+                                                <rect key="frame" x="28" y="274" width="15" height="3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="3" id="5Zm-ZB-7EV"/>
+                                                    <constraint firstAttribute="width" constant="15" id="KQo-EN-KMh"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="챌린지 카테고리명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rGk-OY-0VI">
+                                                <rect key="frame" x="25" y="331" width="113" height="17"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="113" id="0MO-yL-khs"/>
+                                                    <constraint firstAttribute="height" constant="17" id="Lff-3I-yJg"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="NanumSquareOTFB" family="NanumSquareOTF" pointSize="15"/>
+                                                <color key="textColor" red="0.28235294119999998" green="0.53725490200000003" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="선택한 카테고리명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5n6-Pg-vW2">
+                                                <rect key="frame" x="28" y="380" width="98" height="15"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="15" id="DCX-ci-WNM"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="NanumSquareOTFR" family="NanumSquareOTF" pointSize="13"/>
+                                                <color key="textColor" red="0.32549019610000002" green="0.33725490200000002" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="692" translatesAutoresizingMaskIntoConstraints="NO" id="kcL-6o-Ldz">
+                                                <rect key="frame" x="28" y="361" width="15" height="3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="3" id="eWh-VU-Buu"/>
+                                                    <constraint firstAttribute="width" constant="15" id="oZH-rp-1xG"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="챌린지 이야기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0qq-RY-RXO">
+                                                <rect key="frame" x="25" y="422" width="86" height="17"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="86" id="QGF-JT-9fz"/>
+                                                    <constraint firstAttribute="height" constant="17" id="hCp-Nc-eG7"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="NanumSquareOTFB" family="NanumSquareOTF" pointSize="15"/>
+                                                <color key="textColor" red="0.28235294119999998" green="0.53725490200000003" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C0K-PA-COB">
+                                                <rect key="frame" x="25" y="471" width="314" height="180"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="180" id="l5m-OS-kSL"/>
+                                                </constraints>
+                                                <string key="text">어떤 이야기를 가지고 있는 챌린지 인가요?어떤 이야기를 가지고 있는 챌린지 인가요?어떤 이야기를 가지고 있는 챌린지 인가요?어떤 이야기를 가지고 있는 챌린지 인가요?어떤 이기를 가지고 있는 챌린지 인가요?어떤 이야기를 가지고 있는 챌린지 인가요?어떤 이야기를 가지고 있는 챌린지 인가요?어떤 이야기를 가지고 있는 챌린지 인가요?어떤 이야기를 가지고 있는 챌린지 인가요?어떤 이야기를 가지고 있는 챌린지 인가요?어떤 이야기를 가지고 있는 챌린지 인가요?어떤 이야기를 가지고 있는 챌린지 인가요?어떤 이야기를 가지고 있는 챌린지 인가요?어떤 이야기를 가지고 있는 챌린지 인가요?</string>
+                                                <fontDescription key="fontDescription" name="NanumSquareOTFR" family="NanumSquareOTF" pointSize="13"/>
+                                                <color key="textColor" red="0.32549019610000002" green="0.33725490200000002" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="692" translatesAutoresizingMaskIntoConstraints="NO" id="urc-60-PJd">
+                                                <rect key="frame" x="28" y="452" width="15" height="3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="3" id="MwR-dW-WVj"/>
+                                                    <constraint firstAttribute="width" constant="15" id="fzA-Ge-J7w"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="챌린지 이미지" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ji-ul-gHP">
+                                                <rect key="frame" x="25" y="682" width="86" height="17"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="86" id="MWn-EK-OBI"/>
+                                                    <constraint firstAttribute="height" constant="17" id="Php-9m-CwC"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="NanumSquareOTFB" family="NanumSquareOTF" pointSize="15"/>
+                                                <color key="textColor" red="0.28235294119999998" green="0.53725490200000003" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="692" translatesAutoresizingMaskIntoConstraints="NO" id="7BS-iK-lA4">
+                                                <rect key="frame" x="28" y="712" width="15" height="3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="15" id="4BC-v5-ubA"/>
+                                                    <constraint firstAttribute="height" constant="3" id="Lc1-0R-qx6"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ratatouille" translatesAutoresizingMaskIntoConstraints="NO" id="EtE-2a-0Hj">
+                                                <rect key="frame" x="37" y="737" width="300" height="300"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="300" id="ZJt-JL-4AG"/>
+                                                    <constraint firstAttribute="width" constant="300" id="kvQ-vK-rUm"/>
+                                                </constraints>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oOb-3p-Mij">
+                                                <rect key="frame" x="155.5" y="1065" width="63" height="26"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="63" id="Wa4-JM-WJp"/>
+                                                    <constraint firstAttribute="height" constant="26" id="inc-KJ-Eli"/>
+                                                </constraints>
+                                                <state key="normal" image="btnComplete"/>
+                                                <connections>
+                                                    <action selector="complete:" destination="E9k-Ih-bKi" eventType="touchUpInside" id="FaW-2b-u7Z"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="EtE-2a-0Hj" firstAttribute="top" secondItem="7BS-iK-lA4" secondAttribute="bottom" constant="22" id="0fR-Hw-Dof"/>
+                                            <constraint firstItem="FH3-hl-qNs" firstAttribute="top" secondItem="8mp-75-VSH" secondAttribute="top" constant="-65" id="2hG-22-vjg"/>
+                                            <constraint firstItem="C0K-PA-COB" firstAttribute="leading" secondItem="8mp-75-VSH" secondAttribute="leading" constant="25" id="4ec-lO-Dp2"/>
+                                            <constraint firstItem="9ji-ul-gHP" firstAttribute="leading" secondItem="8mp-75-VSH" secondAttribute="leading" constant="25" id="4i2-hl-yJ8"/>
+                                            <constraint firstItem="7BS-iK-lA4" firstAttribute="top" secondItem="9ji-ul-gHP" secondAttribute="bottom" constant="13" id="5D4-9j-YOp"/>
+                                            <constraint firstAttribute="trailing" secondItem="C0K-PA-COB" secondAttribute="trailing" constant="36" id="6Yk-iW-2ba"/>
+                                            <constraint firstItem="9ji-ul-gHP" firstAttribute="top" secondItem="C0K-PA-COB" secondAttribute="bottom" constant="31" id="9ok-Kr-LJO"/>
+                                            <constraint firstItem="gfI-Hv-jJH" firstAttribute="top" secondItem="FH3-hl-qNs" secondAttribute="bottom" constant="64" id="Ag8-oA-4dr"/>
+                                            <constraint firstItem="EtE-2a-0Hj" firstAttribute="leading" secondItem="8mp-75-VSH" secondAttribute="leading" constant="37" id="CMY-VF-PMZ"/>
+                                            <constraint firstItem="oDw-9P-Nbi" firstAttribute="centerX" secondItem="8mp-75-VSH" secondAttribute="centerX" id="CeT-c8-2rp"/>
+                                            <constraint firstAttribute="bottom" secondItem="oOb-3p-Mij" secondAttribute="bottom" constant="109" id="IKX-4D-SUM"/>
+                                            <constraint firstItem="81L-AL-zWc" firstAttribute="centerX" secondItem="oDw-9P-Nbi" secondAttribute="centerX" id="ILq-Ln-dd4"/>
+                                            <constraint firstItem="oDw-9P-Nbi" firstAttribute="top" secondItem="8mp-75-VSH" secondAttribute="top" constant="41" id="MTx-pn-ic2"/>
+                                            <constraint firstItem="0qq-RY-RXO" firstAttribute="leading" secondItem="8mp-75-VSH" secondAttribute="leading" constant="25" id="O3M-Eb-m1i"/>
+                                            <constraint firstItem="0ci-NF-mip" firstAttribute="leading" secondItem="8mp-75-VSH" secondAttribute="leading" constant="28" id="OLK-JC-2ll"/>
+                                            <constraint firstItem="0ci-NF-mip" firstAttribute="top" secondItem="gfI-Hv-jJH" secondAttribute="bottom" constant="13" id="OTl-LV-Pad"/>
+                                            <constraint firstItem="FH3-hl-qNs" firstAttribute="leading" secondItem="8mp-75-VSH" secondAttribute="leading" id="QaV-qC-C3g"/>
+                                            <constraint firstItem="kcL-6o-Ldz" firstAttribute="leading" secondItem="8mp-75-VSH" secondAttribute="leading" constant="28" id="RB3-wp-lEn"/>
+                                            <constraint firstItem="2gr-mV-Ta1" firstAttribute="centerX" secondItem="oDw-9P-Nbi" secondAttribute="centerX" id="Ri2-Sr-gix"/>
+                                            <constraint firstItem="gfI-Hv-jJH" firstAttribute="leading" secondItem="8mp-75-VSH" secondAttribute="leading" constant="25" id="SKe-Ms-cyZ"/>
+                                            <constraint firstItem="81L-AL-zWc" firstAttribute="top" secondItem="oDw-9P-Nbi" secondAttribute="bottom" constant="8" id="StZ-wY-hzG"/>
+                                            <constraint firstItem="5n6-Pg-vW2" firstAttribute="top" secondItem="kcL-6o-Ldz" secondAttribute="bottom" constant="16" id="WYh-os-9Ag"/>
+                                            <constraint firstAttribute="trailing" secondItem="FH3-hl-qNs" secondAttribute="trailing" id="Xif-nD-ton"/>
+                                            <constraint firstItem="kcL-6o-Ldz" firstAttribute="top" secondItem="rGk-OY-0VI" secondAttribute="bottom" constant="13" id="Zj2-w1-Fub"/>
+                                            <constraint firstItem="0qq-RY-RXO" firstAttribute="top" secondItem="5n6-Pg-vW2" secondAttribute="bottom" constant="27" id="aoL-KA-XE0"/>
+                                            <constraint firstItem="QyF-yy-gRX" firstAttribute="top" secondItem="0ci-NF-mip" secondAttribute="bottom" constant="16" id="dw9-32-39G"/>
+                                            <constraint firstItem="QyF-yy-gRX" firstAttribute="leading" secondItem="0ci-NF-mip" secondAttribute="leading" id="f8l-gG-b1J"/>
+                                            <constraint firstItem="urc-60-PJd" firstAttribute="top" secondItem="0qq-RY-RXO" secondAttribute="bottom" constant="13" id="ffx-1Y-w3A"/>
+                                            <constraint firstItem="2gr-mV-Ta1" firstAttribute="top" secondItem="oDw-9P-Nbi" secondAttribute="bottom" constant="46" id="gvt-GG-J0H"/>
+                                            <constraint firstItem="rGk-OY-0VI" firstAttribute="leading" secondItem="8mp-75-VSH" secondAttribute="leading" constant="25" id="hao-Ni-B8T"/>
+                                            <constraint firstItem="5n6-Pg-vW2" firstAttribute="leading" secondItem="kcL-6o-Ldz" secondAttribute="leading" id="idp-aY-WB9"/>
+                                            <constraint firstItem="7BS-iK-lA4" firstAttribute="leading" secondItem="8mp-75-VSH" secondAttribute="leading" constant="28" id="kKZ-9y-Ydx"/>
+                                            <constraint firstItem="C0K-PA-COB" firstAttribute="top" secondItem="urc-60-PJd" secondAttribute="bottom" constant="16" id="lQV-bG-i0l"/>
+                                            <constraint firstItem="oOb-3p-Mij" firstAttribute="centerX" secondItem="EtE-2a-0Hj" secondAttribute="centerX" id="pPa-c4-K3n"/>
+                                            <constraint firstItem="oOb-3p-Mij" firstAttribute="top" secondItem="EtE-2a-0Hj" secondAttribute="bottom" constant="28" id="tDJ-Cy-WVF"/>
+                                            <constraint firstItem="rGk-OY-0VI" firstAttribute="top" secondItem="QyF-yy-gRX" secondAttribute="bottom" constant="23" id="xXP-hv-aYE"/>
+                                            <constraint firstItem="urc-60-PJd" firstAttribute="leading" secondItem="8mp-75-VSH" secondAttribute="leading" constant="28" id="yBr-Nt-qFg"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="8mp-75-VSH" firstAttribute="width" secondItem="s2S-Je-4pn" secondAttribute="width" id="H5x-Tl-Eg8"/>
+                                    <constraint firstItem="8mp-75-VSH" firstAttribute="leading" secondItem="s2S-Je-4pn" secondAttribute="leading" id="YBa-Pv-Xaw"/>
+                                    <constraint firstAttribute="bottom" secondItem="8mp-75-VSH" secondAttribute="bottom" id="lBf-YO-Mu5"/>
+                                    <constraint firstItem="8mp-75-VSH" firstAttribute="height" secondItem="s2S-Je-4pn" secondAttribute="height" priority="750" id="qVa-cW-cnQ"/>
+                                    <constraint firstItem="8mp-75-VSH" firstAttribute="top" secondItem="s2S-Je-4pn" secondAttribute="top" id="rHF-mc-z3w"/>
+                                    <constraint firstAttribute="trailing" secondItem="8mp-75-VSH" secondAttribute="trailing" id="s8j-JK-kZI"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="s2S-Je-4pn" firstAttribute="leading" secondItem="1U4-nc-B8q" secondAttribute="leading" id="3Hd-qx-6ZJ"/>
+                            <constraint firstItem="s2S-Je-4pn" firstAttribute="trailing" secondItem="1U4-nc-B8q" secondAttribute="trailing" id="5cE-PX-LCf"/>
+                            <constraint firstItem="s2S-Je-4pn" firstAttribute="top" secondItem="03z-iE-QEd" secondAttribute="top" id="MxF-RX-yfB"/>
+                            <constraint firstItem="s2S-Je-4pn" firstAttribute="bottom" secondItem="1U4-nc-B8q" secondAttribute="bottom" id="p3W-8z-J8Z"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1U4-nc-B8q"/>
+                    </view>
+                    <size key="freeformSize" width="375" height="1200"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wYA-hu-WGA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4853.6000000000004" y="200.59970014992504"/>
+        </scene>
+        <!--Create6 View Controller-->
+        <scene sceneID="exa-vy-VuY">
+            <objects>
+                <viewController storyboardIdentifier="Create6ViewController" id="yDG-Y5-MrV" customClass="Create6ViewController" customModule="URTH" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8aV-XI-Hpm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="챌린지 개설 신청이 완료되었습니다" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JxU-jj-XeQ">
+                                <rect key="frame" x="79" y="152" width="217" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareOTFB" family="NanumSquareOTF" pointSize="15"/>
+                                <color key="textColor" red="0.28235294119999998" green="0.53725490200000003" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="챌린지 검토는 약 24시간 소요되며" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hka-i9-yHu">
+                                <rect key="frame" x="93" y="370" width="183" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareOTFL" family="NanumSquareOTF" pointSize="13"/>
+                                <color key="textColor" red="0.32549019610000002" green="0.33725490200000002" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imgIllust" translatesAutoresizingMaskIntoConstraints="NO" id="kIY-i0-0Sc">
+                                <rect key="frame" x="123" y="200" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="개설 신청 상황은 마이페이지에서 확인하실 수 있어요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C8I-JI-4TC">
+                                <rect key="frame" x="47" y="393" width="280" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareOTFL" family="NanumSquareOTF" pointSize="13"/>
+                                <color key="textColor" red="0.32549019610000002" green="0.33725490200000002" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="작성 내용에 따라 챌린지 신청이 반려될 수 있어요 :(" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tQU-uY-u0g">
+                                <rect key="frame" x="52" y="416" width="270" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumSquareOTFL" family="NanumSquareOTF" pointSize="13"/>
+                                <color key="textColor" red="0.32549019610000002" green="0.33725490200000002" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VE4-c7-hGP">
+                                <rect key="frame" x="341" y="32" width="18" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="btnClose"/>
+                                <connections>
+                                    <action selector="close:" destination="yDG-Y5-MrV" eventType="touchUpInside" id="pFN-OQ-Wk4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="f0V-Yj-1DH"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EfA-Tr-oks" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6009" y="-43"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="LqL-N6-488">
+            <objects>
+                <navigationController storyboardIdentifier="CreateNavi" automaticallyAdjustsScrollViewInsets="NO" id="9G7-E3-ypP" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4Qj-ja-jyc">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="trN-ub-vB6" kind="relationship" relationship="rootViewController" id="jaI-cF-4kX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="khJ-Ya-2fD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="839.20000000000005" y="-39.130434782608695"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="1618" width="63" height="26"/>
+        <image name="22" width="613" height="287"/>
+        <image name="692" width="15" height="3"/>
+        <image name="btnClose" width="18" height="18"/>
+        <image name="btnComplete" width="63" height="26"/>
+        <image name="btnNext" width="94" height="26"/>
+        <image name="btnReselect" width="94" height="26"/>
+        <image name="buzz" width="500" height="500"/>
+        <image name="imgIllust" width="129" height="129"/>
+        <image name="ratatouille" width="500" height="500"/>
+    </resources>
 </document>
