@@ -32,6 +32,12 @@
 		1551892522CF2FFF00D46663 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1551892422CF2FFF00D46663 /* LoginViewController.swift */; };
 		1551892722CF33CB00D46663 /* SignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1551892622CF33CB00D46663 /* SignViewController.swift */; };
 		1551892A22CF455700D46663 /* CertificateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1551892922CF455700D46663 /* CertificateViewController.swift */; };
+		1551892C22CF4F5D00D46663 /* Create1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1551892B22CF4F5D00D46663 /* Create1ViewController.swift */; };
+		1551892E22CF4F6800D46663 /* Create2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1551892D22CF4F6800D46663 /* Create2ViewController.swift */; };
+		1551893022CF5E4D00D46663 /* Create3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1551892F22CF5E4D00D46663 /* Create3ViewController.swift */; };
+		15FC3A5622CF670E0020D34F /* Create4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FC3A5522CF670E0020D34F /* Create4ViewController.swift */; };
+		15FC3A5822CF6A2A0020D34F /* Create5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FC3A5722CF6A2A0020D34F /* Create5ViewController.swift */; };
+		15FC3A5A22CF86650020D34F /* Create6ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FC3A5922CF86650020D34F /* Create6ViewController.swift */; };
 		50B9BC1D90508828B626507A /* Pods_URTH.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0876142674B459C3184AC188 /* Pods_URTH.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +70,12 @@
 		1551892422CF2FFF00D46663 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1551892622CF33CB00D46663 /* SignViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignViewController.swift; sourceTree = "<group>"; };
 		1551892922CF455700D46663 /* CertificateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificateViewController.swift; sourceTree = "<group>"; };
+		1551892B22CF4F5D00D46663 /* Create1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Create1ViewController.swift; sourceTree = "<group>"; };
+		1551892D22CF4F6800D46663 /* Create2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Create2ViewController.swift; sourceTree = "<group>"; };
+		1551892F22CF5E4D00D46663 /* Create3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Create3ViewController.swift; sourceTree = "<group>"; };
+		15FC3A5522CF670E0020D34F /* Create4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Create4ViewController.swift; sourceTree = "<group>"; };
+		15FC3A5722CF6A2A0020D34F /* Create5ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Create5ViewController.swift; sourceTree = "<group>"; };
+		15FC3A5922CF86650020D34F /* Create6ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Create6ViewController.swift; sourceTree = "<group>"; };
 		6F36920C52CA1F4DF235EF1E /* Pods-URTH.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-URTH.debug.xcconfig"; path = "Pods/Target Support Files/Pods-URTH/Pods-URTH.debug.xcconfig"; sourceTree = "<group>"; };
 		E56AB25FED611C9182D9CAAE /* Pods-URTH.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-URTH.release.xcconfig"; path = "Pods/Target Support Files/Pods-URTH/Pods-URTH.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -137,6 +149,12 @@
 			children = (
 				1551890F22CCA29D00D46663 /* Whole.storyboard */,
 				1551891522CCA3D600D46663 /* WholeViewController.swift */,
+				1551892B22CF4F5D00D46663 /* Create1ViewController.swift */,
+				1551892D22CF4F6800D46663 /* Create2ViewController.swift */,
+				1551892F22CF5E4D00D46663 /* Create3ViewController.swift */,
+				15FC3A5522CF670E0020D34F /* Create4ViewController.swift */,
+				15FC3A5722CF6A2A0020D34F /* Create5ViewController.swift */,
+				15FC3A5922CF86650020D34F /* Create6ViewController.swift */,
 			);
 			path = Whole;
 			sourceTree = "<group>";
@@ -334,18 +352,24 @@
 			files = (
 				1551892522CF2FFF00D46663 /* LoginViewController.swift in Sources */,
 				1551891A22CCA3EC00D46663 /* MypageViewController.swift in Sources */,
+				1551892C22CF4F5D00D46663 /* Create1ViewController.swift in Sources */,
 				1551891C22CCC0C700D46663 /* MagazineTableViewCell.swift in Sources */,
 				1551891622CCA3D600D46663 /* WholeViewController.swift in Sources */,
+				15FC3A5822CF6A2A0020D34F /* Create5ViewController.swift in Sources */,
 				155188EB22CC7ABD00D46663 /* ViewController.swift in Sources */,
+				15FC3A5A22CF86650020D34F /* Create6ViewController.swift in Sources */,
+				1551893022CF5E4D00D46663 /* Create3ViewController.swift in Sources */,
 				155188FF22CC7EE000D46663 /* UPCarouselCollectionViewCell.swift in Sources */,
 				155188E922CC7ABD00D46663 /* AppDelegate.swift in Sources */,
 				1551890122CC8E8700D46663 /* Character.swift in Sources */,
 				1551892A22CF455700D46663 /* CertificateViewController.swift in Sources */,
 				155188FD22CC7DF000D46663 /* GradientView.swift in Sources */,
+				1551892E22CF4F6800D46663 /* Create2ViewController.swift in Sources */,
 				155188FB22CC7D6C00D46663 /* UPCarouselFlowLayout.swift in Sources */,
 				1551891822CCA3E000D46663 /* OurViewController.swift in Sources */,
 				1551891E22CCC0DE00D46663 /* MagazineHeaderTableViewCell.swift in Sources */,
 				1551892722CF33CB00D46663 /* SignViewController.swift in Sources */,
+				15FC3A5622CF670E0020D34F /* Create4ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

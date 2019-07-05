@@ -15,5 +15,10 @@ class WholeViewController: UIViewController {
 
     }
   
-
+    @IBAction func createChallenge(_ sender: Any) {
+        print("create challenge!")
+        let vc = storyboard?.instantiateViewController(withIdentifier: "CreateNavi")
+        present(vc!, animated: true, completion: nil)
+    }
+    
 }
