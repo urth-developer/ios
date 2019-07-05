@@ -12,9 +12,29 @@
 		155188EE22CC7ABD00D46663 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 155188EC22CC7ABD00D46663 /* Main.storyboard */; };
 		155188F022CC7ABF00D46663 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 155188EF22CC7ABF00D46663 /* Assets.xcassets */; };
 		155188F322CC7ABF00D46663 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 155188F122CC7ABF00D46663 /* LaunchScreen.storyboard */; };
+		155188FB22CC7D6C00D46663 /* UPCarouselFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155188FA22CC7D6C00D46663 /* UPCarouselFlowLayout.swift */; };
+		155188FD22CC7DF000D46663 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155188FC22CC7DF000D46663 /* GradientView.swift */; };
+		155188FF22CC7EE000D46663 /* UPCarouselCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155188FE22CC7EE000D46663 /* UPCarouselCollectionViewCell.swift */; };
+		1551890122CC8E8700D46663 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1551890022CC8E8700D46663 /* Character.swift */; };
+		1551890B22CCA19100D46663 /* NanumSquareOTFExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1551890722CCA19000D46663 /* NanumSquareOTFExtraBold.otf */; };
+		1551890C22CCA19100D46663 /* NanumSquareOTFRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1551890822CCA19000D46663 /* NanumSquareOTFRegular.otf */; };
+		1551890D22CCA19100D46663 /* NanumSquareOTFLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1551890922CCA19000D46663 /* NanumSquareOTFLight.otf */; };
+		1551890E22CCA19100D46663 /* NanumSquareOTFBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1551890A22CCA19100D46663 /* NanumSquareOTFBold.otf */; };
+		1551891022CCA29D00D46663 /* Whole.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1551890F22CCA29D00D46663 /* Whole.storyboard */; };
+		1551891222CCA2A900D46663 /* Our.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1551891122CCA2A900D46663 /* Our.storyboard */; };
+		1551891422CCA2BA00D46663 /* Mypage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1551891322CCA2BA00D46663 /* Mypage.storyboard */; };
+		1551891622CCA3D600D46663 /* WholeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1551891522CCA3D600D46663 /* WholeViewController.swift */; };
+		1551891822CCA3E000D46663 /* OurViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1551891722CCA3E000D46663 /* OurViewController.swift */; };
+		1551891A22CCA3EC00D46663 /* MypageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1551891922CCA3EB00D46663 /* MypageViewController.swift */; };
+		1551891C22CCC0C700D46663 /* MagazineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1551891B22CCC0C600D46663 /* MagazineTableViewCell.swift */; };
+		1551891E22CCC0DE00D46663 /* MagazineHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1551891D22CCC0DE00D46663 /* MagazineHeaderTableViewCell.swift */; };
+		1551892322CF2C4400D46663 /* Sign.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1551892222CF2C4400D46663 /* Sign.storyboard */; };
+		1551892522CF2FFF00D46663 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1551892422CF2FFF00D46663 /* LoginViewController.swift */; };
+		50B9BC1D90508828B626507A /* Pods_URTH.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0876142674B459C3184AC188 /* Pods_URTH.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0876142674B459C3184AC188 /* Pods_URTH.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_URTH.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		155188E522CC7ABD00D46663 /* URTH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = URTH.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		155188E822CC7ABD00D46663 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		155188EA22CC7ABD00D46663 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +42,26 @@
 		155188EF22CC7ABF00D46663 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		155188F222CC7ABF00D46663 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		155188F422CC7ABF00D46663 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		155188FA22CC7D6C00D46663 /* UPCarouselFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UPCarouselFlowLayout.swift; sourceTree = "<group>"; };
+		155188FC22CC7DF000D46663 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		155188FE22CC7EE000D46663 /* UPCarouselCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UPCarouselCollectionViewCell.swift; sourceTree = "<group>"; };
+		1551890022CC8E8700D46663 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		1551890722CCA19000D46663 /* NanumSquareOTFExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareOTFExtraBold.otf; sourceTree = "<group>"; };
+		1551890822CCA19000D46663 /* NanumSquareOTFRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareOTFRegular.otf; sourceTree = "<group>"; };
+		1551890922CCA19000D46663 /* NanumSquareOTFLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareOTFLight.otf; sourceTree = "<group>"; };
+		1551890A22CCA19100D46663 /* NanumSquareOTFBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumSquareOTFBold.otf; sourceTree = "<group>"; };
+		1551890F22CCA29D00D46663 /* Whole.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Whole.storyboard; sourceTree = "<group>"; };
+		1551891122CCA2A900D46663 /* Our.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Our.storyboard; sourceTree = "<group>"; };
+		1551891322CCA2BA00D46663 /* Mypage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mypage.storyboard; sourceTree = "<group>"; };
+		1551891522CCA3D600D46663 /* WholeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WholeViewController.swift; sourceTree = "<group>"; };
+		1551891722CCA3E000D46663 /* OurViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OurViewController.swift; sourceTree = "<group>"; };
+		1551891922CCA3EB00D46663 /* MypageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageViewController.swift; sourceTree = "<group>"; };
+		1551891B22CCC0C600D46663 /* MagazineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineTableViewCell.swift; sourceTree = "<group>"; };
+		1551891D22CCC0DE00D46663 /* MagazineHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		1551892222CF2C4400D46663 /* Sign.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Sign.storyboard; sourceTree = "<group>"; };
+		1551892422CF2FFF00D46663 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		6F36920C52CA1F4DF235EF1E /* Pods-URTH.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-URTH.debug.xcconfig"; path = "Pods/Target Support Files/Pods-URTH/Pods-URTH.debug.xcconfig"; sourceTree = "<group>"; };
+		E56AB25FED611C9182D9CAAE /* Pods-URTH.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-URTH.release.xcconfig"; path = "Pods/Target Support Files/Pods-URTH/Pods-URTH.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50B9BC1D90508828B626507A /* Pods_URTH.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +81,8 @@
 			children = (
 				155188E722CC7ABD00D46663 /* URTH */,
 				155188E622CC7ABD00D46663 /* Products */,
+				D395248D036FA72F0F1FA13A /* Pods */,
+				4835059C70B31D4464321FBE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +97,97 @@
 		155188E722CC7ABD00D46663 /* URTH */ = {
 			isa = PBXGroup;
 			children = (
+				1551892122CF2BDF00D46663 /* Sign */,
+				1551890222CCA04A00D46663 /* Home */,
+				1551890322CCA05400D46663 /* Whole */,
+				1551890422CCA07500D46663 /* Our */,
+				1551890522CCA07B00D46663 /* Mypage */,
 				155188E822CC7ABD00D46663 /* AppDelegate.swift */,
-				155188EA22CC7ABD00D46663 /* ViewController.swift */,
-				155188EC22CC7ABD00D46663 /* Main.storyboard */,
 				155188EF22CC7ABF00D46663 /* Assets.xcassets */,
 				155188F122CC7ABF00D46663 /* LaunchScreen.storyboard */,
 				155188F422CC7ABF00D46663 /* Info.plist */,
+				155188FC22CC7DF000D46663 /* GradientView.swift */,
+				1551890022CC8E8700D46663 /* Character.swift */,
+				1551890622CCA16500D46663 /* Font */,
 			);
 			path = URTH;
+			sourceTree = "<group>";
+		};
+		1551890222CCA04A00D46663 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				155188EC22CC7ABD00D46663 /* Main.storyboard */,
+				155188EA22CC7ABD00D46663 /* ViewController.swift */,
+				155188FA22CC7D6C00D46663 /* UPCarouselFlowLayout.swift */,
+				155188FE22CC7EE000D46663 /* UPCarouselCollectionViewCell.swift */,
+				1551891B22CCC0C600D46663 /* MagazineTableViewCell.swift */,
+				1551891D22CCC0DE00D46663 /* MagazineHeaderTableViewCell.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		1551890322CCA05400D46663 /* Whole */ = {
+			isa = PBXGroup;
+			children = (
+				1551890F22CCA29D00D46663 /* Whole.storyboard */,
+				1551891522CCA3D600D46663 /* WholeViewController.swift */,
+			);
+			path = Whole;
+			sourceTree = "<group>";
+		};
+		1551890422CCA07500D46663 /* Our */ = {
+			isa = PBXGroup;
+			children = (
+				1551891122CCA2A900D46663 /* Our.storyboard */,
+				1551891722CCA3E000D46663 /* OurViewController.swift */,
+			);
+			path = Our;
+			sourceTree = "<group>";
+		};
+		1551890522CCA07B00D46663 /* Mypage */ = {
+			isa = PBXGroup;
+			children = (
+				1551891322CCA2BA00D46663 /* Mypage.storyboard */,
+				1551891922CCA3EB00D46663 /* MypageViewController.swift */,
+			);
+			path = Mypage;
+			sourceTree = "<group>";
+		};
+		1551890622CCA16500D46663 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				1551890A22CCA19100D46663 /* NanumSquareOTFBold.otf */,
+				1551890722CCA19000D46663 /* NanumSquareOTFExtraBold.otf */,
+				1551890922CCA19000D46663 /* NanumSquareOTFLight.otf */,
+				1551890822CCA19000D46663 /* NanumSquareOTFRegular.otf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		1551892122CF2BDF00D46663 /* Sign */ = {
+			isa = PBXGroup;
+			children = (
+				1551892222CF2C4400D46663 /* Sign.storyboard */,
+				1551892422CF2FFF00D46663 /* LoginViewController.swift */,
+			);
+			path = Sign;
+			sourceTree = "<group>";
+		};
+		4835059C70B31D4464321FBE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0876142674B459C3184AC188 /* Pods_URTH.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D395248D036FA72F0F1FA13A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6F36920C52CA1F4DF235EF1E /* Pods-URTH.debug.xcconfig */,
+				E56AB25FED611C9182D9CAAE /* Pods-URTH.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +197,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 155188F722CC7ABF00D46663 /* Build configuration list for PBXNativeTarget "URTH" */;
 			buildPhases = (
+				5FD1409D9AC95CD1E78C93DC /* [CP] Check Pods Manifest.lock */,
 				155188E122CC7ABD00D46663 /* Sources */,
 				155188E222CC7ABD00D46663 /* Frameworks */,
 				155188E322CC7ABD00D46663 /* Resources */,
+				EA722760CCAF4909CF3D07BE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -122,21 +250,86 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1551890B22CCA19100D46663 /* NanumSquareOTFExtraBold.otf in Resources */,
+				1551890D22CCA19100D46663 /* NanumSquareOTFLight.otf in Resources */,
 				155188F322CC7ABF00D46663 /* LaunchScreen.storyboard in Resources */,
+				1551892322CF2C4400D46663 /* Sign.storyboard in Resources */,
+				1551890C22CCA19100D46663 /* NanumSquareOTFRegular.otf in Resources */,
+				1551890E22CCA19100D46663 /* NanumSquareOTFBold.otf in Resources */,
 				155188F022CC7ABF00D46663 /* Assets.xcassets in Resources */,
+				1551891022CCA29D00D46663 /* Whole.storyboard in Resources */,
+				1551891422CCA2BA00D46663 /* Mypage.storyboard in Resources */,
 				155188EE22CC7ABD00D46663 /* Main.storyboard in Resources */,
+				1551891222CCA2A900D46663 /* Our.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5FD1409D9AC95CD1E78C93DC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-URTH-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EA722760CCAF4909CF3D07BE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-URTH/Pods-URTH-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/UPCarouselFlowLayout/UPCarouselFlowLayout.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UPCarouselFlowLayout.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-URTH/Pods-URTH-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		155188E122CC7ABD00D46663 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1551892522CF2FFF00D46663 /* LoginViewController.swift in Sources */,
+				1551891A22CCA3EC00D46663 /* MypageViewController.swift in Sources */,
+				1551891C22CCC0C700D46663 /* MagazineTableViewCell.swift in Sources */,
+				1551891622CCA3D600D46663 /* WholeViewController.swift in Sources */,
 				155188EB22CC7ABD00D46663 /* ViewController.swift in Sources */,
+				155188FF22CC7EE000D46663 /* UPCarouselCollectionViewCell.swift in Sources */,
 				155188E922CC7ABD00D46663 /* AppDelegate.swift in Sources */,
+				1551890122CC8E8700D46663 /* Character.swift in Sources */,
+				155188FD22CC7DF000D46663 /* GradientView.swift in Sources */,
+				155188FB22CC7D6C00D46663 /* UPCarouselFlowLayout.swift in Sources */,
+				1551891822CCA3E000D46663 /* OurViewController.swift in Sources */,
+				1551891E22CCC0DE00D46663 /* MagazineHeaderTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +473,7 @@
 		};
 		155188F822CC7ABF00D46663 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F36920C52CA1F4DF235EF1E /* Pods-URTH.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +492,7 @@
 		};
 		155188F922CC7ABF00D46663 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E56AB25FED611C9182D9CAAE /* Pods-URTH.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
