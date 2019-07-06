@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1525273222CFF90300807845 /* PopularTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1525273122CFF90300807845 /* PopularTableViewCell.swift */; };
+		1525273422D04B6D00807845 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1525273322D04B6D00807845 /* SearchTableViewController.swift */; };
+		1525273622D04CC400807845 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1525273522D04CC400807845 /* SearchTableViewCell.swift */; };
+		1525273822D04D9400807845 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1525273722D04D9400807845 /* Challenge.swift */; };
 		155188E922CC7ABD00D46663 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155188E822CC7ABD00D46663 /* AppDelegate.swift */; };
 		155188EB22CC7ABD00D46663 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155188EA22CC7ABD00D46663 /* ViewController.swift */; };
 		155188EE22CC7ABD00D46663 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 155188EC22CC7ABD00D46663 /* Main.storyboard */; };
@@ -43,6 +47,10 @@
 
 /* Begin PBXFileReference section */
 		0876142674B459C3184AC188 /* Pods_URTH.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_URTH.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1525273122CFF90300807845 /* PopularTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularTableViewCell.swift; sourceTree = "<group>"; };
+		1525273322D04B6D00807845 /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
+		1525273522D04CC400807845 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		1525273722D04D9400807845 /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
 		155188E522CC7ABD00D46663 /* URTH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = URTH.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		155188E822CC7ABD00D46663 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		155188EA22CC7ABD00D46663 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -155,6 +163,10 @@
 				15FC3A5522CF670E0020D34F /* Create4ViewController.swift */,
 				15FC3A5722CF6A2A0020D34F /* Create5ViewController.swift */,
 				15FC3A5922CF86650020D34F /* Create6ViewController.swift */,
+				1525273122CFF90300807845 /* PopularTableViewCell.swift */,
+				1525273322D04B6D00807845 /* SearchTableViewController.swift */,
+				1525273522D04CC400807845 /* SearchTableViewCell.swift */,
+				1525273722D04D9400807845 /* Challenge.swift */,
 			);
 			path = Whole;
 			sourceTree = "<group>";
@@ -354,13 +366,16 @@
 				1551891A22CCA3EC00D46663 /* MypageViewController.swift in Sources */,
 				1551892C22CF4F5D00D46663 /* Create1ViewController.swift in Sources */,
 				1551891C22CCC0C700D46663 /* MagazineTableViewCell.swift in Sources */,
+				1525273222CFF90300807845 /* PopularTableViewCell.swift in Sources */,
 				1551891622CCA3D600D46663 /* WholeViewController.swift in Sources */,
 				15FC3A5822CF6A2A0020D34F /* Create5ViewController.swift in Sources */,
 				155188EB22CC7ABD00D46663 /* ViewController.swift in Sources */,
+				1525273622D04CC400807845 /* SearchTableViewCell.swift in Sources */,
 				15FC3A5A22CF86650020D34F /* Create6ViewController.swift in Sources */,
 				1551893022CF5E4D00D46663 /* Create3ViewController.swift in Sources */,
 				155188FF22CC7EE000D46663 /* UPCarouselCollectionViewCell.swift in Sources */,
 				155188E922CC7ABD00D46663 /* AppDelegate.swift in Sources */,
+				1525273822D04D9400807845 /* Challenge.swift in Sources */,
 				1551890122CC8E8700D46663 /* Character.swift in Sources */,
 				1551892A22CF455700D46663 /* CertificateViewController.swift in Sources */,
 				155188FD22CC7DF000D46663 /* GradientView.swift in Sources */,
@@ -368,6 +383,7 @@
 				155188FB22CC7D6C00D46663 /* UPCarouselFlowLayout.swift in Sources */,
 				1551891822CCA3E000D46663 /* OurViewController.swift in Sources */,
 				1551891E22CCC0DE00D46663 /* MagazineHeaderTableViewCell.swift in Sources */,
+				1525273422D04B6D00807845 /* SearchTableViewController.swift in Sources */,
 				1551892722CF33CB00D46663 /* SignViewController.swift in Sources */,
 				15FC3A5622CF670E0020D34F /* Create4ViewController.swift in Sources */,
 			);
