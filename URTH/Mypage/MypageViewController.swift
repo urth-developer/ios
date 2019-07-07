@@ -10,16 +10,43 @@ import UIKit
 
 class MypageViewController: UIViewController {
 
+    @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var profileNickname: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(editProfile))
+        profileImage.addGestureRecognizer(gesture)
+        
+        imageRounded()
 
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func login(_ sender: Any) {
-        let vc = UIStoryboard(name: "Sign", bundle: nil).instantiateViewController(withIdentifier: "LoginNavi")
-        present(vc, animated: true, completion: nil)
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.view.backgroundColor = .clear
+        
     }
     
-
+    func imageRounded(){
+        profileImage.layer.cornerRadius = profileImage.frame.height/2
+    }
+    
+    @objc func editProfile(){
+        let vc = storyboard?.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
+        vc.image = profileImage.image!
+        vc.nickname = profileNickname.text!
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @IBAction func editProfile2(_ sender: Any) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
+        vc.image = profileImage.image!
+        vc.nickname = profileNickname.text!
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
 }

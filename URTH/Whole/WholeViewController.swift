@@ -15,8 +15,8 @@ class WholeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
-        self.navigationController?.title = "모두의 어스"
         let searchButton = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(search))
         searchButton.tintColor = #colorLiteral(red: 0.1643726826, green: 0.5449098349, blue: 0.5535590649, alpha: 1)
         self.navigationItem.rightBarButtonItem = searchButton
@@ -27,6 +27,10 @@ class WholeViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         initChallenges()
+        self.navigationController?.title = "모두의 어스"
+
+        //self.navigationController?.navigationBar.topItem?.title = "모두의 어스"
+
     }
     
     func initChallenges(){

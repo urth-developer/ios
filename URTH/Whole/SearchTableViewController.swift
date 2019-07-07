@@ -26,7 +26,7 @@ class SearchTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationController?.navigationBar.topItem?.title = ""
+        //self.navigationController?.navigationBar.topItem?.title = ""
         self.navigationItem.searchController = searchController
         self.navigationItem.hidesSearchBarWhenScrolling = false
         
@@ -77,8 +77,6 @@ class SearchTableViewController: UITableViewController {
             cell.countLabel.text = "총 \(challenges[indexPath.row].count)회"
         }
         
-        
-
         return cell
     }
     
