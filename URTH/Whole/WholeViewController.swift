@@ -47,8 +47,16 @@ class WholeViewController: UIViewController {
     }
     
     @objc func search(){
-        let vc = storyboard?.instantiateViewController(withIdentifier: "SearchTableViewController") as! SearchTableViewController
-        vc.challenges = challenges
+//        let vc = storyboard?.instantiateViewController(withIdentifier: "SearchTableViewController") as! SearchTableViewController
+//        vc.challenges = challenges
+        let vc = storyboard?.instantiateViewController(withIdentifier: "SearchPopupViewController") as! SearchPopupViewController
+        
+//        let transition = CATransition()
+//        transition.duration = 0.3
+//        transition.type = CATransitionType.push
+//        transition.subtype = CATransitionSubtype.fromBottom
+//        view.window!.layer.add(transition, forKey: kCATransition)
+//        present(vc!, animated: false, completion: nil)
         
         self.navigationController?.pushViewController(vc, animated: true)
         
