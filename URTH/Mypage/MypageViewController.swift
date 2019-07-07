@@ -10,8 +10,10 @@ import UIKit
 
 class MypageViewController: UIViewController {
 
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var profileNickname: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,6 +21,8 @@ class MypageViewController: UIViewController {
         profileImage.addGestureRecognizer(gesture)
         
         imageRounded()
+        
+        scrollView.delegate = self
 
         // Do any additional setup after loading the view.
     }
@@ -49,4 +53,23 @@ class MypageViewController: UIViewController {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
+}
+
+extension MypageViewController: UIScrollViewDelegate {
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+        let yVelocity = scrollView.panGestureRecognizer .velocity(in: scrollView).y
+        
+        if yVelocity > 0 {
+            print("up")
+            scrollView.bounces = false
+
+        } else if yVelocity < 0 {
+            print("down")
+            scrollView.bounces = true
+
+        }
+        
+    }
 }

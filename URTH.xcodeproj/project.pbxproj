@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1500798122D2292B00E9F333 /* SearchPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1500798022D2292B00E9F333 /* SearchPopupViewController.swift */; };
 		1525273222CFF90300807845 /* PopularTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1525273122CFF90300807845 /* PopularTableViewCell.swift */; };
 		1525273422D04B6D00807845 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1525273322D04B6D00807845 /* SearchTableViewController.swift */; };
 		1525273622D04CC400807845 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1525273522D04CC400807845 /* SearchTableViewCell.swift */; };
@@ -48,6 +49,7 @@
 
 /* Begin PBXFileReference section */
 		0876142674B459C3184AC188 /* Pods_URTH.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_URTH.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1500798022D2292B00E9F333 /* SearchPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPopupViewController.swift; sourceTree = "<group>"; };
 		1525273122CFF90300807845 /* PopularTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularTableViewCell.swift; sourceTree = "<group>"; };
 		1525273322D04B6D00807845 /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 		1525273522D04CC400807845 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 				1525273322D04B6D00807845 /* SearchTableViewController.swift */,
 				1525273522D04CC400807845 /* SearchTableViewCell.swift */,
 				1525273722D04D9400807845 /* Challenge.swift */,
+				1500798022D2292B00E9F333 /* SearchPopupViewController.swift */,
 			);
 			path = Whole;
 			sourceTree = "<group>";
@@ -380,6 +383,7 @@
 				155188E922CC7ABD00D46663 /* AppDelegate.swift in Sources */,
 				1525273822D04D9400807845 /* Challenge.swift in Sources */,
 				1551890122CC8E8700D46663 /* Character.swift in Sources */,
+				1500798122D2292B00E9F333 /* SearchPopupViewController.swift in Sources */,
 				1551892A22CF455700D46663 /* CertificateViewController.swift in Sources */,
 				155188FD22CC7DF000D46663 /* GradientView.swift in Sources */,
 				1551892E22CF4F6800D46663 /* Create2ViewController.swift in Sources */,
