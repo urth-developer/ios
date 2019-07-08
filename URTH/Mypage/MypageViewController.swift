@@ -62,11 +62,9 @@ extension MypageViewController: UIScrollViewDelegate {
         let yVelocity = scrollView.panGestureRecognizer .velocity(in: scrollView).y
         
         if yVelocity > 0 {
-            print("up")
             scrollView.bounces = false
 
         } else if yVelocity < 0 {
-            print("down")
             scrollView.bounces = true
 
         }

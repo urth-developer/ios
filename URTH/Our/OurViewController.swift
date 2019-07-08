@@ -17,6 +17,20 @@ class OurViewController: ButtonBarPagerTabStripViewController {
 
         self.navigationItem.title = "우리의 어스"
         setNavigationBarClear()
+        addFriendBarButton()
+        self.navigationController?.navigationBar.backIndicatorImage = #imageLiteral(resourceName: "btnBack")
+
+    }
+    
+    func addFriendBarButton(){
+        let barbuttonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "btnAddUser"), style: .plain, target: self, action: #selector(addFriend))
+        barbuttonItem.tintColor = #colorLiteral(red: 0.3993381858, green: 0.4123505652, blue: 0.4321975112, alpha: 1)
+        self.navigationItem.rightBarButtonItem = barbuttonItem
+    }
+    
+    @objc func addFriend(){
+        let vc = storyboard?.instantiateViewController(withIdentifier: "AddFriendViewController") as! AddFriendViewController
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func setNavigationBarClear() {

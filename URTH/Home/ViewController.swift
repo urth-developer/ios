@@ -186,3 +186,22 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
 
     }
 }
+
+// Disable Bounce
+
+extension ViewController: UIScrollViewDelegate {
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+        let yVelocity = scrollView.panGestureRecognizer .velocity(in: scrollView).y
+        
+        if yVelocity > 0 {
+            scrollView.bounces = false
+            
+        } else if yVelocity < 0 {
+            scrollView.bounces = true
+            
+        }
+        
+    }
+}

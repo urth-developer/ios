@@ -1,24 +1,28 @@
 PODS:
+  - Floaty (4.2.0)
   - TKRadarChart (1.4.3)
   - UPCarouselFlowLayout (1.1.2)
   - XLPagerTabStrip (9.0.0)
 
 DEPENDENCIES:
+  - Floaty (~> 4.2.0)
   - TKRadarChart
   - UPCarouselFlowLayout
   - XLPagerTabStrip (~> 9.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Floaty
     - TKRadarChart
     - UPCarouselFlowLayout
     - XLPagerTabStrip
 
 SPEC CHECKSUMS:
+  Floaty: e2bd5a0f6f7f70899e26ff2da31081c8bee8d1b0
   TKRadarChart: 9e11cba496e47d60d5c5baced04ed8e35cdc9073
   UPCarouselFlowLayout: 4c7d2c43a10ebb1597bde502a53699d378341dad
   XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
-PODFILE CHECKSUM: 76b3f05ad38c479bf9aed054e71987fca02a4f35
+PODFILE CHECKSUM: d69e44566aa9b730b6620516e4f0860a48138d5d
 
 COCOAPODS: 1.5.3
