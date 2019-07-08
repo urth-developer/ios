@@ -6,6 +6,8 @@ target 'URTH' do
   use_frameworks!
 
     pod 'UPCarouselFlowLayout'
+    pod 'XLPagerTabStrip', '~> 9.0'
+    pod 'TKRadarChart'
 
   # Pods for URTH
 

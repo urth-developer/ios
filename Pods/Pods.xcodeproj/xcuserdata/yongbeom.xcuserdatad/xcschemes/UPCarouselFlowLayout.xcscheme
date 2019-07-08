@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "382C4CB198DAE3B69CEE9F366295C952"
+               BlueprintIdentifier = "BED4F3E8F271712F96F13879126BFC68"
                BlueprintName = "UPCarouselFlowLayout"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "UPCarouselFlowLayout.framework">
