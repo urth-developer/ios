@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1500798122D2292B00E9F333 /* SearchPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1500798022D2292B00E9F333 /* SearchPopupViewController.swift */; };
+		150079A622D2FC2F00E9F333 /* OurMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150079A522D2FC2F00E9F333 /* OurMeViewController.swift */; };
+		150079A822D30B0000E9F333 /* OurMe1TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150079A722D30B0000E9F333 /* OurMe1TableViewCell.swift */; };
+		150079AC22D30B3600E9F333 /* OurMe2TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150079AB22D30B3600E9F333 /* OurMe2TableViewCell.swift */; };
 		1525273222CFF90300807845 /* PopularTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1525273122CFF90300807845 /* PopularTableViewCell.swift */; };
 		1525273422D04B6D00807845 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1525273322D04B6D00807845 /* SearchTableViewController.swift */; };
 		1525273622D04CC400807845 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1525273522D04CC400807845 /* SearchTableViewCell.swift */; };
@@ -41,6 +44,8 @@
 		1551892C22CF4F5D00D46663 /* Create1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1551892B22CF4F5D00D46663 /* Create1ViewController.swift */; };
 		1551892E22CF4F6800D46663 /* Create2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1551892D22CF4F6800D46663 /* Create2ViewController.swift */; };
 		1551893022CF5E4D00D46663 /* Create3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1551892F22CF5E4D00D46663 /* Create3ViewController.swift */; };
+		15A8B9B922D326B900D0896C /* OurFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A8B9B822D326B900D0896C /* OurFriendViewController.swift */; };
+		15A8B9BB22D3290600D0896C /* OurFriendCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A8B9BA22D3290600D0896C /* OurFriendCollectionViewCell.swift */; };
 		15FC3A5622CF670E0020D34F /* Create4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FC3A5522CF670E0020D34F /* Create4ViewController.swift */; };
 		15FC3A5822CF6A2A0020D34F /* Create5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FC3A5722CF6A2A0020D34F /* Create5ViewController.swift */; };
 		15FC3A5A22CF86650020D34F /* Create6ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FC3A5922CF86650020D34F /* Create6ViewController.swift */; };
@@ -50,6 +55,9 @@
 /* Begin PBXFileReference section */
 		0876142674B459C3184AC188 /* Pods_URTH.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_URTH.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1500798022D2292B00E9F333 /* SearchPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPopupViewController.swift; sourceTree = "<group>"; };
+		150079A522D2FC2F00E9F333 /* OurMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OurMeViewController.swift; sourceTree = "<group>"; };
+		150079A722D30B0000E9F333 /* OurMe1TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OurMe1TableViewCell.swift; sourceTree = "<group>"; };
+		150079AB22D30B3600E9F333 /* OurMe2TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OurMe2TableViewCell.swift; sourceTree = "<group>"; };
 		1525273122CFF90300807845 /* PopularTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularTableViewCell.swift; sourceTree = "<group>"; };
 		1525273322D04B6D00807845 /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 		1525273522D04CC400807845 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
@@ -85,6 +93,8 @@
 		1551892B22CF4F5D00D46663 /* Create1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Create1ViewController.swift; sourceTree = "<group>"; };
 		1551892D22CF4F6800D46663 /* Create2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Create2ViewController.swift; sourceTree = "<group>"; };
 		1551892F22CF5E4D00D46663 /* Create3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Create3ViewController.swift; sourceTree = "<group>"; };
+		15A8B9B822D326B900D0896C /* OurFriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OurFriendViewController.swift; sourceTree = "<group>"; };
+		15A8B9BA22D3290600D0896C /* OurFriendCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OurFriendCollectionViewCell.swift; sourceTree = "<group>"; };
 		15FC3A5522CF670E0020D34F /* Create4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Create4ViewController.swift; sourceTree = "<group>"; };
 		15FC3A5722CF6A2A0020D34F /* Create5ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Create5ViewController.swift; sourceTree = "<group>"; };
 		15FC3A5922CF86650020D34F /* Create6ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Create6ViewController.swift; sourceTree = "<group>"; };
@@ -181,6 +191,11 @@
 			children = (
 				1551891122CCA2A900D46663 /* Our.storyboard */,
 				1551891722CCA3E000D46663 /* OurViewController.swift */,
+				150079A522D2FC2F00E9F333 /* OurMeViewController.swift */,
+				150079A722D30B0000E9F333 /* OurMe1TableViewCell.swift */,
+				150079AB22D30B3600E9F333 /* OurMe2TableViewCell.swift */,
+				15A8B9B822D326B900D0896C /* OurFriendViewController.swift */,
+				15A8B9BA22D3290600D0896C /* OurFriendCollectionViewCell.swift */,
 			);
 			path = Our;
 			sourceTree = "<group>";
@@ -348,13 +363,17 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-URTH/Pods-URTH-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/TKRadarChart/TKRadarChart.framework",
 				"${BUILT_PRODUCTS_DIR}/UPCarouselFlowLayout/UPCarouselFlowLayout.framework",
+				"${BUILT_PRODUCTS_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TKRadarChart.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UPCarouselFlowLayout.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLPagerTabStrip.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -374,17 +393,21 @@
 				1551891C22CCC0C700D46663 /* MagazineTableViewCell.swift in Sources */,
 				1525273222CFF90300807845 /* PopularTableViewCell.swift in Sources */,
 				1551891622CCA3D600D46663 /* WholeViewController.swift in Sources */,
+				15A8B9BB22D3290600D0896C /* OurFriendCollectionViewCell.swift in Sources */,
 				15FC3A5822CF6A2A0020D34F /* Create5ViewController.swift in Sources */,
 				155188EB22CC7ABD00D46663 /* ViewController.swift in Sources */,
 				1525273622D04CC400807845 /* SearchTableViewCell.swift in Sources */,
 				15FC3A5A22CF86650020D34F /* Create6ViewController.swift in Sources */,
 				1551893022CF5E4D00D46663 /* Create3ViewController.swift in Sources */,
 				155188FF22CC7EE000D46663 /* UPCarouselCollectionViewCell.swift in Sources */,
+				150079A822D30B0000E9F333 /* OurMe1TableViewCell.swift in Sources */,
 				155188E922CC7ABD00D46663 /* AppDelegate.swift in Sources */,
 				1525273822D04D9400807845 /* Challenge.swift in Sources */,
+				150079A622D2FC2F00E9F333 /* OurMeViewController.swift in Sources */,
 				1551890122CC8E8700D46663 /* Character.swift in Sources */,
 				1500798122D2292B00E9F333 /* SearchPopupViewController.swift in Sources */,
 				1551892A22CF455700D46663 /* CertificateViewController.swift in Sources */,
+				150079AC22D30B3600E9F333 /* OurMe2TableViewCell.swift in Sources */,
 				155188FD22CC7DF000D46663 /* GradientView.swift in Sources */,
 				1551892E22CF4F6800D46663 /* Create2ViewController.swift in Sources */,
 				155188FB22CC7D6C00D46663 /* UPCarouselFlowLayout.swift in Sources */,
@@ -394,6 +417,7 @@
 				1525273A22D0637900807845 /* ProfileViewController.swift in Sources */,
 				1551892722CF33CB00D46663 /* SignViewController.swift in Sources */,
 				15FC3A5622CF670E0020D34F /* Create4ViewController.swift in Sources */,
+				15A8B9B922D326B900D0896C /* OurFriendViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
