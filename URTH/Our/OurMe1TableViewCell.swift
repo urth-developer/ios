@@ -21,6 +21,7 @@ class OurMe1TableViewCell: UITableViewCell {
         // Initialization code
         
         chart.configuration.radius = 80
+        chart.configuration.borderWidth = 1
         chart.dataSource = self
         chart.delegate = self
         chart.reloadData()
@@ -67,7 +68,8 @@ extension OurMe1TableViewCell: TKRadarChartDataSource, TKRadarChartDelegate{
     
     func valueOfSectionForRadarChart(withRow row: Int, section: Int) -> CGFloat {
         if section == 0 {
-            return CGFloat(max(min(row + 1, 4), 3))
+            return 1
+            //return CGFloat(max(min(row + 1, 4), 3))
         } else {
             return 3
         }
@@ -102,10 +104,12 @@ extension OurMe1TableViewCell: TKRadarChartDataSource, TKRadarChartDelegate{
     
     func colorOfSectionBorderForRadarChart(_ radarChart: TKRadarChart, section: Int) -> UIColor {
         if section == 0 {
-            return UIColor.white
+            return UIColor.orange
         } else {
             return UIColor.white
         }
+        
+       
     }
     
     func fontOfTitleForRadarChart(_ radarChart: TKRadarChart) -> UIFont {

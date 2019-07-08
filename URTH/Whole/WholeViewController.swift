@@ -7,17 +7,21 @@
 //
 
 import UIKit
+import Floaty
 
-class WholeViewController: UIViewController {
+class WholeViewController: UIViewController, FloatyDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     var challenges: [Challenge] = []
+    var floaty = Floaty()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+         layoutFAB()
+        
 
-        let searchButton = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(search))
+        let searchButton = UIBarButtonItem(image: #imageLiteral(resourceName: "btnSearch"), style: .plain, target: self, action: #selector(search))
         searchButton.tintColor = #colorLiteral(red: 0.1643726826, green: 0.5449098349, blue: 0.5535590649, alpha: 1)
         self.navigationItem.rightBarButtonItem = searchButton
         
@@ -32,6 +36,45 @@ class WholeViewController: UIViewController {
         //self.navigationController?.navigationBar.topItem?.title = "모두의 어스"
 
     }
+    
+    func layoutFAB() {
+        
+        floaty.buttonColor = #colorLiteral(red: 0.1643726826, green: 0.5449098349, blue: 0.5535590649, alpha: 1)
+        floaty.openAnimationType = .none
+        
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(create))
+        floaty.addGestureRecognizer(gesture)
+        
+//        let item = FloatyItem()
+//        item.hasShadow = false
+//        item.buttonColor = UIColor.clear
+//        item.circleShadowColor = UIColor.red
+//        //        item.titleShadowColor = UIColor.blue
+//        //        item.titleLabelPosition = .right
+//        //        item.title = "titlePosition right"
+//        item.handler = { item in
+//
+//        }
+        
+        floaty.hasShadow = false
+        //floaty.addItem(item: item)
+        floaty.paddingX = self.view.frame.width/2 - 180
+        floaty.paddingY = self.view.frame.height/2 - 270
+        floaty.fabDelegate = self
+        
+        self.view.addSubview(floaty)
+        
+    }
+    
+    @objc func create(){
+        let vc = storyboard?.instantiateViewController(withIdentifier: "CreateNavi")
+        present(vc!, animated: true, completion: nil)
+    }
+    
+//    func floatyWillOpen(_ floaty: Floaty) {
+//        let vc = storyboard?.instantiateViewController(withIdentifier: "CreateNavi")
+//        present(vc!, animated: true, completion: nil)
+//    }
     
     func initChallenges(){
         challenges.append(Challenge(title: "가나다", name: "이사람", count: 10, image: #imageLiteral(resourceName: "monsters")))
@@ -85,3 +128,23 @@ extension WholeViewController: UITableViewDelegate, UITableViewDataSource{
     
     
 }
+
+extension WholeViewController: UIScrollViewDelegate {
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+        let yVelocity = scrollView.panGestureRecognizer .velocity(in: scrollView).y
+        
+        if yVelocity > 0 {
+            //print("up")
+            scrollView.bounces = false
+            
+        } else if yVelocity < 0 {
+            //print("down")
+            scrollView.bounces = true
+            
+        }
+        
+    }
+}
+

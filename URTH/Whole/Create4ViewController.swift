@@ -25,8 +25,20 @@ class Create4ViewController: UIViewController {
         let gesture = UITapGestureRecognizer(target: self, action: #selector(selectPhoto))
         imageView.addGestureRecognizer(gesture)
 
+        addCloseButton()
         
     }
+    
+    func addCloseButton(){
+        let barbuttonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "btnClose"), style: .plain, target: self, action: #selector(close))
+        barbuttonItem.tintColor = #colorLiteral(red: 0.1643726826, green: 0.5449098349, blue: 0.5535590649, alpha: 1)
+        self.navigationItem.rightBarButtonItem = barbuttonItem
+    }
+    
+    @objc func close(){
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     
     @objc func selectPhoto(){
         print("selectPhoto")

@@ -59,7 +59,7 @@
                                                     <constraint firstAttribute="height" constant="3" id="QAc-1c-rsl"/>
                                                 </constraints>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hBtnCategory1" translatesAutoresizingMaskIntoConstraints="NO" id="TKn-sb-hDz">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img1" translatesAutoresizingMaskIntoConstraints="NO" id="TKn-sb-hDz">
                                                 <rect key="frame" x="26" y="265" width="54" height="54"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="54" id="O6Y-2z-fIO"/>
@@ -76,7 +76,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="btnCategory2" translatesAutoresizingMaskIntoConstraints="NO" id="Efa-bx-YHV">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img2" translatesAutoresizingMaskIntoConstraints="NO" id="Efa-bx-YHV">
                                                 <rect key="frame" x="95" y="265" width="54" height="54"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="54" id="8uU-YF-vk4"/>
@@ -93,7 +93,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="btnCategory3" translatesAutoresizingMaskIntoConstraints="NO" id="7ve-Ci-mrE">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img3" translatesAutoresizingMaskIntoConstraints="NO" id="7ve-Ci-mrE">
                                                 <rect key="frame" x="161" y="265" width="54" height="54"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="54" id="SPa-8k-S8x"/>
@@ -110,7 +110,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="btnCategory4" translatesAutoresizingMaskIntoConstraints="NO" id="eXe-ko-mzq">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img4" translatesAutoresizingMaskIntoConstraints="NO" id="eXe-ko-mzq">
                                                 <rect key="frame" x="228" y="265" width="54" height="54"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="54" id="7WE-AT-neg"/>
@@ -127,7 +127,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="btnCategory5" translatesAutoresizingMaskIntoConstraints="NO" id="C2G-gL-hLc">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img5" translatesAutoresizingMaskIntoConstraints="NO" id="C2G-gL-hLc">
                                                 <rect key="frame" x="295" y="265" width="54" height="54"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="54" id="RiM-pc-yFM"/>
@@ -1064,7 +1064,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EfA-Tr-oks" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6948" y="-43.628185907046479"/>
+            <point key="canvasLocation" x="7553" y="-43"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="LqL-N6-488">
@@ -1117,6 +1117,11 @@
         <image name="btnNext" width="94" height="26"/>
         <image name="btnReselect" width="94" height="26"/>
         <image name="hBtnCategory1" width="56" height="56"/>
+        <image name="img1" width="52" height="52"/>
+        <image name="img2" width="52" height="52"/>
+        <image name="img3" width="52" height="52"/>
+        <image name="img4" width="52" height="52"/>
+        <image name="img5" width="52" height="52"/>
         <image name="imgAdvertiseBanner" width="375" height="175"/>
         <image name="imgIllust" width="129" height="129"/>
         <image name="ratatouille" width="500" height="500"/>
