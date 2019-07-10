@@ -53,7 +53,7 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LAbel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rnu-qY-O4K">
-                                                <rect key="frame" x="28" y="90" width="41" height="17"/>
+                                                <rect key="frame" x="28" y="90" width="38.5" height="17"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="17" id="LRd-XC-GAh"/>
                                                 </constraints>
@@ -62,7 +62,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="님이" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aTE-ki-hz4">
-                                                <rect key="frame" x="77" y="90" width="27.5" height="17"/>
+                                                <rect key="frame" x="74.5" y="90" width="26" height="17"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="17" id="eWS-RM-hLo"/>
                                                 </constraints>
@@ -326,6 +326,7 @@
                     <connections>
                         <outlet property="collectionView" destination="nHF-nL-MKI" id="HXk-o7-SDp"/>
                         <outlet property="label" destination="RPi-OO-wRJ" id="c54-YV-fHh"/>
+                        <outlet property="nickName" destination="rnu-qY-O4K" id="lz2-KO-q4F"/>
                         <outlet property="pageControl" destination="exV-2Q-Etu" id="WWX-VX-nQW"/>
                         <outlet property="scrollView" destination="rB3-Pf-Wxf" id="wDU-Ds-JQi"/>
                         <outlet property="tableView" destination="T0J-0l-AdP" id="BSL-fq-FZX"/>
@@ -819,6 +820,6 @@
         <image name="imgProfileFullCertifiedPhotograph" width="28" height="28"/>
         <image name="imgSizeSquareFullCertifiedPhotograph" width="168" height="168"/>
         <image name="invalidName" width="5.5" height="10.5"/>
-        <image name="logo" width="73" height="18"/>
+        <image name="logo" width="124.5" height="30.5"/>
     </resources>
 </document>
