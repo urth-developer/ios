@@ -52,6 +52,8 @@
 		15A8B9BB22D3290600D0896C /* OurFriendCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A8B9BA22D3290600D0896C /* OurFriendCollectionViewCell.swift */; };
 		15A8B9BD22D334C400D0896C /* AddFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A8B9BC22D334C400D0896C /* AddFriendViewController.swift */; };
 		15A8B9BF22D337AC00D0896C /* AddFriendDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A8B9BE22D337AC00D0896C /* AddFriendDetailViewController.swift */; };
+		15EE30C122D5AF9B00244ACD /* MyChallengeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EE30C022D5AF9B00244ACD /* MyChallengeTableViewCell.swift */; };
+		15EE30C322D5AFC300244ACD /* MyChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EE30C222D5AFC300244ACD /* MyChallengeViewController.swift */; };
 		15FC3A5622CF670E0020D34F /* Create4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FC3A5522CF670E0020D34F /* Create4ViewController.swift */; };
 		15FC3A5822CF6A2A0020D34F /* Create5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FC3A5722CF6A2A0020D34F /* Create5ViewController.swift */; };
 		15FC3A5A22CF86650020D34F /* Create6ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FC3A5922CF86650020D34F /* Create6ViewController.swift */; };
@@ -107,6 +109,8 @@
 		15A8B9BA22D3290600D0896C /* OurFriendCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OurFriendCollectionViewCell.swift; sourceTree = "<group>"; };
 		15A8B9BC22D334C400D0896C /* AddFriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendViewController.swift; sourceTree = "<group>"; };
 		15A8B9BE22D337AC00D0896C /* AddFriendDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendDetailViewController.swift; sourceTree = "<group>"; };
+		15EE30C022D5AF9B00244ACD /* MyChallengeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyChallengeTableViewCell.swift; sourceTree = "<group>"; };
+		15EE30C222D5AFC300244ACD /* MyChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyChallengeViewController.swift; sourceTree = "<group>"; };
 		15FC3A5522CF670E0020D34F /* Create4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Create4ViewController.swift; sourceTree = "<group>"; };
 		15FC3A5722CF6A2A0020D34F /* Create5ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Create5ViewController.swift; sourceTree = "<group>"; };
 		15FC3A5922CF86650020D34F /* Create6ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Create6ViewController.swift; sourceTree = "<group>"; };
@@ -175,6 +179,8 @@
 				1551892922CF455700D46663 /* CertificateViewController.swift */,
 				1558291322D4DB66005F9D05 /* CertificateAllViewController.swift */,
 				1558291522D4DE0B005F9D05 /* CertificateAllCollectionViewCell.swift */,
+				15EE30C022D5AF9B00244ACD /* MyChallengeTableViewCell.swift */,
+				15EE30C222D5AFC300244ACD /* MyChallengeViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -414,6 +420,7 @@
 				1551891A22CCA3EC00D46663 /* MypageViewController.swift in Sources */,
 				1551892C22CF4F5D00D46663 /* Create1ViewController.swift in Sources */,
 				1551891C22CCC0C700D46663 /* MagazineTableViewCell.swift in Sources */,
+				15EE30C122D5AF9B00244ACD /* MyChallengeTableViewCell.swift in Sources */,
 				1525273222CFF90300807845 /* PopularTableViewCell.swift in Sources */,
 				1551891622CCA3D600D46663 /* WholeViewController.swift in Sources */,
 				15A8B9BB22D3290600D0896C /* OurFriendCollectionViewCell.swift in Sources */,
@@ -427,6 +434,7 @@
 				150079A822D30B0000E9F333 /* OurMe1TableViewCell.swift in Sources */,
 				1558291622D4DE0B005F9D05 /* CertificateAllCollectionViewCell.swift in Sources */,
 				155188E922CC7ABD00D46663 /* AppDelegate.swift in Sources */,
+				15EE30C322D5AFC300244ACD /* MyChallengeViewController.swift in Sources */,
 				1525273822D04D9400807845 /* Challenge.swift in Sources */,
 				150079A622D2FC2F00E9F333 /* OurMeViewController.swift in Sources */,
 				154F4A5322D35DF900905F1C /* WholeCategoryViewController.swift in Sources */,

@@ -29,7 +29,6 @@ class ViewController: UIViewController {
 """)
     
     
-    
     let picker = UIImagePickerController()
     
     fileprivate var items = [Character]()
@@ -80,11 +79,11 @@ class ViewController: UIViewController {
         pageControl.numberOfPages = 4
         
         
-        let bar: UINavigationBar! = self.navigationController?.navigationBar
-        
-        bar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-        bar.shadowImage = UIImage()
-        bar.backgroundColor = UIColor.clear
+//        let bar: UINavigationBar! = self.navigationController?.navigationBar
+//
+//        bar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+//        bar.shadowImage = UIImage()
+//        bar.backgroundColor = UIColor.clear
         
         
     }
@@ -100,6 +99,10 @@ class ViewController: UIViewController {
         label.sizeToFit()
     }
     
+    @IBAction func showMyChallenge(_ sender: Any) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "MyChallengeViewController") as! MyChallengeViewController
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
     func createItems() -> [Character] {
         let characters = [
             Character(imageName: "wall-e", name: "Wall-E", movie: "Wall-E"),
@@ -171,7 +174,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
             let cell = tableView.dequeueReusableCell(withIdentifier: "MagazineTableViewCell", for: indexPath) as! MagazineTableViewCell
-            cell.title.text = "챌린저 제목"
+            cell.title.text = "챌린지 제목"
             cell.name.text = "개설자"
             cell.count.text = "8/100회"
             return cell
