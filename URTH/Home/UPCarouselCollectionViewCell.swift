@@ -16,7 +16,7 @@ class UPCarouselCollectionViewCell: UICollectionViewCell {
         super.init(coder: aDecoder)
         
         self.layer.cornerRadius = max(self.frame.size.width, self.frame.size.height) / 2
-        self.layer.borderWidth = 5
-        self.layer.borderColor = UIColor(red: 221.0/255.0, green: 228.0/255.0, blue: 194.0/255.0, alpha: 1.0).cgColor
+//        self.layer.borderWidth = 5
+//        self.layer.borderColor = UIColor(red: 221.0/255.0, green: 228.0/255.0, blue: 194.0/255.0, alpha: 1.0).cgColor
     }
 }

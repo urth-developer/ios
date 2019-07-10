@@ -16,6 +16,9 @@
 		1525273622D04CC400807845 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1525273522D04CC400807845 /* SearchTableViewCell.swift */; };
 		1525273822D04D9400807845 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1525273722D04D9400807845 /* Challenge.swift */; };
 		1525273A22D0637900807845 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1525273922D0637900807845 /* ProfileViewController.swift */; };
+		154F4A5322D35DF900905F1C /* WholeCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154F4A5222D35DF900905F1C /* WholeCategoryViewController.swift */; };
+		154F4A5522D3611400905F1C /* WholeCategory1TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154F4A5422D3611400905F1C /* WholeCategory1TableViewCell.swift */; };
+		154F4A5722D3612000905F1C /* WholeCategory2TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154F4A5622D3612000905F1C /* WholeCategory2TableViewCell.swift */; };
 		155188E922CC7ABD00D46663 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155188E822CC7ABD00D46663 /* AppDelegate.swift */; };
 		155188EB22CC7ABD00D46663 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155188EA22CC7ABD00D46663 /* ViewController.swift */; };
 		155188EE22CC7ABD00D46663 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 155188EC22CC7ABD00D46663 /* Main.storyboard */; };
@@ -36,7 +39,6 @@
 		1551891822CCA3E000D46663 /* OurViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1551891722CCA3E000D46663 /* OurViewController.swift */; };
 		1551891A22CCA3EC00D46663 /* MypageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1551891922CCA3EB00D46663 /* MypageViewController.swift */; };
 		1551891C22CCC0C700D46663 /* MagazineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1551891B22CCC0C600D46663 /* MagazineTableViewCell.swift */; };
-		1551891E22CCC0DE00D46663 /* MagazineHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1551891D22CCC0DE00D46663 /* MagazineHeaderTableViewCell.swift */; };
 		1551892322CF2C4400D46663 /* Sign.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1551892222CF2C4400D46663 /* Sign.storyboard */; };
 		1551892522CF2FFF00D46663 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1551892422CF2FFF00D46663 /* LoginViewController.swift */; };
 		1551892722CF33CB00D46663 /* SignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1551892622CF33CB00D46663 /* SignViewController.swift */; };
@@ -44,6 +46,8 @@
 		1551892C22CF4F5D00D46663 /* Create1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1551892B22CF4F5D00D46663 /* Create1ViewController.swift */; };
 		1551892E22CF4F6800D46663 /* Create2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1551892D22CF4F6800D46663 /* Create2ViewController.swift */; };
 		1551893022CF5E4D00D46663 /* Create3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1551892F22CF5E4D00D46663 /* Create3ViewController.swift */; };
+		1558291422D4DB66005F9D05 /* CertificateAllViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1558291322D4DB66005F9D05 /* CertificateAllViewController.swift */; };
+		1558291622D4DE0B005F9D05 /* CertificateAllCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1558291522D4DE0B005F9D05 /* CertificateAllCollectionViewCell.swift */; };
 		15A8B9B922D326B900D0896C /* OurFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A8B9B822D326B900D0896C /* OurFriendViewController.swift */; };
 		15A8B9BB22D3290600D0896C /* OurFriendCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A8B9BA22D3290600D0896C /* OurFriendCollectionViewCell.swift */; };
 		15A8B9BD22D334C400D0896C /* AddFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A8B9BC22D334C400D0896C /* AddFriendViewController.swift */; };
@@ -65,6 +69,9 @@
 		1525273522D04CC400807845 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		1525273722D04D9400807845 /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
 		1525273922D0637900807845 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		154F4A5222D35DF900905F1C /* WholeCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WholeCategoryViewController.swift; sourceTree = "<group>"; };
+		154F4A5422D3611400905F1C /* WholeCategory1TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WholeCategory1TableViewCell.swift; sourceTree = "<group>"; };
+		154F4A5622D3612000905F1C /* WholeCategory2TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WholeCategory2TableViewCell.swift; sourceTree = "<group>"; };
 		155188E522CC7ABD00D46663 /* URTH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = URTH.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		155188E822CC7ABD00D46663 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		155188EA22CC7ABD00D46663 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -87,7 +94,6 @@
 		1551891722CCA3E000D46663 /* OurViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OurViewController.swift; sourceTree = "<group>"; };
 		1551891922CCA3EB00D46663 /* MypageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageViewController.swift; sourceTree = "<group>"; };
 		1551891B22CCC0C600D46663 /* MagazineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineTableViewCell.swift; sourceTree = "<group>"; };
-		1551891D22CCC0DE00D46663 /* MagazineHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagazineHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		1551892222CF2C4400D46663 /* Sign.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Sign.storyboard; sourceTree = "<group>"; };
 		1551892422CF2FFF00D46663 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1551892622CF33CB00D46663 /* SignViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +101,8 @@
 		1551892B22CF4F5D00D46663 /* Create1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Create1ViewController.swift; sourceTree = "<group>"; };
 		1551892D22CF4F6800D46663 /* Create2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Create2ViewController.swift; sourceTree = "<group>"; };
 		1551892F22CF5E4D00D46663 /* Create3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Create3ViewController.swift; sourceTree = "<group>"; };
+		1558291322D4DB66005F9D05 /* CertificateAllViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificateAllViewController.swift; sourceTree = "<group>"; };
+		1558291522D4DE0B005F9D05 /* CertificateAllCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificateAllCollectionViewCell.swift; sourceTree = "<group>"; };
 		15A8B9B822D326B900D0896C /* OurFriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OurFriendViewController.swift; sourceTree = "<group>"; };
 		15A8B9BA22D3290600D0896C /* OurFriendCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OurFriendCollectionViewCell.swift; sourceTree = "<group>"; };
 		15A8B9BC22D334C400D0896C /* AddFriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendViewController.swift; sourceTree = "<group>"; };
@@ -164,8 +172,9 @@
 				155188FA22CC7D6C00D46663 /* UPCarouselFlowLayout.swift */,
 				155188FE22CC7EE000D46663 /* UPCarouselCollectionViewCell.swift */,
 				1551891B22CCC0C600D46663 /* MagazineTableViewCell.swift */,
-				1551891D22CCC0DE00D46663 /* MagazineHeaderTableViewCell.swift */,
 				1551892922CF455700D46663 /* CertificateViewController.swift */,
+				1558291322D4DB66005F9D05 /* CertificateAllViewController.swift */,
+				1558291522D4DE0B005F9D05 /* CertificateAllCollectionViewCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -186,6 +195,9 @@
 				1525273522D04CC400807845 /* SearchTableViewCell.swift */,
 				1525273722D04D9400807845 /* Challenge.swift */,
 				1500798022D2292B00E9F333 /* SearchPopupViewController.swift */,
+				154F4A5222D35DF900905F1C /* WholeCategoryViewController.swift */,
+				154F4A5422D3611400905F1C /* WholeCategory1TableViewCell.swift */,
+				154F4A5622D3612000905F1C /* WholeCategory2TableViewCell.swift */,
 			);
 			path = Whole;
 			sourceTree = "<group>";
@@ -370,6 +382,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-URTH/Pods-URTH-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Floaty/Floaty.framework",
+				"${BUILT_PRODUCTS_DIR}/MTCircularSlider/MTCircularSlider.framework",
 				"${BUILT_PRODUCTS_DIR}/TKRadarChart/TKRadarChart.framework",
 				"${BUILT_PRODUCTS_DIR}/UPCarouselFlowLayout/UPCarouselFlowLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework",
@@ -379,6 +392,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Floaty.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MTCircularSlider.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TKRadarChart.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UPCarouselFlowLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLPagerTabStrip.framework",
@@ -395,6 +409,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1558291422D4DB66005F9D05 /* CertificateAllViewController.swift in Sources */,
 				1551892522CF2FFF00D46663 /* LoginViewController.swift in Sources */,
 				1551891A22CCA3EC00D46663 /* MypageViewController.swift in Sources */,
 				1551892C22CF4F5D00D46663 /* Create1ViewController.swift in Sources */,
@@ -410,19 +425,22 @@
 				1551893022CF5E4D00D46663 /* Create3ViewController.swift in Sources */,
 				155188FF22CC7EE000D46663 /* UPCarouselCollectionViewCell.swift in Sources */,
 				150079A822D30B0000E9F333 /* OurMe1TableViewCell.swift in Sources */,
+				1558291622D4DE0B005F9D05 /* CertificateAllCollectionViewCell.swift in Sources */,
 				155188E922CC7ABD00D46663 /* AppDelegate.swift in Sources */,
 				1525273822D04D9400807845 /* Challenge.swift in Sources */,
 				150079A622D2FC2F00E9F333 /* OurMeViewController.swift in Sources */,
+				154F4A5322D35DF900905F1C /* WholeCategoryViewController.swift in Sources */,
 				1551890122CC8E8700D46663 /* Character.swift in Sources */,
 				1500798122D2292B00E9F333 /* SearchPopupViewController.swift in Sources */,
 				1551892A22CF455700D46663 /* CertificateViewController.swift in Sources */,
 				150079AC22D30B3600E9F333 /* OurMe2TableViewCell.swift in Sources */,
+				154F4A5522D3611400905F1C /* WholeCategory1TableViewCell.swift in Sources */,
 				155188FD22CC7DF000D46663 /* GradientView.swift in Sources */,
 				1551892E22CF4F6800D46663 /* Create2ViewController.swift in Sources */,
 				155188FB22CC7D6C00D46663 /* UPCarouselFlowLayout.swift in Sources */,
 				15A8B9BD22D334C400D0896C /* AddFriendViewController.swift in Sources */,
 				1551891822CCA3E000D46663 /* OurViewController.swift in Sources */,
-				1551891E22CCC0DE00D46663 /* MagazineHeaderTableViewCell.swift in Sources */,
+				154F4A5722D3612000905F1C /* WholeCategory2TableViewCell.swift in Sources */,
 				1525273422D04B6D00807845 /* SearchTableViewController.swift in Sources */,
 				1525273A22D0637900807845 /* ProfileViewController.swift in Sources */,
 				1551892722CF33CB00D46663 /* SignViewController.swift in Sources */,

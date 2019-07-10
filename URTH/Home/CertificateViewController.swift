@@ -7,27 +7,35 @@
 //
 
 import UIKit
+import MTCircularSlider
 
 class CertificateViewController: UIViewController {
 
+    @IBOutlet weak var circularSlider: MTCircularSlider!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setNavigationBarClear()
+        circularSlider.transform = circularSlider.transform.rotated(by: CGFloat.init(Double.pi/2))
+        circularSlider.isEnabled = false
 
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func showAnother(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+        let vc = storyboard?.instantiateViewController(withIdentifier: "CertificateAllViewController") as! CertificateAllViewController
+        self.navigationController?.pushViewController(vc, animated: true)
+        
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setNavigationBarClear() {
+        let bar: UINavigationBar! = self.navigationController?.navigationBar
+        
+        bar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        bar.shadowImage = UIImage()
+        bar.backgroundColor = UIColor.clear
     }
-    */
 
+    @IBAction func close(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
 }

@@ -9,6 +9,7 @@ target 'URTH' do
     pod 'XLPagerTabStrip', '~> 9.0'
     pod 'TKRadarChart'
     pod 'Floaty', '~> 4.2.0'
+    pod 'MTCircularSlider'
 
   # Pods for URTH
 

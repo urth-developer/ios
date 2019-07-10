@@ -104,7 +104,11 @@ class WholeViewController: UIViewController, FloatyDelegate {
         self.navigationController?.pushViewController(vc, animated: true)
         
     }
- 
+    @IBAction func showCategory(_ sender: UIButton) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "WholeCategoryViewController") as! WholeCategoryViewController
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
 }
 
 extension WholeViewController: UITableViewDelegate, UITableViewDataSource{
