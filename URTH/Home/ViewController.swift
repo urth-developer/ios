@@ -15,12 +15,25 @@ class ViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var pageControl: UIPageControl!
+    @IBOutlet weak var label: UILabel!
+    
+    let attributedString = NSMutableAttributedString(string: """
+3678명의 사람들과 함께
+공기 34L를 깨끗하게 하고
+나무 32그루를 살리고
+동물 34마리와 함께하며
+깨끗한 물 323L를 아끼고
+바다거북 34마리를 살렸어요
+어스에서는 작은 실천이 모여
+큰 변화를 만듭니다
+""")
+    
+    
     
     let picker = UIImagePickerController()
     
     fileprivate var items = [Character]()
     
-    @IBOutlet weak var gradientView: GradientView!
     var cellCenter : CGPoint?
     
     var currentPage: Int = 0 {
@@ -46,6 +59,7 @@ class ViewController: UIViewController {
         
         items = createItems()
         setupLayout()
+        setLabel()
         
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -58,25 +72,32 @@ class ViewController: UIViewController {
 
     }
     
+    
     func setupLayout() {
         let layout = self.collectionView.collectionViewLayout as! UPCarouselFlowLayout
         layout.spacingMode = UPCarouselFlowLayoutSpacingMode.overlap(visibleOffset: 30)
         
-        gradientView.clipsToBounds = true
-        gradientView.layer.shadowOffset = CGSize(width: 0, height: 3)
-        gradientView.layer.shadowRadius = 1
-        gradientView.layer.shadowColor = UIColor.black.cgColor
-        gradientView.layer.cornerRadius = gradientView.frame.height / 2
-        gradientView.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
-        
         pageControl.numberOfPages = 4
         
-//        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-//        self.navigationController?.navigationBar.shadowImage = UIImage()
-//        self.navigationController?.navigationBar.isTranslucent = true
-//        self.navigationController?.view.backgroundColor = .clear
+        
+        let bar: UINavigationBar! = self.navigationController?.navigationBar
+        
+        bar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        bar.shadowImage = UIImage()
+        bar.backgroundColor = UIColor.clear
         
         
+    }
+    
+    func setLabel() {
+        let paragraphStyle = NSMutableParagraphStyle()
+        
+        paragraphStyle.lineSpacing = 13 // Whatever line spacing you want in points
+        
+        attributedString.addAttribute(NSAttributedString.Key.paragraphStyle, value:paragraphStyle, range:NSMakeRange(0, attributedString.length))
+        
+        label.attributedText = attributedString
+        label.sizeToFit()
     }
     
     func createItems() -> [Character] {
@@ -139,37 +160,26 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource{
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
     }
     
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MagazineHeaderTableViewCell") as! MagazineHeaderTableViewCell
-        cell.titleLabel.text = "우리 모두 사라지_지마"
-        cell.subtitleLabel.text = "미세먼지 때문에 죽어여"
-        return cell.contentView
-    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
             let cell = tableView.dequeueReusableCell(withIdentifier: "MagazineTableViewCell", for: indexPath) as! MagazineTableViewCell
-            cell.magazineImageView.image = #imageLiteral(resourceName: "buzz")
             cell.title.text = "챌린저 제목"
             cell.name.text = "개설자"
             cell.count.text = "8/100회"
             return cell
         
     }
-    
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 60
-    }
-    
+ 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 120
+        return 150
     }
     
     
@@ -181,8 +191,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
 extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         dismiss(animated: false, completion: nil)
-        let vc = storyboard?.instantiateViewController(withIdentifier: "CertificateViewController") as! CertificateViewController
-        present(vc, animated: true, completion: nil)
+        let vc = storyboard?.instantiateViewController(withIdentifier: "certificateNavi")
+        present(vc!, animated: true, completion: nil)
 
     }
 }
