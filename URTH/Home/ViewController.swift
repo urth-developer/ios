@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var nickName: UILabel!
     
     let attributedString = NSMutableAttributedString(string: """
 3678명의 사람들과 함께
@@ -28,6 +29,7 @@ class ViewController: UIViewController {
 큰 변화를 만듭니다
 """)
     
+    let userdefaults = UserDefaults.standard
     
     let picker = UIImagePickerController()
     
@@ -50,9 +52,6 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.isHidden = true
-        print(scrollView.contentOffset)
-        scrollView.setContentOffset(CGPoint(x: 0, y: -100), animated: false)
-        print(scrollView.contentOffset)
 
     }
     
@@ -72,6 +71,11 @@ class ViewController: UIViewController {
         
         picker.delegate = self
         picker.sourceType = .camera
+        
+        if let userNickName = userdefaults.string(forKey: "nickname"){
+            nickName.text = userNickName
+            nickName.sizeToFit()
+        }
 
     }
     
