@@ -90,9 +90,9 @@ class WholeViewController: UIViewController, FloatyDelegate {
     }
     
     @objc func search(){
-//        let vc = storyboard?.instantiateViewController(withIdentifier: "SearchTableViewController") as! SearchTableViewController
-//        vc.challenges = challenges
-        let vc = storyboard?.instantiateViewController(withIdentifier: "SearchPopupViewController") as! SearchPopupViewController
+        let vc = storyboard?.instantiateViewController(withIdentifier: "SearchTableViewController") as! SearchTableViewController
+        vc.challenges = challenges
+//        let vc = storyboard?.instantiateViewController(withIdentifier: "SearchPopupViewController") as! SearchPopupViewController
         
 //        let transition = CATransition()
 //        transition.duration = 0.3

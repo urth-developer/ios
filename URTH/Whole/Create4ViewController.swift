@@ -22,6 +22,9 @@ class Create4ViewController: UIViewController {
         picker.delegate = self
         picker.sourceType = .photoLibrary
         
+        imageView.layer.borderWidth = 1
+        imageView.layer.borderColor = #colorLiteral(red: 0.6901267767, green: 0.6902446747, blue: 0.6901112795, alpha: 1)
+        
         let gesture = UITapGestureRecognizer(target: self, action: #selector(selectPhoto))
         imageView.addGestureRecognizer(gesture)
 
@@ -60,6 +63,9 @@ class Create4ViewController: UIViewController {
 
 extension Create4ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        imageView.contentMode = .scaleAspectFill
+        
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
             
             self.imageView.image = image

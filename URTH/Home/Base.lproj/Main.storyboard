@@ -32,7 +32,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="2000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rB3-Pf-Wxf">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rB3-Pf-Wxf">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="1951"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BMT-24-5zP">
@@ -62,7 +62,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="님이" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aTE-ki-hz4">
-                                                <rect key="frame" x="77" y="90" width="28" height="17"/>
+                                                <rect key="frame" x="77" y="90" width="27.5" height="17"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="17" id="eWS-RM-hLo"/>
                                                 </constraints>
@@ -70,6 +70,13 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="exV-2Q-Etu">
+                                                <rect key="frame" x="139.5" y="400" width="96" height="37"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="37" id="NNz-hx-yTS"/>
+                                                    <constraint firstAttribute="width" constant="96" id="VNj-PD-ZqA"/>
+                                                </constraints>
+                                            </pageControl>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="nHF-nL-MKI">
                                                 <rect key="frame" x="0.0" y="110" width="375" height="339"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -122,13 +129,6 @@
                                                     <action selector="showMyChallenge:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xCo-CY-KB3"/>
                                                 </connections>
                                             </button>
-                                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="exV-2Q-Etu">
-                                                <rect key="frame" x="139.5" y="449" width="96" height="37"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="96" id="1ba-aR-vAh"/>
-                                                    <constraint firstAttribute="height" constant="37" id="QfD-Bh-cjq"/>
-                                                </constraints>
-                                            </pageControl>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="14" translatesAutoresizingMaskIntoConstraints="NO" id="Dff-4y-WLd">
                                                 <rect key="frame" x="0.0" y="449" width="375" height="790"/>
                                                 <constraints>
@@ -272,13 +272,14 @@
                                             <constraint firstItem="RPi-OO-wRJ" firstAttribute="leading" secondItem="BMT-24-5zP" secondAttribute="leading" constant="27" id="5ZS-Or-LWY"/>
                                             <constraint firstItem="2n6-Mg-L9C" firstAttribute="leading" secondItem="BMT-24-5zP" secondAttribute="leading" id="5d9-AS-vWt"/>
                                             <constraint firstItem="rnu-qY-O4K" firstAttribute="leading" secondItem="BMT-24-5zP" secondAttribute="leading" constant="28" id="9t4-Gb-J2N"/>
+                                            <constraint firstItem="exV-2Q-Etu" firstAttribute="top" secondItem="BMT-24-5zP" secondAttribute="top" constant="400" id="AI9-4U-HBv"/>
                                             <constraint firstItem="Dff-4y-WLd" firstAttribute="centerX" secondItem="2n6-Mg-L9C" secondAttribute="centerX" id="Bg0-9w-TB0"/>
                                             <constraint firstItem="nHF-nL-MKI" firstAttribute="top" secondItem="BMT-24-5zP" secondAttribute="top" constant="110" id="CFC-ea-BwQ"/>
                                             <constraint firstItem="nHF-nL-MKI" firstAttribute="centerX" secondItem="BMT-24-5zP" secondAttribute="centerX" id="EY2-rF-0Mo"/>
+                                            <constraint firstItem="exV-2Q-Etu" firstAttribute="centerX" secondItem="BMT-24-5zP" secondAttribute="centerX" id="GFz-gY-oP9"/>
                                             <constraint firstItem="IUQ-w0-h7G" firstAttribute="top" secondItem="Dff-4y-WLd" secondAttribute="bottom" constant="8" id="Jsd-J7-WwJ"/>
                                             <constraint firstItem="IUQ-w0-h7G" firstAttribute="leading" secondItem="BMT-24-5zP" secondAttribute="leading" constant="23" id="LIm-zq-Eiz"/>
                                             <constraint firstItem="Dff-4y-WLd" firstAttribute="top" secondItem="2n6-Mg-L9C" secondAttribute="bottom" constant="2" id="QtY-Zi-orj"/>
-                                            <constraint firstItem="exV-2Q-Etu" firstAttribute="top" secondItem="nHF-nL-MKI" secondAttribute="bottom" id="SYi-gO-Ylv"/>
                                             <constraint firstAttribute="trailing" secondItem="W29-sO-J2X" secondAttribute="trailing" constant="24" id="UTg-Oe-g9k"/>
                                             <constraint firstItem="aTE-ki-hz4" firstAttribute="centerY" secondItem="rnu-qY-O4K" secondAttribute="centerY" id="Urf-8z-Odd"/>
                                             <constraint firstItem="aTE-ki-hz4" firstAttribute="leading" secondItem="rnu-qY-O4K" secondAttribute="trailing" constant="8" id="XLj-aH-pYg"/>
@@ -286,7 +287,6 @@
                                             <constraint firstAttribute="bottom" secondItem="T0J-0l-AdP" secondAttribute="bottom" constant="60" id="YxS-Yd-p1l"/>
                                             <constraint firstItem="Mhi-OJ-oLL" firstAttribute="trailing" secondItem="W29-sO-J2X" secondAttribute="trailing" id="aNw-07-S02"/>
                                             <constraint firstItem="Oue-o2-694" firstAttribute="top" secondItem="rnu-qY-O4K" secondAttribute="bottom" id="afc-zN-Mon"/>
-                                            <constraint firstItem="exV-2Q-Etu" firstAttribute="centerX" secondItem="nHF-nL-MKI" secondAttribute="centerX" id="drk-0p-QAx"/>
                                             <constraint firstItem="Mhi-OJ-oLL" firstAttribute="top" secondItem="W29-sO-J2X" secondAttribute="bottom" constant="3" id="jvK-TI-G1S"/>
                                             <constraint firstItem="T0J-0l-AdP" firstAttribute="centerX" secondItem="BMT-24-5zP" secondAttribute="centerX" id="k07-wS-1YK"/>
                                             <constraint firstItem="RPi-OO-wRJ" firstAttribute="top" secondItem="BMT-24-5zP" secondAttribute="top" constant="787" id="kIF-Um-bLO"/>
@@ -569,7 +569,7 @@
         <!--홈-->
         <scene sceneID="G6T-40-teK">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tN4-wR-kSB" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="mainNavi" automaticallyAdjustsScrollViewInsets="NO" id="tN4-wR-kSB" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="홈" image="btnHome" id="w1p-dt-b4O"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3u4-mL-B0O">

@@ -52,6 +52,7 @@
 		15A8B9BB22D3290600D0896C /* OurFriendCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A8B9BA22D3290600D0896C /* OurFriendCollectionViewCell.swift */; };
 		15A8B9BD22D334C400D0896C /* AddFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A8B9BC22D334C400D0896C /* AddFriendViewController.swift */; };
 		15A8B9BF22D337AC00D0896C /* AddFriendDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A8B9BE22D337AC00D0896C /* AddFriendDetailViewController.swift */; };
+		15C855B822D5E25A0024EC60 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C855B722D5E25A0024EC60 /* APIService.swift */; };
 		15EE30C122D5AF9B00244ACD /* MyChallengeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EE30C022D5AF9B00244ACD /* MyChallengeTableViewCell.swift */; };
 		15EE30C322D5AFC300244ACD /* MyChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15EE30C222D5AFC300244ACD /* MyChallengeViewController.swift */; };
 		15FC3A5622CF670E0020D34F /* Create4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FC3A5522CF670E0020D34F /* Create4ViewController.swift */; };
@@ -109,6 +110,7 @@
 		15A8B9BA22D3290600D0896C /* OurFriendCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OurFriendCollectionViewCell.swift; sourceTree = "<group>"; };
 		15A8B9BC22D334C400D0896C /* AddFriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendViewController.swift; sourceTree = "<group>"; };
 		15A8B9BE22D337AC00D0896C /* AddFriendDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendDetailViewController.swift; sourceTree = "<group>"; };
+		15C855B722D5E25A0024EC60 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		15EE30C022D5AF9B00244ACD /* MyChallengeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyChallengeTableViewCell.swift; sourceTree = "<group>"; };
 		15EE30C222D5AFC300244ACD /* MyChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyChallengeViewController.swift; sourceTree = "<group>"; };
 		15FC3A5522CF670E0020D34F /* Create4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Create4ViewController.swift; sourceTree = "<group>"; };
@@ -160,8 +162,7 @@
 				155188EF22CC7ABF00D46663 /* Assets.xcassets */,
 				155188F122CC7ABF00D46663 /* LaunchScreen.storyboard */,
 				155188F422CC7ABF00D46663 /* Info.plist */,
-				155188FC22CC7DF000D46663 /* GradientView.swift */,
-				1551890022CC8E8700D46663 /* Character.swift */,
+				15C855B622D5E2450024EC60 /* Service */,
 				1551892822CF3DBF00D46663 /* Util */,
 				1551890622CCA16500D46663 /* Font */,
 			);
@@ -258,8 +259,18 @@
 		1551892822CF3DBF00D46663 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				1551890022CC8E8700D46663 /* Character.swift */,
+				155188FC22CC7DF000D46663 /* GradientView.swift */,
 			);
 			path = Util;
+			sourceTree = "<group>";
+		};
+		15C855B622D5E2450024EC60 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				15C855B722D5E25A0024EC60 /* APIService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		4835059C70B31D4464321FBE /* Frameworks */ = {
@@ -387,8 +398,11 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-URTH/Pods-URTH-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Floaty/Floaty.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/MTCircularSlider/MTCircularSlider.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/TKRadarChart/TKRadarChart.framework",
 				"${BUILT_PRODUCTS_DIR}/UPCarouselFlowLayout/UPCarouselFlowLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework",
@@ -397,8 +411,11 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Floaty.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MTCircularSlider.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TKRadarChart.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UPCarouselFlowLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLPagerTabStrip.framework",
@@ -421,6 +438,7 @@
 				1551892C22CF4F5D00D46663 /* Create1ViewController.swift in Sources */,
 				1551891C22CCC0C700D46663 /* MagazineTableViewCell.swift in Sources */,
 				15EE30C122D5AF9B00244ACD /* MyChallengeTableViewCell.swift in Sources */,
+				15C855B822D5E25A0024EC60 /* APIService.swift in Sources */,
 				1525273222CFF90300807845 /* PopularTableViewCell.swift in Sources */,
 				1551891622CCA3D600D46663 /* WholeViewController.swift in Sources */,
 				15A8B9BB22D3290600D0896C /* OurFriendCollectionViewCell.swift in Sources */,

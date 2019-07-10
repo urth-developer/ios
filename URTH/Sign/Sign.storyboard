@@ -81,40 +81,36 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ratatouille" translatesAutoresizingMaskIntoConstraints="NO" id="6Ce-Ip-zFt">
-                                <rect key="frame" x="132" y="93" width="111" height="111"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K4T-n7-2Eh">
-                                <rect key="frame" x="180" y="610" width="15" height="1"/>
+                                <rect key="frame" x="180" y="603" width="15" height="1"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.69019607843137254" green="0.69019607843137254" blue="0.69019607843137254" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DI6-yk-8PW">
-                                <rect key="frame" x="143" y="619" width="90" height="27"/>
+                                <rect key="frame" x="143" y="612" width="90" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="NanumSquareOTFR" family="NanumSquareOTF" pointSize="13"/>
                                 <state key="normal" title="그냥 둘러볼래요!">
                                     <color key="titleColor" red="0.69019607839999997" green="0.69019607839999997" blue="0.69019607839999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <action selector="lookAround:" destination="j4u-Yx-M8G" eventType="touchUpInside" id="X6m-vd-fFk"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tiH-2a-qdS">
                                 <rect key="frame" x="84" y="480" width="206" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="btnLogin"/>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="6Ce-Ip-zFt">
+                                <rect key="frame" x="125" y="131" width="125" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="uej-1F-dDd"/>
                     </view>
-                    <navigationItem key="navigationItem" id="HBv-YX-FWz">
-                        <barButtonItem key="rightBarButtonItem" systemItem="stop" id="dzA-qp-hlZ">
-                            <color key="tintColor" red="0.1427610339" green="0.63817444670000001" blue="0.48098472279999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            <connections>
-                                <action selector="close:" destination="j4u-Yx-M8G" id="cEo-ET-gg8"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="HBv-YX-FWz"/>
                     <connections>
                         <segue destination="Rmt-Y3-fHs" kind="show" id="fwc-iL-prb"/>
                     </connections>
@@ -298,11 +294,11 @@
                                                 </constraints>
                                                 <state key="normal" image="btnStart"/>
                                             </button>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ratatouille" translatesAutoresizingMaskIntoConstraints="NO" id="ojI-PZ-Bj3">
-                                                <rect key="frame" x="133" y="28" width="111" height="111"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="ojI-PZ-Bj3">
+                                                <rect key="frame" x="125" y="66" width="125" height="35"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="111" id="6et-dY-pJm"/>
-                                                    <constraint firstAttribute="height" constant="111" id="VcW-uE-cEO"/>
+                                                    <constraint firstAttribute="width" constant="125" id="6et-dY-pJm"/>
+                                                    <constraint firstAttribute="height" constant="35" id="VcW-uE-cEO"/>
                                                 </constraints>
                                             </imageView>
                                         </subviews>
@@ -322,7 +318,7 @@
                                             <constraint firstItem="Wzd-ww-vog" firstAttribute="top" secondItem="7e0-mS-7yE" secondAttribute="bottom" constant="3" id="HLY-gR-Gi5"/>
                                             <constraint firstItem="6I7-kv-g4C" firstAttribute="top" secondItem="6ge-Ga-YtM" secondAttribute="bottom" constant="8" id="Jmv-Aj-Oqb"/>
                                             <constraint firstItem="Dox-Lj-VhF" firstAttribute="leading" secondItem="nM8-0V-gRr" secondAttribute="leading" id="KhI-0a-M6W"/>
-                                            <constraint firstItem="ojI-PZ-Bj3" firstAttribute="top" secondItem="c6k-vF-TVY" secondAttribute="top" constant="28" id="MDS-ob-Zyi"/>
+                                            <constraint firstItem="ojI-PZ-Bj3" firstAttribute="top" secondItem="c6k-vF-TVY" secondAttribute="top" constant="66" id="MDS-ob-Zyi"/>
                                             <constraint firstItem="24S-Ww-gkN" firstAttribute="centerX" secondItem="Wzd-ww-vog" secondAttribute="centerX" id="N3u-b9-3NQ"/>
                                             <constraint firstItem="gZd-Rf-eJa" firstAttribute="leading" secondItem="c6k-vF-TVY" secondAttribute="leading" id="NFp-NT-U9M"/>
                                             <constraint firstItem="gZd-Rf-eJa" firstAttribute="top" secondItem="c6k-vF-TVY" secondAttribute="top" constant="-65" id="QH5-Dn-8UU"/>
@@ -341,7 +337,7 @@
                                             <constraint firstAttribute="bottom" secondItem="24S-Ww-gkN" secondAttribute="bottom" constant="100" id="h13-uI-mxj"/>
                                             <constraint firstItem="7e0-mS-7yE" firstAttribute="top" secondItem="EQK-s9-uK5" secondAttribute="bottom" constant="8" id="kAh-ye-ld4"/>
                                             <constraint firstItem="Dox-Lj-VhF" firstAttribute="top" secondItem="nM8-0V-gRr" secondAttribute="bottom" constant="3" id="kVS-t1-rbx"/>
-                                            <constraint firstItem="ojI-PZ-Bj3" firstAttribute="centerX" secondItem="c6k-vF-TVY" secondAttribute="centerX" constant="1" id="kfy-On-rz0"/>
+                                            <constraint firstItem="ojI-PZ-Bj3" firstAttribute="centerX" secondItem="c6k-vF-TVY" secondAttribute="centerX" id="kfy-On-rz0"/>
                                             <constraint firstItem="T54-sn-cL1" firstAttribute="leading" secondItem="BfJ-Rd-eqG" secondAttribute="trailing" constant="21" id="l0t-fD-1NH"/>
                                             <constraint firstItem="pgf-JZ-Gvz" firstAttribute="centerY" secondItem="6I7-kv-g4C" secondAttribute="centerY" id="mR5-m1-s86"/>
                                             <constraint firstItem="suS-rh-Unn" firstAttribute="top" secondItem="KIk-XY-hHh" secondAttribute="bottom" constant="36" id="qcc-w6-tbF"/>
@@ -404,6 +400,6 @@
         <image name="iconPadlock" width="17" height="22.5"/>
         <image name="iconPerson" width="18.5" height="21.5"/>
         <image name="loginBg" width="375" height="297.5"/>
-        <image name="ratatouille" width="500" height="500"/>
+        <image name="logo" width="73" height="18"/>
     </resources>
 </document>

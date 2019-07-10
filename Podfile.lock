@@ -1,32 +1,44 @@
 PODS:
+  - Alamofire (4.8.2)
   - Floaty (4.2.0)
+  - Kingfisher (5.5.0)
   - MTCircularSlider (1.0.0)
+  - SwiftyJSON (5.0.0)
   - TKRadarChart (1.4.3)
   - UPCarouselFlowLayout (1.1.2)
   - XLPagerTabStrip (9.0.0)
 
 DEPENDENCIES:
+  - Alamofire
   - Floaty (~> 4.2.0)
+  - Kingfisher
   - MTCircularSlider
+  - SwiftyJSON
   - TKRadarChart
   - UPCarouselFlowLayout
   - XLPagerTabStrip (~> 9.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Alamofire
     - Floaty
+    - Kingfisher
     - MTCircularSlider
+    - SwiftyJSON
     - TKRadarChart
     - UPCarouselFlowLayout
     - XLPagerTabStrip
 
 SPEC CHECKSUMS:
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   Floaty: e2bd5a0f6f7f70899e26ff2da31081c8bee8d1b0
+  Kingfisher: 6fe5e67a90fd335e49b0f5c075ff55ac5ebedd94
   MTCircularSlider: ce0b277515dbc1b7b9163352103c368f53739c9e
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   TKRadarChart: 9e11cba496e47d60d5c5baced04ed8e35cdc9073
   UPCarouselFlowLayout: 4c7d2c43a10ebb1597bde502a53699d378341dad
   XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
-PODFILE CHECKSUM: 104bb8e5bd4a747622cbe6c5587a172e5e3f2235
+PODFILE CHECKSUM: 016833100d4ad847818d42ef98b4209b374b86f7
 
 COCOAPODS: 1.5.3
