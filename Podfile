@@ -10,6 +10,9 @@ target 'URTH' do
     pod 'TKRadarChart'
     pod 'Floaty', '~> 4.2.0'
     pod 'MTCircularSlider'
+    pod 'Alamofire'
+    pod 'SwiftyJSON'
+    pod 'Kingfisher'
 
   # Pods for URTH
 

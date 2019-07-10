@@ -23,13 +23,14 @@ class LoginViewController: UIViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
-   
-    @IBAction func close(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-    }
+  
     
     @IBAction func goSign(_ sender: Any) {
         let vc = UIStoryboard(name: "Sign", bundle: nil).instantiateViewController(withIdentifier: "SignViewController") as! SignViewController
         self.navigationController?.pushViewController(vc, animated: true)
+    }
+    @IBAction func lookAround(_ sender: Any) {
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "mainNavi")
+        present(vc, animated: true, completion: nil)
     }
 }

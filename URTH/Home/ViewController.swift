@@ -50,6 +50,10 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.isHidden = true
+        print(scrollView.contentOffset)
+        scrollView.setContentOffset(CGPoint(x: 0, y: -100), animated: false)
+        print(scrollView.contentOffset)
+
     }
     
     
