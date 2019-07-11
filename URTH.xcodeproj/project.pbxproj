@@ -48,6 +48,11 @@
 		1551893022CF5E4D00D46663 /* Create3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1551892F22CF5E4D00D46663 /* Create3ViewController.swift */; };
 		1558291422D4DB66005F9D05 /* CertificateAllViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1558291322D4DB66005F9D05 /* CertificateAllViewController.swift */; };
 		1558291622D4DE0B005F9D05 /* CertificateAllCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1558291522D4DE0B005F9D05 /* CertificateAllCollectionViewCell.swift */; };
+		159BA01222D762F5009DC8F9 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159BA01122D762F5009DC8F9 /* HomeService.swift */; };
+		159BA01522D763FD009DC8F9 /* Summary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159BA01422D763FD009DC8F9 /* Summary.swift */; };
+		159BA01722D769B7009DC8F9 /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159BA01622D769B7009DC8F9 /* Favorite.swift */; };
+		159BA01922D76B03009DC8F9 /* Together.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159BA01822D76B03009DC8F9 /* Together.swift */; };
+		159BA01B22D76BEE009DC8F9 /* ChallengeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159BA01A22D76BEE009DC8F9 /* ChallengeService.swift */; };
 		15A8B9B922D326B900D0896C /* OurFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A8B9B822D326B900D0896C /* OurFriendViewController.swift */; };
 		15A8B9BB22D3290600D0896C /* OurFriendCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A8B9BA22D3290600D0896C /* OurFriendCollectionViewCell.swift */; };
 		15A8B9BD22D334C400D0896C /* AddFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A8B9BC22D334C400D0896C /* AddFriendViewController.swift */; };
@@ -108,6 +113,11 @@
 		1551892F22CF5E4D00D46663 /* Create3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Create3ViewController.swift; sourceTree = "<group>"; };
 		1558291322D4DB66005F9D05 /* CertificateAllViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificateAllViewController.swift; sourceTree = "<group>"; };
 		1558291522D4DE0B005F9D05 /* CertificateAllCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificateAllCollectionViewCell.swift; sourceTree = "<group>"; };
+		159BA01122D762F5009DC8F9 /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
+		159BA01422D763FD009DC8F9 /* Summary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Summary.swift; sourceTree = "<group>"; };
+		159BA01622D769B7009DC8F9 /* Favorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorite.swift; sourceTree = "<group>"; };
+		159BA01822D76B03009DC8F9 /* Together.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Together.swift; sourceTree = "<group>"; };
+		159BA01A22D76BEE009DC8F9 /* ChallengeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeService.swift; sourceTree = "<group>"; };
 		15A8B9B822D326B900D0896C /* OurFriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OurFriendViewController.swift; sourceTree = "<group>"; };
 		15A8B9BA22D3290600D0896C /* OurFriendCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OurFriendCollectionViewCell.swift; sourceTree = "<group>"; };
 		15A8B9BC22D334C400D0896C /* AddFriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendViewController.swift; sourceTree = "<group>"; };
@@ -176,6 +186,7 @@
 		1551890222CCA04A00D46663 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				159BA01322D763AC009DC8F9 /* Model */,
 				155188EC22CC7ABD00D46663 /* Main.storyboard */,
 				155188EA22CC7ABD00D46663 /* ViewController.swift */,
 				155188FA22CC7D6C00D46663 /* UPCarouselFlowLayout.swift */,
@@ -270,11 +281,23 @@
 			path = Util;
 			sourceTree = "<group>";
 		};
+		159BA01322D763AC009DC8F9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				159BA01422D763FD009DC8F9 /* Summary.swift */,
+				159BA01622D769B7009DC8F9 /* Favorite.swift */,
+				159BA01822D76B03009DC8F9 /* Together.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		15C855B622D5E2450024EC60 /* Service */ = {
 			isa = PBXGroup;
 			children = (
 				15C855B722D5E25A0024EC60 /* APIService.swift */,
 				15C855B922D5EAD30024EC60 /* SignService.swift */,
+				159BA01122D762F5009DC8F9 /* HomeService.swift */,
+				159BA01A22D76BEE009DC8F9 /* ChallengeService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -452,6 +475,8 @@
 				15FC3A5822CF6A2A0020D34F /* Create5ViewController.swift in Sources */,
 				155188EB22CC7ABD00D46663 /* ViewController.swift in Sources */,
 				15C855BC22D5EC950024EC60 /* Extensions.swift in Sources */,
+				159BA01522D763FD009DC8F9 /* Summary.swift in Sources */,
+				159BA01722D769B7009DC8F9 /* Favorite.swift in Sources */,
 				1525273622D04CC400807845 /* SearchTableViewCell.swift in Sources */,
 				15FC3A5A22CF86650020D34F /* Create6ViewController.swift in Sources */,
 				1551893022CF5E4D00D46663 /* Create3ViewController.swift in Sources */,
@@ -460,6 +485,7 @@
 				1558291622D4DE0B005F9D05 /* CertificateAllCollectionViewCell.swift in Sources */,
 				155188E922CC7ABD00D46663 /* AppDelegate.swift in Sources */,
 				15EE30C322D5AFC300244ACD /* MyChallengeViewController.swift in Sources */,
+				159BA01B22D76BEE009DC8F9 /* ChallengeService.swift in Sources */,
 				1525273822D04D9400807845 /* Challenge.swift in Sources */,
 				150079A622D2FC2F00E9F333 /* OurMeViewController.swift in Sources */,
 				154F4A5322D35DF900905F1C /* WholeCategoryViewController.swift in Sources */,
@@ -469,11 +495,13 @@
 				1551892A22CF455700D46663 /* CertificateViewController.swift in Sources */,
 				150079AC22D30B3600E9F333 /* OurMe2TableViewCell.swift in Sources */,
 				154F4A5522D3611400905F1C /* WholeCategory1TableViewCell.swift in Sources */,
+				159BA01922D76B03009DC8F9 /* Together.swift in Sources */,
 				155188FD22CC7DF000D46663 /* GradientView.swift in Sources */,
 				1551892E22CF4F6800D46663 /* Create2ViewController.swift in Sources */,
 				155188FB22CC7D6C00D46663 /* UPCarouselFlowLayout.swift in Sources */,
 				15A8B9BD22D334C400D0896C /* AddFriendViewController.swift in Sources */,
 				1551891822CCA3E000D46663 /* OurViewController.swift in Sources */,
+				159BA01222D762F5009DC8F9 /* HomeService.swift in Sources */,
 				154F4A5722D3612000905F1C /* WholeCategory2TableViewCell.swift in Sources */,
 				1525273422D04B6D00807845 /* SearchTableViewController.swift in Sources */,
 				1525273A22D0637900807845 /* ProfileViewController.swift in Sources */,

@@ -54,6 +54,7 @@ extension LoginViewController{
     func login() {
         SignService.login(id: gsno(id.text), password: gsno(password.text)) { (message) in
             if message == "success"{
+                print("로그인 성공!!")
                 let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "mainTab")
                 self.present(vc, animated: true, completion: nil)
             }else if message == "failure"{

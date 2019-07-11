@@ -8,9 +8,10 @@
 
 import UIKit
 import UPCarouselFlowLayout
+import Kingfisher
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var tableView: UITableView!
@@ -18,7 +19,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var nickName: UILabel!
     
-    let attributedString = NSMutableAttributedString(string: """
+    var attributedString = NSMutableAttributedString(string: """
 3678명의 사람들과 함께
 공기 34L를 깨끗하게 하고
 나무 32그루를 살리고
@@ -33,13 +34,11 @@ class ViewController: UIViewController {
     
     let picker = UIImagePickerController()
     
-    fileprivate var items = [Character]()
-    
     var cellCenter : CGPoint?
     
     var currentPage: Int = 0 {
         didSet {
-            let character = self.items[self.currentPage]
+            let character = self.myFavoriteChallenges[self.currentPage]
         }
     }
     
@@ -50,18 +49,22 @@ class ViewController: UIViewController {
         return pageSize
     }
     
+    var myFavoriteChallenges: [FavoriteChallenge] = []
+    
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.isHidden = true
-
+        print("-------------------------")
+        getSummary()
+        getFavoriteChallenge()
+        
+        
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        items = createItems()
         setupLayout()
-        setLabel()
         
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -76,7 +79,7 @@ class ViewController: UIViewController {
             nickName.text = userNickName
             nickName.sizeToFit()
         }
-
+        
     }
     
     
@@ -85,14 +88,6 @@ class ViewController: UIViewController {
         layout.spacingMode = UPCarouselFlowLayoutSpacingMode.overlap(visibleOffset: 30)
         
         pageControl.numberOfPages = 4
-        
-        
-//        let bar: UINavigationBar! = self.navigationController?.navigationBar
-//
-//        bar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-//        bar.shadowImage = UIImage()
-//        bar.backgroundColor = UIColor.clear
-        
         
     }
     
@@ -117,14 +112,14 @@ class ViewController: UIViewController {
             Character(imageName: "nemo", name: "Nemo", movie: "Finding Nemo"),
             Character(imageName: "ratatouille", name: "Remy", movie: "Ratatouille"),
             Character(imageName: "buzz", name: "Buzz Lightyear", movie: "Toy Story"),
-//            Character(imageName: "monsters", name: "Mike & Sullivan", movie: "Monsters Inc."),
-//            Character(imageName: "brave", name: "Merida", movie: "Brave")
+            //            Character(imageName: "monsters", name: "Mike & Sullivan", movie: "Monsters Inc."),
+            //            Character(imageName: "brave", name: "Merida", movie: "Brave")
         ]
         return characters
     }
-
     
-
+    
+    
 }
 
 // CollectionView
@@ -135,20 +130,20 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return items.count
+        return myFavoriteChallenges.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "UPCarouselCollectionViewCell", for: indexPath) as! UPCarouselCollectionViewCell
-        let character = items[(indexPath as NSIndexPath).row]
-        cell.image.image = UIImage(named: character.imageName)
+        let character = myFavoriteChallenges[(indexPath as NSIndexPath).row]
+        cell.image.kf.setImage(with: URL(string: myFavoriteChallenges[indexPath.row].image), placeholder: UIImage())
         cellCenter = cell.center
         
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let character = items[(indexPath as NSIndexPath).row]
+        let character = myFavoriteChallenges[(indexPath as NSIndexPath).row]
         let alert = UIAlertController(title: character.name, message: nil, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         //present(alert, animated: true, completion: nil)
@@ -181,14 +176,14 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-            let cell = tableView.dequeueReusableCell(withIdentifier: "MagazineTableViewCell", for: indexPath) as! MagazineTableViewCell
-            cell.title.text = "챌린지 제목"
-            cell.name.text = "개설자"
-            cell.count.text = "8/100회"
-            return cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MagazineTableViewCell", for: indexPath) as! MagazineTableViewCell
+        cell.title.text = "챌린지 제목"
+        cell.name.text = "개설자"
+        cell.count.text = "8/100회"
+        return cell
         
     }
- 
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 150
     }
@@ -201,10 +196,27 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
 
 extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        dismiss(animated: false, completion: nil)
-        let vc = storyboard?.instantiateViewController(withIdentifier: "certificateNavi")
-        present(vc!, animated: true, completion: nil)
+        
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
 
+            ChallengeService.certificateChallenge(idx: "1", image: image) { (message) in
+                if message == "success"{
+                    print("챌린지 인증 성공!!")
+                    self.dismiss(animated: false, completion: nil)
+                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "certificateNavi")
+                    self.present(vc!, animated: true, completion: nil)
+                }else{
+                    print("챌린지 인증 실패!!")
+                    self.dismiss(animated: false, completion: nil)
+                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "certificateNavi")
+                    self.present(vc!, animated: true, completion: nil)
+                }
+            }
+
+        }
+
+        
+        
     }
 }
 
@@ -224,5 +236,32 @@ extension ViewController: UIScrollViewDelegate {
             
         }
         
+    }
+}
+
+// Network
+
+extension ViewController{
+    func getSummary(){
+        HomeService.summary { (data) in
+            self.attributedString = NSMutableAttributedString(string: """
+                \(data.totalUserCount)명의 사람들과 함께
+                공기 \(data.authCountsByCategory.category1)L를 깨끗하게 하고
+                나무 \(data.authCountsByCategory.category2)그루를 살리고
+                동물 \(data.authCountsByCategory.category3)마리와 함께하며
+                깨끗한 물 \(data.authCountsByCategory.category4)L를 아끼고
+                바다거북 \(data.authCountsByCategory.category5)마리를 살렸어요
+                어스에서는 작은 실천이 모여
+                큰 변화를 만듭니다
+                """)
+            self.setLabel()
+        }
+    }
+    
+    func getFavoriteChallenge(){
+        HomeService.favoriteChallenge { (data) in
+            self.myFavoriteChallenges = data
+            self.collectionView.reloadData()
+        }
     }
 }
