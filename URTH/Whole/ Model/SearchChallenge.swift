@@ -15,7 +15,6 @@ struct SearchChallenge: Codable {
     let data: [SearchChallengeData]
 }
 
-// MARK: - Datum
 struct SearchChallengeData: Codable {
     let challengeIdx: Int
     let name, image: String
