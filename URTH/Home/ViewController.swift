@@ -50,6 +50,7 @@ class ViewController: UIViewController {
     }
     
     var myFavoriteChallenges: [FavoriteData] = []
+    var todayChallenges: [TodayData] = []
     var currentFavoriteIndex: Int = 1
     
     let userdefault = UserDefaults.standard
@@ -59,6 +60,7 @@ class ViewController: UIViewController {
         print("-------------------------")
         getSummary()
         getFavoriteChallenge()
+        getTodayChallenge()
         
     }
     
@@ -171,15 +173,19 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return todayChallenges.count
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "MagazineTableViewCell", for: indexPath) as! MagazineTableViewCell
-        cell.title.text = "챌린지 제목"
-        cell.name.text = "개설자"
+        cell.title.text = todayChallenges[indexPath.row].name
+        if let creator = todayChallenges[indexPath.row].creator{
+            cell.name.text = creator
+        }else{
+            cell.name.text = "URTH"
+        }
         cell.count.text = "8/100회"
         return cell
         
@@ -205,6 +211,8 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
                     print("챌린지 인증 성공!!")
                     self.dismiss(animated: false, completion: nil)
                     let vc = self.storyboard?.instantiateViewController(withIdentifier: "certificateNavi")
+                    let certificateVC = self.storyboard?.instantiateViewController(withIdentifier: "CertificateViewController") as! CertificateViewController
+                    certificateVC.category = self.currentFavoriteIndex
                     self.present(vc!, animated: true, completion: nil)
                 }else if message == "failure"{
                     print("챌린지 인증 실패!!")
@@ -267,6 +275,14 @@ extension ViewController{
             print("즐겨찾기 가져오기 성공!!")
             self.myFavoriteChallenges = data
             self.collectionView.reloadData()
+        }
+    }
+    
+    func getTodayChallenge(){
+        HomeService.todayChallengeList { (data) in
+            print("오늘의 챌린지 가져오기 성공!!")
+            self.todayChallenges = data
+            self.tableView.reloadData()
         }
     }
 }

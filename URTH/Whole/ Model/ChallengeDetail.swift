@@ -15,7 +15,6 @@ struct ChallengeDetail: Codable {
     let data: ChallengeDetailData
 }
 
-// MARK: - DataClass
 struct ChallengeDetailData: Codable {
     let creator: String
     let challengeIdx: Int

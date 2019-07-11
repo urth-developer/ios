@@ -102,7 +102,11 @@ extension WholeViewController: UITableViewDelegate, UITableViewDataSource{
         let cell = tableView.dequeueReusableCell(withIdentifier: "PopularTableViewCell", for: indexPath) as! PopularTableViewCell
         cell.mainImage.kf.setImage(with: URL(string: top10challenges[indexPath.row].image), placeholder: UIImage())
         cell.titleLabel.text = top10challenges[indexPath.row].name
-//        cell.nameLabel.text = top10challenges[indexPath.row].name
+        if let creator = top10challenges[indexPath.row].creator{
+            cell.nameLabel.text = creator
+        }else{
+            cell.nameLabel.text = "URTH"
+        }
         cell.countLabel.text = "총 \(top10challenges[indexPath.row].count)회"
         
         return cell

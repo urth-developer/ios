@@ -15,7 +15,6 @@ struct ChallengeComment: Codable {
     let data: [ChallengeCommentData]
 }
 
-// MARK: - Datum
 struct ChallengeCommentData: Codable {
     let commentIdx, userIdx, challengeIdx: Int
     let comment, time: String

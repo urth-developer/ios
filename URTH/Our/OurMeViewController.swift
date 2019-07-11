@@ -43,8 +43,16 @@ extension OurMeViewController: UITableViewDelegate, UITableViewDataSource{
         if indexPath.row == 0{
             let cell = tableView.dequeueReusableCell(withIdentifier: "OurMe1TableViewCell", for: indexPath) as! OurMe1TableViewCell
             
-            cell.profileImage.kf.setImage(with: URL(string: myInfo!.profileImg), placeholder: UIImage())
-            cell.nickName.text = myInfo!.nickname
+            if let image = myInfo?.profileImg{
+                cell.profileImage.kf.setImage(with: URL(string: myInfo!.profileImg), placeholder: UIImage())
+            }else{
+                cell.profileImage.image = #imageLiteral(resourceName: "buzz")
+            }
+            if let nickname = myInfo?.nickname{
+                cell.nickName.text = nickname
+            }else{
+                cell.nickName.text = ""
+            }
             cell.level.text = "(Level. \(myInfo!.level)"
             cell.count.text = "총 \(myInfo!.userSuccessCount)회 인증"
             //cell.nickName.text = myTimeLines[indexPath.row]

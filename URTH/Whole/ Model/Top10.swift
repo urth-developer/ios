@@ -9,17 +9,16 @@
 import Foundation
 
 struct Top10: Codable {
-    let data: [Top10Challenge]
-    let status: Int
     let success: Bool
+    let status: Int
+    let data: [Top10Challenge]
     let message: String
 }
 
 struct Top10Challenge: Codable {
-    let creator: String?
     let image: String
-    let category: String
-    let count, machineLearningCategory: Int
-    let name, explanation: String
+    let name: String
+    let count: Int
+    let creator: String?
     let challengeIdx: Int
 }
