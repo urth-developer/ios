@@ -8,11 +8,12 @@
 
 import UIKit
 import Floaty
+import Kingfisher
 
 class WholeViewController: UIViewController, FloatyDelegate {
 
     @IBOutlet weak var tableView: UITableView!
-    var challenges: [Challenge] = []
+    var top10challenges: [Top10Challenge] = []
     var floaty = Floaty()
     
     override func viewDidLoad() {
@@ -30,10 +31,8 @@ class WholeViewController: UIViewController, FloatyDelegate {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        initChallenges()
-        self.navigationController?.title = "모두의 어스"
-
-        //self.navigationController?.navigationBar.topItem?.title = "모두의 어스"
+        getTop10()
+        self.navigationController?.title = "챌린지"
 
     }
     
@@ -45,16 +44,6 @@ class WholeViewController: UIViewController, FloatyDelegate {
         let gesture = UITapGestureRecognizer(target: self, action: #selector(create))
         floaty.addGestureRecognizer(gesture)
         
-//        let item = FloatyItem()
-//        item.hasShadow = false
-//        item.buttonColor = UIColor.clear
-//        item.circleShadowColor = UIColor.red
-//        //        item.titleShadowColor = UIColor.blue
-//        //        item.titleLabelPosition = .right
-//        //        item.title = "titlePosition right"
-//        item.handler = { item in
-//
-//        }
         
         floaty.hasShadow = false
         //floaty.addItem(item: item)
@@ -76,30 +65,23 @@ class WholeViewController: UIViewController, FloatyDelegate {
 //        present(vc!, animated: true, completion: nil)
 //    }
     
-    func initChallenges(){
-        challenges.append(Challenge(title: "가나다", name: "이사람", count: 10, image: #imageLiteral(resourceName: "monsters")))
-        challenges.append(Challenge(title: "나다다", name: "저사람", count: 15, image: #imageLiteral(resourceName: "brave")))
-        challenges.append(Challenge(title: "나라다", name: "그사람", count: 20, image: #imageLiteral(resourceName: "monsters")))
-        challenges.append(Challenge(title: "가지마", name: "저사람", count: 30, image: #imageLiteral(resourceName: "wall-e")))
-        challenges.append(Challenge(title: "다나피", name: "작성자", count: 5, image: #imageLiteral(resourceName: "nemo")))
-        challenges.append(Challenge(title: "하나라", name: "이사람", count: 200, image: #imageLiteral(resourceName: "monsters")))
-        challenges.append(Challenge(title: "바나다", name: "작성자", count: 116, image: #imageLiteral(resourceName: "buzz")))
-        challenges.append(Challenge(title: "가가나다", name: "그사람", count: 30, image: #imageLiteral(resourceName: "monsters")))
-        challenges.append(Challenge(title: "갑니나다", name: "저사람", count: 5000, image: #imageLiteral(resourceName: "wall-e")))
-        challenges.append(Challenge(title: "크크나다", name: "작성자", count: 10, image: #imageLiteral(resourceName: "nemo")))
-    }
+//    func initChallenges(){
+//        challenges.append(Challenge(title: "가나다", name: "이사람", count: 10, image: #imageLiteral(resourceName: "monsters")))
+//        challenges.append(Challenge(title: "나다다", name: "저사람", count: 15, image: #imageLiteral(resourceName: "brave")))
+//        challenges.append(Challenge(title: "나라다", name: "그사람", count: 20, image: #imageLiteral(resourceName: "monsters")))
+//        challenges.append(Challenge(title: "가지마", name: "저사람", count: 30, image: #imageLiteral(resourceName: "wall-e")))
+//        challenges.append(Challenge(title: "다나피", name: "작성자", count: 5, image: #imageLiteral(resourceName: "nemo")))
+//        challenges.append(Challenge(title: "하나라", name: "이사람", count: 200, image: #imageLiteral(resourceName: "monsters")))
+//        challenges.append(Challenge(title: "바나다", name: "작성자", count: 116, image: #imageLiteral(resourceName: "buzz")))
+//        challenges.append(Challenge(title: "가가나다", name: "그사람", count: 30, image: #imageLiteral(resourceName: "monsters")))
+//        challenges.append(Challenge(title: "갑니나다", name: "저사람", count: 5000, image: #imageLiteral(resourceName: "wall-e")))
+//        challenges.append(Challenge(title: "크크나다", name: "작성자", count: 10, image: #imageLiteral(resourceName: "nemo")))
+//    }
     
     @objc func search(){
         let vc = storyboard?.instantiateViewController(withIdentifier: "SearchTableViewController") as! SearchTableViewController
-        vc.challenges = challenges
-//        let vc = storyboard?.instantiateViewController(withIdentifier: "SearchPopupViewController") as! SearchPopupViewController
-        
-//        let transition = CATransition()
-//        transition.duration = 0.3
-//        transition.type = CATransitionType.push
-//        transition.subtype = CATransitionSubtype.fromBottom
-//        view.window!.layer.add(transition, forKey: kCATransition)
-//        present(vc!, animated: false, completion: nil)
+        //vc.challenges = challenges
+
         
         self.navigationController?.pushViewController(vc, animated: true)
         
@@ -113,15 +95,15 @@ class WholeViewController: UIViewController, FloatyDelegate {
 
 extension WholeViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return challenges.count
+        return top10challenges.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PopularTableViewCell", for: indexPath) as! PopularTableViewCell
-        cell.mainImage.image = challenges[indexPath.row].image
-        cell.titleLabel.text = challenges[indexPath.row].title
-        cell.nameLabel.text = challenges[indexPath.row].name
-        cell.countLabel.text = "총 \(challenges[indexPath.row].count)회"
+        cell.mainImage.kf.setImage(with: URL(string: top10challenges[indexPath.row].image), placeholder: UIImage())
+        cell.titleLabel.text = top10challenges[indexPath.row].name
+//        cell.nameLabel.text = top10challenges[indexPath.row].name
+        cell.countLabel.text = "총 \(top10challenges[indexPath.row].count)회"
         
         return cell
     }
@@ -152,3 +134,13 @@ extension WholeViewController: UIScrollViewDelegate {
     }
 }
 
+// Network
+
+extension WholeViewController{
+    func getTop10(){
+        WholeService.top10Challenge { (challenges) in
+            self.top10challenges = challenges
+            self.tableView.reloadData()
+        }
+    }
+}

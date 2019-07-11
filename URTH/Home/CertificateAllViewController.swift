@@ -13,6 +13,10 @@ class CertificateAllViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     let reportAlert = UIAlertController(title: nil, message: "정말 신고하시겠습니까?", preferredStyle: .alert)
+    
+    var certificateList: [ReportChallenge] = []
+    
+    let userdefault = UserDefaults.standard
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +30,10 @@ class CertificateAllViewController: UIViewController {
         self.navigationController?.navigationItem.backBarButtonItem?.image = #imageLiteral(resourceName: "btnBack")
         self.navigationController?.navigationItem.backBarButtonItem?.tintColor = #colorLiteral(red: 0.3993381858, green: 0.4123505652, blue: 0.4321975112, alpha: 1)
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        getReportList()
     }
     
     func initReport(){
@@ -42,12 +50,14 @@ class CertificateAllViewController: UIViewController {
 
 extension CertificateAllViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 9
+        return certificateList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CertificateAllCollectionViewCell", for: indexPath) as! CertificateAllCollectionViewCell
         cell.delegate = self
+        
+        cell.mainImage.kf.setImage(with: URL(string: certificateList[indexPath.row].image), placeholder: UIImage())
         return cell
     }
     
@@ -74,5 +84,17 @@ extension CertificateAllViewController: CertificateCellDelegate{
         actionSheet.addAction(UIAlertAction(title: "취소", style: .default, handler: nil))
         
         present(actionSheet, animated: true, completion: nil)
+    }
+}
+
+// Network
+
+extension CertificateAllViewController{
+    func getReportList(){
+        let index = userdefault.integer(forKey: "currentCertificateIndex")
+        ChallengeService.reportList(idx: "\(index)") { (challenges) in
+            self.certificateList = challenges
+            self.collectionView.reloadData()
+        }
     }
 }

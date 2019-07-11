@@ -49,14 +49,16 @@ class ViewController: UIViewController {
         return pageSize
     }
     
-    var myFavoriteChallenges: [FavoriteChallenge] = []
+    var myFavoriteChallenges: [FavoriteData] = []
+    var currentFavoriteIndex: Int = 1
+    
+    let userdefault = UserDefaults.standard
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.isHidden = true
         print("-------------------------")
         getSummary()
         getFavoriteChallenge()
-        
         
     }
     
@@ -79,7 +81,7 @@ class ViewController: UIViewController {
             nickName.text = userNickName
             nickName.sizeToFit()
         }
-        
+                
     }
     
     
@@ -144,9 +146,8 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let character = myFavoriteChallenges[(indexPath as NSIndexPath).row]
-        let alert = UIAlertController(title: character.name, message: nil, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        //present(alert, animated: true, completion: nil)
+        currentFavoriteIndex = myFavoriteChallenges[indexPath.row].challengeIdx
+        userdefault.setValue(currentFavoriteIndex, forKey: "currentCertificateIndex")
         present(picker, animated: true, completion: nil)
     }
     
@@ -199,24 +200,26 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
         
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
 
-            ChallengeService.certificateChallenge(idx: "1", image: image) { (message) in
+            ChallengeService.certificateChallenge(idx: "\(self.currentFavoriteIndex)", image: image) { (message) in
                 if message == "success"{
                     print("챌린지 인증 성공!!")
                     self.dismiss(animated: false, completion: nil)
                     let vc = self.storyboard?.instantiateViewController(withIdentifier: "certificateNavi")
                     self.present(vc!, animated: true, completion: nil)
-                }else{
+                }else if message == "failure"{
                     print("챌린지 인증 실패!!")
                     self.dismiss(animated: false, completion: nil)
-                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "certificateNavi")
-                    self.present(vc!, animated: true, completion: nil)
+                    let alert = UIAlertController(title: "챌린지 인증 실패", message: "다시 시도해주세요", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "확인", style: .default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+//                    self.dismiss(animated: false, completion: nil)
+//                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "certificateNavi")
+//                    self.present(vc!, animated: true, completion: nil)
                 }
             }
 
         }
 
-        
-        
     }
 }
 
@@ -244,6 +247,7 @@ extension ViewController: UIScrollViewDelegate {
 extension ViewController{
     func getSummary(){
         HomeService.summary { (data) in
+            print("어스 요약 가져오기 성공!!")
             self.attributedString = NSMutableAttributedString(string: """
                 \(data.totalUserCount)명의 사람들과 함께
                 공기 \(data.authCountsByCategory.category1)L를 깨끗하게 하고
@@ -260,6 +264,7 @@ extension ViewController{
     
     func getFavoriteChallenge(){
         HomeService.favoriteChallenge { (data) in
+            print("즐겨찾기 가져오기 성공!!")
             self.myFavoriteChallenges = data
             self.collectionView.reloadData()
         }
