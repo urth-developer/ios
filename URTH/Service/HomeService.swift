@@ -23,8 +23,8 @@ struct HomeService: APIService{
                 if let value = res.result.value{
                     //print(JSON(value))
                     if let message = JSON(value)["message"].string{
-                        if message == "어스 정보 조회 성공"{ 
-                            print("어스 정보 조회 성공")
+                        if message == "어스 정보 조회 성공"{
+                            //print("어스 정보 조회 성공")
                             let decoder = JSONDecoder()
                             do{
                                 let data = try decoder.decode(Summary.self, from: value)
@@ -50,7 +50,7 @@ struct HomeService: APIService{
     
     // MARK : 즐겨 찾기 챌린지 리스트 정보 조회
     
-    static func favoriteChallenge(completion: @escaping (_ data: [FavoriteChallenge])->Void){
+    static func favoriteChallenge(completion: @escaping (_ data: [FavoriteData])->Void){
         let userDefault = UserDefaults.standard
 
         guard let token = userDefault.string(forKey: "token") else { return }
@@ -64,9 +64,9 @@ struct HomeService: APIService{
             switch res.result{
             case .success:
                 if let value = res.result.value{
-                    print(JSON(value))
+                    //print(JSON(value))
                     if let message = JSON(value)["message"].string{
-                        if message == "즐켜찾기 챌린지 리스트 조히 성공했습니다."{
+                        if message == "즐겨찾기 챌린지 리스트 조회 성공했습니다."{
                             
                             let decoder = JSONDecoder()
                             do{
@@ -99,7 +99,7 @@ struct HomeService: APIService{
         
         let headers = ["token": token]
         
-        let URL = url("urth/challenge/together")
+        let URL = url("/urth/challenge/together")
         
         
         Alamofire.request(URL, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: headers).responseData(){ res in

@@ -1,5 +1,5 @@
 //
-//  Favorite.swift
+//  Report.swift
 //  URTH
 //
 //  Created by 장용범 on 11/07/2019.
@@ -8,16 +8,14 @@
 
 import Foundation
 
-struct Favorite: Codable {
-    let data: [FavoriteData]
+struct Report: Codable {
+    let data: [ReportChallenge]
+    let success: Bool
     let message: String
     let status: Int
-    let success: Bool
 }
 
-// MARK: - Datum
-struct FavoriteData: Codable {
-    let name: String
+struct ReportChallenge: Codable {
     let image: String
-    let challengeIdx: Int
+    let userIdx, authChallengeIdx: Int
 }

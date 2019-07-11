@@ -14,6 +14,8 @@ class OurMeViewController: UIViewController, IndicatorInfoProvider {
     
     var childNumber = ""
     @IBOutlet weak var tableView: UITableView!
+    var myInfo: InfoData? = nil
+    var myTimeLines: [TimeLineData] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,9 +42,18 @@ extension OurMeViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0{
             let cell = tableView.dequeueReusableCell(withIdentifier: "OurMe1TableViewCell", for: indexPath) as! OurMe1TableViewCell
+            
+            cell.profileImage.kf.setImage(with: URL(string: myInfo!.profileImg), placeholder: UIImage())
+            cell.nickName.text = myInfo!.nickname
+            cell.level.text = "(Level. \(myInfo!.level)"
+            cell.count.text = "총 \(myInfo!.userSuccessCount)회 인증"
+            //cell.nickName.text = myTimeLines[indexPath.row]
             return cell
         }else{
             let cell = tableView.dequeueReusableCell(withIdentifier: "OurMe2TableViewCell", for: indexPath) as! OurMe2TableViewCell
+            cell.mainImage.kf.setImage(with: URL(string: myTimeLines[indexPath.row].image), placeholder: UIImage())
+            cell.date.text = myTimeLines[indexPath.row].time
+            
             return cell
         }
     }
@@ -55,4 +66,22 @@ extension OurMeViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     
+}
+
+// Network
+
+extension OurMeViewController{
+    func getInfo(){
+        OurService.userInfo { (data) in
+            self.myInfo = data
+            
+        }
+    }
+    
+    func getTimeLine(){
+        OurService.userTimeLine { (timeLines) in
+            self.myTimeLines = timeLines
+            self.tableView.reloadData()
+        }
+    }
 }
