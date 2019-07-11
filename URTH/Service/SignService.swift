@@ -11,7 +11,8 @@ import Alamofire
 import SwiftyJSON
 
 struct SignService: APIService {
-    //MARK: 로그인 서비스
+    
+    //MARK: 로그인
     static func login(id: String, password: String, completion: @escaping (_ message: String)->Void){
         
         let userdefault = UserDefaults.standard
@@ -27,9 +28,9 @@ struct SignService: APIService {
             switch res.result{
             case .success:
                 if let value = res.result.value{
-                    print(JSON(value))
+                    //print(JSON(value))
                     if let message = JSON(value)["message"].string{
-                        if message == "로그인 성공."{ // 로그인 성공
+                        if message == "로그인 성공."{
                             /***************** USER DEFAULT *****************/
                             
                             let myToken = gsno(JSON(value)["data"]["token"].string)
@@ -37,6 +38,8 @@ struct SignService: APIService {
                             
                             userdefault.setValue(myToken, forKey: "token")
                             userdefault.setValue(myNickName, forKey: "nickname")
+                            
+                            print("token: \(myToken)")
                             
                             completion("success")
                             
@@ -59,7 +62,7 @@ struct SignService: APIService {
         }
     }
     
-    //MARK: 회원가입 서비스
+    //MARK: 회원가입
     
     static func signup(id: String, nickname: String, password: String, completion: @escaping (_ message: String)->Void){
         
@@ -77,9 +80,9 @@ struct SignService: APIService {
                 if let value = res.result.value{
                     print(JSON(value))
                     if let message = JSON(value)["message"].string{
-                        if message == "회원가입 성공했습니다."{ // 회원가입 성공
+                        if message == "회원가입 성공했습니다."{ 
                             completion("success")
-                        }else{ // 회원가입 실패
+                        }else{
                             completion("failure")
                         }
                     }
