@@ -37,6 +37,7 @@ struct SignService: APIService {
                             let myNickName = gsno(JSON(value)["data"]["nickname"].string)
                             
                             userdefault.setValue(myToken, forKey: "token")
+                            userdefault.setValue(id, forKey: "id")
                             userdefault.setValue(myNickName, forKey: "nickname")
                             
                             print("token: \(myToken)")

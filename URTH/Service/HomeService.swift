@@ -64,7 +64,7 @@ struct HomeService: APIService{
             switch res.result{
             case .success:
                 if let value = res.result.value{
-                    //print(JSON(value))
+                    print(JSON(value))
                     if let message = JSON(value)["message"].string{
                         if message == "즐겨찾기 챌린지 리스트 조회 성공했습니다."{
                             

@@ -250,8 +250,8 @@ struct OurService: APIService {
                                 print("catcch....")
                             }
                             
-                        }else{
-                            
+                        }else if message == "해당 닉네임의 유저가 존재하지 않습니다."{
+                            completion(FriendSearchData(userIdx: -1, nickname: "", level: 0, profileImg: nil, friendship: false))
                         }
                     }
                 }
@@ -266,9 +266,9 @@ struct OurService: APIService {
     
     //MARK: 친구 추가
     
-    static func addFriend(idx: String, completion: @escaping (_ message: String)->Void){
+    static func addFriend(idx: Int, completion: @escaping (_ message: String)->Void){
         
-        let URL = url("/urth/user/friends/\(idx)")
+        let URL = url("/urth/user/friends")
         
         let userDefault = UserDefaults.standard
         
@@ -276,11 +276,11 @@ struct OurService: APIService {
         
         let headers = ["token": token]
         
-//        let body: [String: Any] = [
-//            "authchallengeIdx" : idx
-//        ]
+        let body: [String: Any] = [
+            "userIdx" : idx
+        ]
         
-        Alamofire.request(URL, method: .post, parameters: nil, encoding: JSONEncoding.default, headers: headers).responseData(){ res in
+        Alamofire.request(URL, method: .post, parameters: body, encoding: JSONEncoding.default, headers: headers).responseData(){ res in
             switch res.result{
             case .success:
                 if let value = res.result.value{

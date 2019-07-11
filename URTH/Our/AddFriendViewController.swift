@@ -18,9 +18,6 @@ class AddFriendViewController: UIViewController, UITextFieldDelegate {
         nickNameTextField.returnKeyType = .search
         
         self.navigationItem.title = "친구 추가"
-        //self.navigationController?.navigationBar.backItem?.title = ""
-
-        
 
     }
     
@@ -31,10 +28,15 @@ class AddFriendViewController: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
         let vc = storyboard?.instantiateViewController(withIdentifier: "AddFriendDetailViewController") as! AddFriendDetailViewController
-        self.navigationController?.pushViewController(vc, animated: true)
+        if let searchNickName = nickNameTextField.text{
+            vc.nickName = searchNickName
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+        
         return true
     }
     
     
     
 }
+

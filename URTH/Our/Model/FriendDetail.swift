@@ -18,7 +18,7 @@ struct FriendDetail: Codable {
 struct FriendDetailData: Codable {
     let userIdx, id, nickname: String
     let level, experiencePoint: Int
-    let profileImg: String
+    let profileImg: String?
     let userAuthCountsByCategory: UserAuthCountsByCategory
     let userSuccessCount: Int
 }
