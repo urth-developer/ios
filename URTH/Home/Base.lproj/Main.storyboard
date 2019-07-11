@@ -46,14 +46,14 @@
                                                 </constraints>
                                             </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="nxq-Pb-HNL">
-                                                <rect key="frame" x="151" y="58" width="73" height="18"/>
+                                                <rect key="frame" x="151" y="58" width="73.000000000000028" height="18"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="73" id="7ub-Z1-m9X"/>
                                                     <constraint firstAttribute="height" constant="18" id="fyg-uu-KBp"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LAbel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rnu-qY-O4K">
-                                                <rect key="frame" x="28" y="90" width="38.5" height="17"/>
+                                                <rect key="frame" x="28" y="90" width="41" height="17"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="17" id="LRd-XC-GAh"/>
                                                 </constraints>
@@ -62,7 +62,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="님이" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aTE-ki-hz4">
-                                                <rect key="frame" x="74.5" y="90" width="26" height="17"/>
+                                                <rect key="frame" x="77" y="90" width="27.5" height="17"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="17" id="eWS-RM-hLo"/>
                                                 </constraints>
@@ -180,7 +180,7 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgChal" translatesAutoresizingMaskIntoConstraints="NO" id="7dB-BY-kWe">
-                                                                    <rect key="frame" x="25" y="26" width="98" height="98"/>
+                                                                    <rect key="frame" x="25" y="26" width="98.000000000000028" height="98.000000000000028"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="98" id="GPs-Za-lBe"/>
                                                                         <constraint firstAttribute="height" constant="98" id="Gab-Pk-eKp"/>

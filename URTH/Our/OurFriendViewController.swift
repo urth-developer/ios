@@ -10,16 +10,18 @@ import UIKit
 import XLPagerTabStrip
 
 class OurFriendViewController: UIViewController, IndicatorInfoProvider {
-    
-    
 
     @IBOutlet weak var collectionView: UICollectionView!
+    var friendList: [FriendData] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         
         collectionView.delegate = self
         collectionView.dataSource = self
 
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        getFriendList()
     }
     
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
@@ -31,13 +33,22 @@ class OurFriendViewController: UIViewController, IndicatorInfoProvider {
 
 extension OurFriendViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 11
+        return friendList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "OurFriendCollectionViewCell", for: indexPath) as! OurFriendCollectionViewCell
         cell.contentView.layer.cornerRadius = 10
         cell.contentView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.6959546233)
+        if let image = friendList[indexPath.row].profileImg{
+            cell.profileImage.kf.setImage(with: URL(string: image), placeholder: UIImage())
+        }else{
+            cell.profileImage.image = #imageLiteral(resourceName: "buzz")
+        }
+        
+        cell.nickName.text = friendList[indexPath.row].nickname
+        cell.level.text = "Level. \(friendList[indexPath.row].level)"
+
         return cell
     }
     
@@ -54,4 +65,15 @@ extension OurFriendViewController: UICollectionViewDelegate, UICollectionViewDat
     }
     
     
+}
+
+//Network
+
+extension OurFriendViewController{
+    func getFriendList(){
+        OurService.friendList { (friends) in
+            self.friendList = friends
+            self.collectionView.reloadData()
+        }
+    }
 }

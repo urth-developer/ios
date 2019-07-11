@@ -18,7 +18,6 @@ class OurViewController: ButtonBarPagerTabStripViewController {
         self.navigationItem.title = "우리의 어스"
         setNavigationBarClear()
         addFriendBarButton()
-        self.navigationController?.navigationBar.backIndicatorImage = #imageLiteral(resourceName: "btnBack")
 
     }
     
@@ -39,6 +38,14 @@ class OurViewController: ButtonBarPagerTabStripViewController {
         bar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         bar.shadowImage = UIImage()
         bar.backgroundColor = UIColor.clear
+        
+        let yourBackImage = #imageLiteral(resourceName: "btnBack")
+        self.navigationController?.navigationBar.backIndicatorImage = yourBackImage
+        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = yourBackImage
+        self.navigationController?.navigationBar.tintColor = #colorLiteral(red: 0.6901267767, green: 0.6902446747, blue: 0.6901112795, alpha: 1)
+        self.navigationController?.navigationBar.backItem?.title = ""
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+
     }
     
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {

@@ -18,6 +18,6 @@ struct FriendSearchData: Codable {
     let userIdx: Int
     let nickname: String
     let level: Int
-    let profileImg: String
+    let profileImg: String?
     let friendship: Bool
 }

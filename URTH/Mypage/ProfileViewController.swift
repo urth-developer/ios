@@ -12,8 +12,10 @@ class ProfileViewController: UIViewController {
 
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var profileNickname: UITextField!
+    let userdefault = UserDefaults.standard
     
     var image: UIImage = UIImage()
+    var changeImage: UIImage = UIImage()
     var nickname: String = ""
     
     
@@ -22,8 +24,6 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationController?.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(saveProfile))
-
         picker.delegate = self
         
         profileImage.image = image
@@ -37,14 +37,20 @@ class ProfileViewController: UIViewController {
         self.navigationController?.navigationBar.topItem?.title = ""
         self.navigationItem.title = "프로필 수정"
         
+        if let nick = userdefault.string(forKey: "nickname"){
+            self.profileNickname.text = nick
+        }
+        
     }
     
-    
-    @objc func saveProfile(){
-        print("SAVE PROFILE")
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
     
-
+    @IBAction func adjust(_ sender: Any) {
+        modifyProfile()
+    }
+    
     @IBAction func selectProfileImage(_ sender: Any) {
         present(picker, animated: true, completion: nil)
     }
@@ -55,9 +61,30 @@ extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationCo
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
             
             self.profileImage.image = image
+            changeImage = image
             
         }
         
         dismiss(animated: true, completion: nil)
+    }
+}
+
+// Network
+
+extension ProfileViewController{
+    func modifyProfile(){
+        guard let myId = userdefault.string(forKey: "id") else {return}
+        guard let myNickName = profileNickname.text else {return}
+        MyPageService.changeProfile(id: myId, nickname: myNickName, image: changeImage) { (message) in
+            if message == "success"{
+                let alert = UIAlertController(title: nil, message: "프로필 수정 성공!", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "확인", style: .default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            }else{
+                let alert = UIAlertController(title: nil, message: "프로필 수정 실패!", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "확인", style: .default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            }
+        }
     }
 }

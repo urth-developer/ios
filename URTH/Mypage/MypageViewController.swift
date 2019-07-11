@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import Kingfisher
 
 class MypageViewController: UIViewController {
 
+    @IBOutlet weak var profileId: UILabel!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var profileNickname: UILabel!
+    let userdefault = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +27,7 @@ class MypageViewController: UIViewController {
         
         scrollView.delegate = self
 
-        // Do any additional setup after loading the view.
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -32,6 +35,17 @@ class MypageViewController: UIViewController {
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.view.backgroundColor = .clear
+        
+        // backIndicator custom
+        let yourBackImage = #imageLiteral(resourceName: "btnBack")
+        self.navigationController?.navigationBar.backIndicatorImage = yourBackImage
+        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = yourBackImage
+        self.navigationController?.navigationBar.tintColor = #colorLiteral(red: 0.6901267767, green: 0.6902446747, blue: 0.6901112795, alpha: 1)
+        self.navigationController?.navigationBar.backItem?.title = ""
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+
+        
+        getInfo()
         
     }
     
@@ -69,5 +83,22 @@ extension MypageViewController: UIScrollViewDelegate {
 
         }
         
+    }
+}
+
+// Network
+
+extension MypageViewController{
+    func getInfo(){
+        OurService.userInfo { (data) in
+            if data.profileImg == ""{
+                self.profileImage.image = #imageLiteral(resourceName: "profileNon")
+            }else{
+                self.profileImage.kf.setImage(with: URL(string: data.profileImg), placeholder: UIImage())
+            }
+            
+            self.profileNickname.text = data.nickname
+            self.profileId.text = data.id
+        }
     }
 }

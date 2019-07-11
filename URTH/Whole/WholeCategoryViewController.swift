@@ -16,6 +16,7 @@ class WholeCategoryViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     let userdefault = UserDefaults.standard
+    var idx = 1
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,8 +25,29 @@ class WholeCategoryViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
+        idx = userdefault.integer(forKey: "currentCategoryIndex")
+        switch idx {
+        case 1:
+            self.navigationItem.title = "일회용품"
+            break
+        case 2:
+            self.navigationItem.title = "대기"
+            break
+        case 3:
+            self.navigationItem.title = "자원"
+            break
+        case 4:
+            self.navigationItem.title = "수질"
+            break
+        case 5:
+            self.navigationItem.title = "생태계"
+            break
+        default:
+            break
+        }
+                
         getCategoryList()
+        
         
     }
     
@@ -43,7 +65,7 @@ extension WholeCategoryViewController: UITableViewDelegate, UITableViewDataSourc
             let cell = tableView.dequeueReusableCell(withIdentifier: "WholeCategory1TableViewCell", for: indexPath) as! WholeCategory1TableViewCell
             headerView = cell.contentView
             
-            let idx = userdefault.integer(forKey: "currentCategoryIndex")
+            idx = userdefault.integer(forKey: "currentCategoryIndex")
             print("index!!!!!:\(idx)")
             switch idx {
             case 1:

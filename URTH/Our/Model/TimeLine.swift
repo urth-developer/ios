@@ -17,6 +17,7 @@ struct TimeLine: Codable {
 
 struct TimeLineData: Codable {
     let authChallengeIdx, userIdx, challengeIdx: Int
-    let image, time, reportCount: String
+    let time, reportCount: String
+    let image: String?
     let isWrong: Int
 }

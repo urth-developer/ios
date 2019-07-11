@@ -49,9 +49,13 @@ extension OurMeViewController: UITableViewDelegate, UITableViewDataSource{
             let cell = tableView.dequeueReusableCell(withIdentifier: "OurMe1TableViewCell", for: indexPath) as! OurMe1TableViewCell
             
             if let image = myInfo?.profileImg{
-                cell.profileImage.kf.setImage(with: URL(string: myInfo!.profileImg), placeholder: UIImage())
+                if image == ""{
+                    cell.profileImage.image = #imageLiteral(resourceName: "profileNon")
+                }else{
+                    cell.profileImage.kf.setImage(with: URL(string: image), placeholder: UIImage())
+                }
             }else{
-                cell.profileImage.image = #imageLiteral(resourceName: "buzz")
+                cell.profileImage.image = #imageLiteral(resourceName: "profileNon")
             }
             if let nickname = myInfo?.nickname{
                 cell.nickName.text = nickname
@@ -63,8 +67,16 @@ extension OurMeViewController: UITableViewDelegate, UITableViewDataSource{
             return cell
         }else{
             let cell = tableView.dequeueReusableCell(withIdentifier: "OurMe2TableViewCell", for: indexPath) as! OurMe2TableViewCell
-            cell.mainImage.kf.setImage(with: URL(string: myTimeLines[indexPath.row-1].image), placeholder: UIImage())
             
+            if let image = myTimeLines[indexPath.row-1].image{
+                if image == ""{
+                    cell.mainImage.image = #imageLiteral(resourceName: "imgChal")
+                }else{
+                    cell.mainImage.kf.setImage(with: URL(string: image), placeholder: UIImage())
+                }
+            }else{
+                cell.mainImage.image = #imageLiteral(resourceName: "imgChal")
+            }
             
             cell.date.text = myTimeLines[indexPath.row-1].time
             
