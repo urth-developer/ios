@@ -3,17 +3,17 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "btnMypage.png"
+      "filename" : "photoAtmos.png"
     },
     {
       "idiom" : "universal",
-      "filename" : "btnMypage@2x.png",
+      "filename" : "photoAtmos@2x.png",
       "scale" : "2x"
     },
     {
-      "filename" : "btnMypage@3x.png",
       "idiom" : "universal",
-      "scale" : "3x"
+      "scale" : "3x",
+      "filename" : "photoAtmos@3x.png"
     }
   ],
   "info" : {

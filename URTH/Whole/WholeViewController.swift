@@ -15,6 +15,7 @@ class WholeViewController: UIViewController, FloatyDelegate {
     @IBOutlet weak var tableView: UITableView!
     var top10challenges: [Top10Challenge] = []
     var floaty = Floaty()
+    let userdefault = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,12 +41,13 @@ class WholeViewController: UIViewController, FloatyDelegate {
         
         floaty.buttonColor = #colorLiteral(red: 0.1643726826, green: 0.5449098349, blue: 0.5535590649, alpha: 1)
         floaty.openAnimationType = .none
+        floaty.buttonImage = #imageLiteral(resourceName: "floatingBtnChal")
+        floaty.hasShadow = true
         
         let gesture = UITapGestureRecognizer(target: self, action: #selector(create))
         floaty.addGestureRecognizer(gesture)
         
         
-        floaty.hasShadow = false
         //floaty.addItem(item: item)
         floaty.paddingX = self.view.frame.width/2 - 180
         floaty.paddingY = self.view.frame.height/2 - 270
@@ -60,23 +62,6 @@ class WholeViewController: UIViewController, FloatyDelegate {
         present(vc!, animated: true, completion: nil)
     }
     
-//    func floatyWillOpen(_ floaty: Floaty) {
-//        let vc = storyboard?.instantiateViewController(withIdentifier: "CreateNavi")
-//        present(vc!, animated: true, completion: nil)
-//    }
-    
-//    func initChallenges(){
-//        challenges.append(Challenge(title: "가나다", name: "이사람", count: 10, image: #imageLiteral(resourceName: "monsters")))
-//        challenges.append(Challenge(title: "나다다", name: "저사람", count: 15, image: #imageLiteral(resourceName: "brave")))
-//        challenges.append(Challenge(title: "나라다", name: "그사람", count: 20, image: #imageLiteral(resourceName: "monsters")))
-//        challenges.append(Challenge(title: "가지마", name: "저사람", count: 30, image: #imageLiteral(resourceName: "wall-e")))
-//        challenges.append(Challenge(title: "다나피", name: "작성자", count: 5, image: #imageLiteral(resourceName: "nemo")))
-//        challenges.append(Challenge(title: "하나라", name: "이사람", count: 200, image: #imageLiteral(resourceName: "monsters")))
-//        challenges.append(Challenge(title: "바나다", name: "작성자", count: 116, image: #imageLiteral(resourceName: "buzz")))
-//        challenges.append(Challenge(title: "가가나다", name: "그사람", count: 30, image: #imageLiteral(resourceName: "monsters")))
-//        challenges.append(Challenge(title: "갑니나다", name: "저사람", count: 5000, image: #imageLiteral(resourceName: "wall-e")))
-//        challenges.append(Challenge(title: "크크나다", name: "작성자", count: 10, image: #imageLiteral(resourceName: "nemo")))
-//    }
     
     @objc func search(){
         let vc = storyboard?.instantiateViewController(withIdentifier: "SearchTableViewController") as! SearchTableViewController
@@ -88,6 +73,9 @@ class WholeViewController: UIViewController, FloatyDelegate {
     }
     @IBAction func showCategory(_ sender: UIButton) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "WholeCategoryViewController") as! WholeCategoryViewController
+        
+        userdefault.setValue(sender.tag, forKey: "currentCategoryIndex")
+        vc.categoryIndex = sender.tag
         self.navigationController?.pushViewController(vc, animated: true)
     }
     

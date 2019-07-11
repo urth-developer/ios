@@ -816,7 +816,7 @@
         <image name="btnCloseGray" width="18" height="18"/>
         <image name="btnDetail" width="14" height="3"/>
         <image name="btnEverybodySEarth" width="28" height="26.5"/>
-        <image name="btnHome" width="27" height="26.5"/>
+        <image name="btnHome" width="28" height="27.5"/>
         <image name="btnMyPage" width="26.5" height="26.5"/>
         <image name="btnOurEarth" width="23" height="26.5"/>
         <image name="imgChal" width="98" height="98"/>

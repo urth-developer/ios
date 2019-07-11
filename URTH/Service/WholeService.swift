@@ -24,7 +24,7 @@ struct WholeService: APIService {
                 if let value = res.result.value{
                     print(JSON(value))
                     if let message = JSON(value)["message"].string{
-                        if message == "유저의 정보 조회 성공"{
+                        if message == "카테고리별 챌린지 리스트 조회 성공"{
                             
                             let decoder = JSONDecoder()
                             do{

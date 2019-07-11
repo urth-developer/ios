@@ -1,16 +1,18 @@
 {
   "images" : [
     {
-      "scale" : "1x",
+      "filename" : "imgDisposable.png",
       "idiom" : "universal",
-      "filename" : "imgResource.png"
+      "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "scale" : "2x"
+      "scale" : "2x",
+      "filename" : "imgDisposable@2x.png"
     },
     {
       "scale" : "3x",
+      "filename" : "imgDisposable@3x.png",
       "idiom" : "universal"
     }
   ],

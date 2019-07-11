@@ -10,7 +10,7 @@ import UIKit
 
 class WholeCategory1TableViewCell: UITableViewCell {
 
-    @IBOutlet weak var mainImage: UIView!
+    @IBOutlet weak var mainImageView: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

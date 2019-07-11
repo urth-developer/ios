@@ -1,16 +1,18 @@
 {
   "images" : [
     {
-      "scale" : "1x",
+      "filename" : "photoResource.png",
       "idiom" : "universal",
-      "filename" : "imgResource.png"
+      "scale" : "1x"
     },
     {
-      "idiom" : "universal",
-      "scale" : "2x"
+      "filename" : "photoResource@2x.png",
+      "scale" : "2x",
+      "idiom" : "universal"
     },
     {
       "scale" : "3x",
+      "filename" : "photoResource@3x.png",
       "idiom" : "universal"
     }
   ],

@@ -9,15 +9,17 @@
 import Foundation
 
 struct Category: Codable {
+    let data: [CategoryChallenge]
+    let message: String
     let status: Int
     let success: Bool
-    let message: String
-    let data: [CategoryChallenge]
 }
 
 struct CategoryChallenge: Codable {
     let challengeIdx: Int
-    let name, image: String
+    let category: String
+    let image: String
+    let name: String
+    let creator: String?
     let count: Int
-    let category, creator: String
 }

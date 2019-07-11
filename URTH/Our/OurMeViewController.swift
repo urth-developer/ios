@@ -19,24 +19,29 @@ class OurMeViewController: UIViewController, IndicatorInfoProvider {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         tableView.delegate = self
         tableView.dataSource = self
-       
+        
     }
     
-  
+    override func viewWillAppear(_ animated: Bool) {
+        getInfo()
+        getTimeLine()
+    }
+    
+    
     
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
         return IndicatorInfo(title: "나")
     }
-  
-
+    
+    
 }
 
 extension OurMeViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return myTimeLines.count+1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -53,14 +58,15 @@ extension OurMeViewController: UITableViewDelegate, UITableViewDataSource{
             }else{
                 cell.nickName.text = ""
             }
-            cell.level.text = "(Level. \(myInfo!.level)"
-            cell.count.text = "총 \(myInfo!.userSuccessCount)회 인증"
+            //cell.count.text = "총 \(myInfo!.userSuccessCount)회 인증"
             //cell.nickName.text = myTimeLines[indexPath.row]
             return cell
         }else{
             let cell = tableView.dequeueReusableCell(withIdentifier: "OurMe2TableViewCell", for: indexPath) as! OurMe2TableViewCell
-            cell.mainImage.kf.setImage(with: URL(string: myTimeLines[indexPath.row].image), placeholder: UIImage())
-            cell.date.text = myTimeLines[indexPath.row].time
+            cell.mainImage.kf.setImage(with: URL(string: myTimeLines[indexPath.row-1].image), placeholder: UIImage())
+            
+            
+            cell.date.text = myTimeLines[indexPath.row-1].time
             
             return cell
         }
@@ -82,7 +88,7 @@ extension OurMeViewController{
     func getInfo(){
         OurService.userInfo { (data) in
             self.myInfo = data
-            
+            self.tableView.reloadData()
         }
     }
     

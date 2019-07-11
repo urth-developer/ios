@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x",
-      "filename" : "btnMypage.png"
+      "filename" : "photoWater.png",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "photoWater@2x.png",
+      "scale" : "2x",
+      "idiom" : "universal"
     },
     {
       "idiom" : "universal",
-      "filename" : "btnMypage@2x.png",
-      "scale" : "2x"
-    },
-    {
-      "filename" : "btnMypage@3x.png",
-      "idiom" : "universal",
+      "filename" : "photoWater@3x.png",
       "scale" : "3x"
     }
   ],
