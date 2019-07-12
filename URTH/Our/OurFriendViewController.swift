@@ -42,7 +42,12 @@ extension OurFriendViewController: UICollectionViewDelegate, UICollectionViewDat
         cell.contentView.layer.cornerRadius = 10
         cell.contentView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.6959546233)
         if let image = friendList[indexPath.row].profileImg{
-            cell.profileImage.kf.setImage(with: URL(string: image), placeholder: UIImage())
+            if image != ""{
+                cell.profileImage.kf.setImage(with: URL(string: image), placeholder: UIImage())
+            }else{
+                cell.profileImage.image = #imageLiteral(resourceName: "profileNon")
+            }
+            
         }else{
             cell.profileImage.image = #imageLiteral(resourceName: "buzz")
         }
