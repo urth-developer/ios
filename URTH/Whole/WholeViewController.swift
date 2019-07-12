@@ -34,6 +34,8 @@ class WholeViewController: UIViewController, FloatyDelegate {
     override func viewWillAppear(_ animated: Bool) {
         getTop10()
         self.navigationController?.title = "챌린지"
+        
+        tableView.setContentOffset(.zero, animated: false)
 
     }
     

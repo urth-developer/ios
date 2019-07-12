@@ -195,6 +195,8 @@ struct WholeService: APIService {
                                 if let message = JSON(value)["message"].string{
                                     if message == "챌린지 개설 건의 성공했습니다."{
                                         completion("success")
+                                    }else{
+                                        completion("failure")
                                     }
                                 }
                                 

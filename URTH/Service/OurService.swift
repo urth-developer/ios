@@ -226,7 +226,7 @@ struct OurService: APIService {
     
     static func searchFriend(nickname: String, completion: @escaping (_ data: FriendSearchData)->Void){
         
-        let URL = url("/urth/user/friends/search/\(nickname)")
+        let URL = url("/urth/user/friends/search")
         
         let userDefault = UserDefaults.standard
         
@@ -234,7 +234,11 @@ struct OurService: APIService {
         
         let headers = ["token": token]
         
-        Alamofire.request(URL, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: headers).responseData(){ res in
+        let body: [String: Any] = [
+            "nickname" : nickname
+        ]
+        
+        Alamofire.request(URL, method: .get, parameters: body, encoding: JSONEncoding.default, headers: headers).responseData(){ res in
             switch res.result{
             case .success:
                 if let value = res.result.value{

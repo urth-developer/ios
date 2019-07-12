@@ -406,6 +406,7 @@
                         <viewLayoutGuide key="safeArea" id="irx-aa-Ybx"/>
                     </view>
                     <connections>
+                        <outlet property="profileId" destination="YMT-ka-jNh" id="BJM-yt-RCD"/>
                         <outlet property="profileImage" destination="HSE-gU-iLB" id="FoV-qm-Qog"/>
                         <outlet property="profileNickname" destination="MHj-52-O2f" id="6hW-5i-c3U"/>
                     </connections>

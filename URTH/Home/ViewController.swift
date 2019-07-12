@@ -61,6 +61,7 @@ class ViewController: UIViewController {
         getSummary()
         getFavoriteChallenge()
         getTodayChallenge()
+        scrollView.setContentOffset(CGPoint(x: 0, y: -20), animated: false)
         
     }
     
@@ -277,6 +278,7 @@ extension ViewController{
             print("즐겨찾기 가져오기 성공!!")
             self.myFavoriteChallenges = data
             self.collectionView.reloadData()
+            self.pageControl.numberOfPages = data.count
         }
     }
     

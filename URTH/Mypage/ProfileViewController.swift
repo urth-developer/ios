@@ -10,6 +10,7 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
+    @IBOutlet weak var profileId: UILabel!
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var profileNickname: UITextField!
     let userdefault = UserDefaults.standard
@@ -17,6 +18,7 @@ class ProfileViewController: UIViewController {
     var image: UIImage = UIImage()
     var changeImage: UIImage = UIImage()
     var nickname: String = ""
+    var id: String = ""
     
     
     let picker = UIImagePickerController()
@@ -28,6 +30,7 @@ class ProfileViewController: UIViewController {
         
         profileImage.image = image
         profileNickname.text = nickname
+        profileId.text = id
         
         profileImage.layer.cornerRadius = profileImage.frame.height/2
 

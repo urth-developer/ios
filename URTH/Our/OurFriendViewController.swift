@@ -22,6 +22,7 @@ class OurFriendViewController: UIViewController, IndicatorInfoProvider {
     }
     override func viewWillAppear(_ animated: Bool) {
         getFriendList()
+        collectionView.setContentOffset(.zero, animated: false)
     }
     
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {

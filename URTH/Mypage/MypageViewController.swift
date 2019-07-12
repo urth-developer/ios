@@ -47,6 +47,8 @@ class MypageViewController: UIViewController {
         
         getInfo()
         
+        scrollView.setContentOffset(.zero, animated: false)
+
     }
     
     func imageRounded(){
@@ -57,6 +59,7 @@ class MypageViewController: UIViewController {
         let vc = storyboard?.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
         vc.image = profileImage.image!
         vc.nickname = profileNickname.text!
+        vc.id = profileId.text!
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -64,6 +67,7 @@ class MypageViewController: UIViewController {
         let vc = storyboard?.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
         vc.image = profileImage.image!
         vc.nickname = profileNickname.text!
+        vc.id = profileId.text!
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
