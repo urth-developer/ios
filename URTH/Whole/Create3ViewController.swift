@@ -8,12 +8,20 @@
 
 import UIKit
 
-class Create3ViewController: UIViewController {
-
+class Create3ViewController: UIViewController,UITextViewDelegate {
+    
+    @IBOutlet weak var contentTextView: UITextView!
+    
+    let userdefault = UserDefaults.standard
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        contentTextView.text = "이곳에 이야기를 작성해주세요"
+        contentTextView.textColor = UIColor.lightGray
+        contentTextView.delegate = self
         self.navigationController?.navigationBar.topItem?.title = ""
+        
         addCloseButton()
     }
     
@@ -32,7 +40,27 @@ class Create3ViewController: UIViewController {
     }
     
     @IBAction func next(_ sender: Any) {
-        let vc = storyboard?.instantiateViewController(withIdentifier: "Create4ViewController") as! Create4ViewController
-        self.navigationController?.pushViewController(vc, animated: true)
+        if let content = contentTextView.text{
+            userdefault.setValue(content, forKey: "create_content")
+            let vc = storyboard?.instantiateViewController(withIdentifier: "Create4ViewController") as! Create4ViewController
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+        
+    }
+    
+    // textview delegate
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.textColor == UIColor.lightGray{
+            textView.text = nil
+            textView.textColor = #colorLiteral(red: 0.3993381858, green: 0.4123505652, blue: 0.4321975112, alpha: 1)
+        }
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text.isEmpty{
+            textView.text = "이곳에 이야기를 작성해주세요"
+            textView.textColor = UIColor.lightGray
+        }
     }
 }

@@ -28,6 +28,7 @@ class OurMeViewController: UIViewController, IndicatorInfoProvider {
     override func viewWillAppear(_ animated: Bool) {
         getInfo()
         getTimeLine()
+        tableView.setContentOffset(.zero, animated: false)
     }
     
     

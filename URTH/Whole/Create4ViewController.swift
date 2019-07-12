@@ -12,6 +12,8 @@ class Create4ViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
     
+    let userdefault = UserDefaults.standard
+    
     let picker = UIImagePickerController()
     
     override func viewDidLoad() {
@@ -53,8 +55,14 @@ class Create4ViewController: UIViewController {
     }
     
     @IBAction func next(_ sender: Any) {
-        let vc = storyboard?.instantiateViewController(withIdentifier: "Create5ViewController") as! Create5ViewController
-        self.navigationController?.pushViewController(vc, animated: true)
+        if let image = imageView.image{
+            
+            let vc = storyboard?.instantiateViewController(withIdentifier: "Create5ViewController") as! Create5ViewController
+            
+            vc.challengeImage = image
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+        
     }
     
 }

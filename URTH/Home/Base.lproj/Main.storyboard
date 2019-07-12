@@ -181,7 +181,7 @@
                                                     <constraint firstAttribute="height" constant="451" id="nOP-zc-4IT"/>
                                                 </constraints>
                                                 <prototypes>
-                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MagazineTableViewCell" rowHeight="150" id="000-Ot-4BF" customClass="MagazineTableViewCell" customModule="URTH" customModuleProvider="target">
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="MagazineTableViewCell" rowHeight="150" id="000-Ot-4BF" customClass="MagazineTableViewCell" customModule="URTH" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="28" width="375" height="150"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="000-Ot-4BF" id="zaP-5j-VRU">
@@ -621,7 +621,7 @@
         <scene sceneID="QXr-4Z-FUR">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZvW-qs-ekG" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="챌린지" image="btnEverybodySEarth" id="bwp-dc-4uP"/>
+                    <tabBarItem key="tabBarItem" title="챌린지" image="btnEverybodysUrth" id="bwp-dc-4uP"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="SXw-9e-HGT">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -670,7 +670,7 @@
         <scene sceneID="D4Z-qP-FVg">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="B0u-PX-cLr" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="히스토리" image="btnOurEarth" id="1qL-SB-4D9"/>
+                    <tabBarItem key="tabBarItem" title="히스토리" image="btnOurUrth" id="1qL-SB-4D9"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jTs-DX-rZC">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -842,10 +842,10 @@
         <image name="bgHome" width="375" height="447"/>
         <image name="btnCloseGray" width="18" height="18"/>
         <image name="btnDetail" width="14" height="3"/>
-        <image name="btnEverybodySEarth" width="28" height="26.5"/>
+        <image name="btnEverybodysUrth" width="27" height="25.5"/>
         <image name="btnHome" width="28" height="27.5"/>
         <image name="btnMyPage" width="26.5" height="26.5"/>
-        <image name="btnOurEarth" width="23" height="26.5"/>
+        <image name="btnOurUrth" width="22.5" height="26.5"/>
         <image name="imgChal" width="98" height="98"/>
         <image name="imgDisposableProducts" width="178" height="178"/>
         <image name="imgProfileFullCertifiedPhotograph" width="28" height="28"/>
