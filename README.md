@@ -2,6 +2,8 @@
 
 지구를 지키는 **에코챌린지** , **URTH**
 
+
+
 ## [ About ]
 
 어스는 '함께 사는 지구를 위한 **환경보호 플랫폼**' 입니다.
@@ -38,4 +40,47 @@
 - [TKRadarChart](https://github.com/TBXark/TKRadarChart)
 - [UPCarouselFlowLayout](https://github.com/ink-spot/UPCarouselFlowLayout)
 - [XLPagerTabStrip](https://github.com/xmartlabs/XLPagerTabStrip)
+
+## [ Feature ]
+
+- 유저
+
+  - 로그인(o)
+  - 회원가입(o)
+
+- 홈
+
+  - 어스 성과 요약(o)
+  - 즐겨찾기 챌린지(o)
+  - 즐겨찾기 챌린지 수정(x)
+  - 함께하기 챌린지(o)
+  - 오늘의 챌린지(o)
+
+- 챌린지
+
+  - 챌린지 인증(o)
+  - 다른 유저들의 챌린지(o)
+  - 신고하기(o)
+
+  - 카테고리별 챌린지(o)
+  - 인기 Top10 챌린지(o)
+  - 검색 키워드 리스트(x)
+  - 챌린지 개설(o)
+  - 챌린지 검색(o)
+  - 챌린지 상세보기(x)
+  - 챌린지 참여(x)
+
+- 히스토리
+
+  - 유저 정보(o)
+  - 유저 타임라인(o)
+  - 친구 목록(o)
+  - 친구 검색(o)
+  - 친구 상세정보(x)
+  - 친구 추가(o)
+
+- 마이페이지
+
+  - 프로필 수정(o)
+  - 챌린지 개설내역(x)
 
