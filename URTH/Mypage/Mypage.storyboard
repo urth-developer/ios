@@ -40,14 +40,14 @@
                                                 </constraints>
                                             </imageView>
                                             <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ratatouille" translatesAutoresizingMaskIntoConstraints="NO" id="Lbs-nK-Uts">
-                                                <rect key="frame" x="146.5" y="28" width="82" height="82"/>
+                                                <rect key="frame" x="138.5" y="22" width="94" height="94"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="82" id="q0u-IC-Ykw"/>
-                                                    <constraint firstAttribute="height" constant="82" id="zXF-Ti-hQV"/>
+                                                    <constraint firstAttribute="width" constant="94" id="q0u-IC-Ykw"/>
+                                                    <constraint firstAttribute="height" constant="94" id="zXF-Ti-hQV"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="솝트밍밍" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DG4-bl-lKj">
-                                                <rect key="frame" x="65.5" y="129" width="244" height="17"/>
+                                                <rect key="frame" x="65.5" y="128" width="244" height="17"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="17" id="f1P-cF-hll"/>
                                                     <constraint firstAttribute="width" constant="244" id="qVo-pv-Gtx"/>
@@ -57,7 +57,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="kys979510@gmail.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qrN-56-j4Q">
-                                                <rect key="frame" x="58.5" y="154" width="258" height="10"/>
+                                                <rect key="frame" x="58.5" y="153" width="258" height="10"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="258" id="Eo0-hZ-u7Q"/>
                                                     <constraint firstAttribute="height" constant="10" id="oRV-i1-8aa"/>
@@ -73,7 +73,7 @@
                                                     <constraint firstAttribute="height" constant="15" id="mKp-PA-1ft"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="NanumSquareOTFB" family="NanumSquareOTF" pointSize="13"/>
-                                                <color key="textColor" red="0.28235294119999998" green="0.53725490200000003" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="textColor" red="0.08235294118" green="0.41176470590000003" blue="0.42352941179999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0tu-WC-1hZ">
@@ -231,7 +231,7 @@
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3EK-OY-n93">
-                                                <rect key="frame" x="207.5" y="88" width="21" height="22"/>
+                                                <rect key="frame" x="206.5" y="89" width="21" height="22"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="22" id="9do-Sk-Nia"/>
                                                     <constraint firstAttribute="width" constant="21" id="tHy-kE-WHQ"/>
@@ -273,7 +273,7 @@
                                             <constraint firstItem="cQp-OR-Usn" firstAttribute="leading" secondItem="YZB-Om-imI" secondAttribute="leading" constant="20" id="L9a-VN-8hf"/>
                                             <constraint firstItem="csw-U3-kTD" firstAttribute="leading" secondItem="YZB-Om-imI" secondAttribute="leading" constant="20" id="LfZ-qd-Q52"/>
                                             <constraint firstItem="knA-Vk-LvD" firstAttribute="leading" secondItem="0tu-WC-1hZ" secondAttribute="leading" id="N4M-Ye-jOn"/>
-                                            <constraint firstItem="DG4-bl-lKj" firstAttribute="centerX" secondItem="Lbs-nK-Uts" secondAttribute="centerX" id="Nlk-dL-8SC"/>
+                                            <constraint firstItem="DG4-bl-lKj" firstAttribute="centerX" secondItem="Lbs-nK-Uts" secondAttribute="centerX" constant="2" id="Nlk-dL-8SC"/>
                                             <constraint firstItem="e4P-3m-kGx" firstAttribute="top" secondItem="cQp-OR-Usn" secondAttribute="bottom" constant="18" id="NwK-Rh-MoV"/>
                                             <constraint firstItem="0tu-WC-1hZ" firstAttribute="top" secondItem="QGY-eM-UsW" secondAttribute="bottom" constant="19" id="PX7-uE-7ki"/>
                                             <constraint firstItem="QGY-eM-UsW" firstAttribute="top" secondItem="3zr-Zk-7qm" secondAttribute="bottom" constant="52" id="Pg5-nz-hcJ"/>
@@ -293,15 +293,15 @@
                                             <constraint firstItem="dTG-7G-oFH" firstAttribute="leading" secondItem="e4P-3m-kGx" secondAttribute="leading" id="paT-VB-54C"/>
                                             <constraint firstItem="l4O-dN-wcD" firstAttribute="top" secondItem="dTG-7G-oFH" secondAttribute="bottom" constant="5" id="qyu-v1-Pi2"/>
                                             <constraint firstItem="2UM-2r-FwY" firstAttribute="leading" secondItem="YZB-Om-imI" secondAttribute="leading" constant="20" id="rHs-Oq-9If"/>
-                                            <constraint firstItem="3EK-OY-n93" firstAttribute="top" secondItem="Lbs-nK-Uts" secondAttribute="bottom" constant="-22" id="rhH-Hu-p1b"/>
+                                            <constraint firstItem="3EK-OY-n93" firstAttribute="top" secondItem="Lbs-nK-Uts" secondAttribute="bottom" constant="-27" id="rhH-Hu-p1b"/>
                                             <constraint firstItem="qrN-56-j4Q" firstAttribute="centerX" secondItem="YZB-Om-imI" secondAttribute="centerX" id="sPz-8G-pjJ"/>
                                             <constraint firstItem="4NW-wh-Oel" firstAttribute="top" secondItem="l4O-dN-wcD" secondAttribute="bottom" constant="17" id="sW0-RR-9hh"/>
                                             <constraint firstAttribute="bottom" secondItem="JbH-qr-irr" secondAttribute="bottom" constant="47" id="tOq-3P-uPF"/>
-                                            <constraint firstItem="Lbs-nK-Uts" firstAttribute="centerX" secondItem="3zr-Zk-7qm" secondAttribute="centerX" id="tan-ak-pz3"/>
+                                            <constraint firstItem="Lbs-nK-Uts" firstAttribute="centerX" secondItem="3zr-Zk-7qm" secondAttribute="centerX" constant="-2" id="tan-ak-pz3"/>
                                             <constraint firstItem="csw-U3-kTD" firstAttribute="top" secondItem="4NW-wh-Oel" secondAttribute="bottom" constant="27" id="vl0-36-yOU"/>
-                                            <constraint firstItem="3EK-OY-n93" firstAttribute="trailing" secondItem="Lbs-nK-Uts" secondAttribute="trailing" id="ymY-4y-KdN"/>
-                                            <constraint firstItem="DG4-bl-lKj" firstAttribute="top" secondItem="Lbs-nK-Uts" secondAttribute="bottom" constant="19" id="ys1-LF-J9g"/>
-                                            <constraint firstItem="3zr-Zk-7qm" firstAttribute="top" secondItem="Lbs-nK-Uts" secondAttribute="bottom" constant="-182" id="zz4-g1-Wau"/>
+                                            <constraint firstItem="3EK-OY-n93" firstAttribute="trailing" secondItem="Lbs-nK-Uts" secondAttribute="trailing" constant="-5" id="ymY-4y-KdN"/>
+                                            <constraint firstItem="DG4-bl-lKj" firstAttribute="top" secondItem="Lbs-nK-Uts" secondAttribute="bottom" constant="12" id="ys1-LF-J9g"/>
+                                            <constraint firstItem="3zr-Zk-7qm" firstAttribute="top" secondItem="Lbs-nK-Uts" secondAttribute="bottom" constant="-188" id="zz4-g1-Wau"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -346,11 +346,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ratatouille" translatesAutoresizingMaskIntoConstraints="NO" id="HSE-gU-iLB">
-                                <rect key="frame" x="146" y="72" width="82" height="82"/>
+                                <rect key="frame" x="140" y="81" width="94" height="94"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gsk-g5-CeD">
-                                <rect key="frame" x="196" y="125" width="47" height="47"/>
+                                <rect key="frame" x="196" y="140" width="47" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="btnImgEdit"/>
                                 <connections>
@@ -358,40 +358,40 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="이메일 아이디" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gEQ-eV-8qp">
-                                <rect key="frame" x="31" y="224" width="75" height="15"/>
+                                <rect key="frame" x="31" y="230" width="75" height="15"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="NanumSquareOTFB" family="NanumSquareOTF" pointSize="13"/>
                                 <color key="textColor" red="0.28235294119999998" green="0.53725490200000003" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="kys87878@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YMT-ka-jNh">
-                                <rect key="frame" x="31" y="251" width="153" height="17"/>
+                                <rect key="frame" x="31" y="257" width="153" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="NanumSquareOTFR" family="NanumSquareOTF" pointSize="15"/>
                                 <color key="textColor" red="0.32549019610000002" green="0.33725490200000002" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="닉네임" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6mw-Hk-efP">
-                                <rect key="frame" x="31" y="295" width="36" height="15"/>
+                                <rect key="frame" x="31" y="301" width="36" height="15"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="NanumSquareOTFB" family="NanumSquareOTF" pointSize="13"/>
                                 <color key="textColor" red="0.28235294119999998" green="0.53725490200000003" blue="0.54901960780000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yuN-7N-Qeg">
-                                <rect key="frame" x="25" y="351" width="325" height="1"/>
+                                <rect key="frame" x="25" y="357" width="325" height="1"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MHj-52-O2f">
-                                <rect key="frame" x="31" y="318" width="319" height="30"/>
+                                <rect key="frame" x="31" y="324" width="319" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="NanumSquareOTFR" family="NanumSquareOTF" pointSize="13"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tOW-mV-LGA">
-                                <rect key="frame" x="162" y="393" width="80" height="24"/>
+                                <rect key="frame" x="162" y="399" width="80" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="NanumSquareOTFR" family="NanumSquareOTF" pointSize="13"/>
                                 <state key="normal" title="적용" backgroundImage="812">
@@ -406,6 +406,7 @@
                         <viewLayoutGuide key="safeArea" id="irx-aa-Ybx"/>
                     </view>
                     <connections>
+                        <outlet property="cameraButton" destination="Gsk-g5-CeD" id="TWQ-Me-c2T"/>
                         <outlet property="profileId" destination="YMT-ka-jNh" id="BJM-yt-RCD"/>
                         <outlet property="profileImage" destination="HSE-gU-iLB" id="FoV-qm-Qog"/>
                         <outlet property="profileNickname" destination="MHj-52-O2f" id="6hW-5i-c3U"/>

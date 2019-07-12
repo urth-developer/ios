@@ -20,8 +20,7 @@ class WholeViewController: UIViewController, FloatyDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-         layoutFAB()
-        
+        layoutFAB()
 
         let searchButton = UIBarButtonItem(image: #imageLiteral(resourceName: "btnSearch"), style: .plain, target: self, action: #selector(search))
         searchButton.tintColor = #colorLiteral(red: 0.1643726826, green: 0.5449098349, blue: 0.5535590649, alpha: 1)
@@ -32,11 +31,14 @@ class WholeViewController: UIViewController, FloatyDelegate {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        tableView.setContentOffset(CGPoint(x: 0, y: 0 - tableView.contentInset.top), animated: false)
         getTop10()
         self.navigationController?.title = "챌린지"
         
-        tableView.setContentOffset(.zero, animated: false)
-
+        
+        naviBarInit()
+        
+        
     }
     
     func layoutFAB() {
@@ -51,11 +53,23 @@ class WholeViewController: UIViewController, FloatyDelegate {
         
         
         //floaty.addItem(item: item)
-        floaty.paddingX = self.view.frame.width/2 - 180
+        floaty.paddingX = self.view.frame.width/2 - 170
         floaty.paddingY = self.view.frame.height/2 - 270
         floaty.fabDelegate = self
         
         self.view.addSubview(floaty)
+        
+        
+        
+    }
+    
+    func naviBarInit(){
+        let bar: UINavigationBar! = self.navigationController?.navigationBar
+        
+        //bar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        bar.shadowImage = UIImage()
+        bar.backgroundColor = UIColor.white
+        bar.tintColor = #colorLiteral(red: 0.3993381858, green: 0.4123505652, blue: 0.4321975112, alpha: 1)
         
         // backIndicator custom
         let yourBackImage = #imageLiteral(resourceName: "btnBack")
@@ -65,7 +79,6 @@ class WholeViewController: UIViewController, FloatyDelegate {
         self.navigationController?.navigationBar.backItem?.title = ""
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
 
-        
     }
     
     @objc func create(){
@@ -115,7 +128,7 @@ extension WholeViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 120
+        return 150
     }
     
     

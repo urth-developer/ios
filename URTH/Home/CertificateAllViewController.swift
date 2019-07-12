@@ -17,6 +17,8 @@ class CertificateAllViewController: UIViewController {
     var certificateList: [ReportChallenge] = []
     
     let userdefault = UserDefaults.standard
+    
+    var authIdx = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +40,7 @@ class CertificateAllViewController: UIViewController {
     
     func initReport(){
         let report = UIAlertAction(title: "신고", style: .default) { (action) in
-            
+            self.reportChallenge(index: self.authIdx)
         }
         reportAlert.addAction(UIAlertAction(title: "취소", style: .default, handler: nil))
         reportAlert.addAction(report)
@@ -57,7 +59,10 @@ extension CertificateAllViewController: UICollectionViewDelegate, UICollectionVi
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CertificateAllCollectionViewCell", for: indexPath) as! CertificateAllCollectionViewCell
         cell.delegate = self
         
-        cell.mainImage.kf.setImage(with: URL(string: certificateList[indexPath.row].image), placeholder: UIImage())
+        if let image = certificateList[indexPath.row].image{
+            cell.mainImage.kf.setImage(with: URL(string: image), placeholder: UIImage())
+        }
+        
         return cell
     }
     
@@ -92,9 +97,22 @@ extension CertificateAllViewController: CertificateCellDelegate{
 extension CertificateAllViewController{
     func getReportList(){
         let index = userdefault.integer(forKey: "currentCertificateIndex")
-        ChallengeService.reportList(idx: "\(index)") { (challenges) in
+        ChallengeService.reportList(idx: index) { (challenges) in
+            print("전체 인증 사진 가져오기 성공!!")
             self.certificateList = challenges
             self.collectionView.reloadData()
+        }
+    }
+    
+    func reportChallenge(index: Int){
+        ChallengeService.report(idx: index) { (message) in
+            if message == "success"{
+                let alert = UIAlertController(title: nil, message: "신고 접수 되었습니다.", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "확인", style: .default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            }else{
+                print("신고 실패.. ㅠ")
+            }
         }
     }
 }

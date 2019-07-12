@@ -40,7 +40,7 @@ struct ChallengeService: APIService {
                     switch res.result {
                     case .success:
                         if let value = res.result.value {
-                            print(JSON(value))
+                            //print(JSON(value))
                             do {
                                 if let message = JSON(value)["message"].string{
                                     if message == "챌린지 사진 인증 성공했습니다."{
@@ -70,7 +70,7 @@ struct ChallengeService: APIService {
     
     // MARK : 신고 할 수 있는 이미지 리스트 조회
     
-    static func reportList(idx: String, completion: @escaping (_ data: [ReportChallenge])->Void){
+    static func reportList(idx: Int, completion: @escaping (_ data: [ReportChallenge])->Void){
         let userDefault = UserDefaults.standard
         
         guard let token = userDefault.string(forKey: "token") else { return }
@@ -112,7 +112,7 @@ struct ChallengeService: APIService {
     
     //MARK: 해당 챌린지에서 이상한 사진 신고
     
-    static func report(idx: String, completion: @escaping (_ message: String)->Void){
+    static func report(idx: Int, completion: @escaping (_ message: String)->Void){
         
         let URL = url("/urth/auth/report")
         
@@ -130,12 +130,54 @@ struct ChallengeService: APIService {
             switch res.result{
             case .success:
                 if let value = res.result.value{
-                    print(JSON(value))
+                    //print(JSON(value))
                     if let message = JSON(value)["message"].string{
                         if message == "해당 이미지 신고 하기가 성공했습니다."{
                             completion("success")
                         }else{
                             completion("failure")
+                        }
+                    }
+                }
+                
+                break
+            case .failure(let err):
+                print(err.localizedDescription)
+                break
+            }
+        }
+    }
+    
+    // MARK : 챌린지 완료 화면 정보 조회
+
+    static func completeChallenge(idx: String, completion: @escaping (_ data: CompleteData)->Void){
+        let userDefault = UserDefaults.standard
+        
+        guard let token = userDefault.string(forKey: "token") else { return }
+        
+        let headers = ["token": token]
+        
+        let URL = url("/urth//auth/result/\(idx)")
+        
+        
+        Alamofire.request(URL, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: headers).responseData(){ res in
+            switch res.result{
+            case .success:
+                if let value = res.result.value{
+                    print(JSON(value))
+                    if let message = JSON(value)["message"].string{
+                        if message == "챌린지 완료 화면 정보 조회 성공."{
+                            
+                            let decoder = JSONDecoder()
+                            do{
+                                let data = try decoder.decode(Complete.self, from: value)
+                                completion(data.data)
+                            }catch{
+                                print("catcch....")
+                            }
+                            
+                        }else{
+                            
                         }
                     }
                 }

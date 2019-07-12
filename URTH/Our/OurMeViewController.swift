@@ -63,8 +63,13 @@ extension OurMeViewController: UITableViewDelegate, UITableViewDataSource{
             }else{
                 cell.nickName.text = ""
             }
-            //cell.count.text = "총 \(myInfo!.userSuccessCount)회 인증"
-            //cell.level.text = "Level. \(myInfo!.level)"
+            if let success = myInfo?.userSuccessCount{
+                cell.count.text = "총 \(success)회 인증"
+            }
+            if let level = myInfo?.level{
+                cell.level.text = "(Level. \(level))"
+            }
+            
             return cell
         }else{
             let cell = tableView.dequeueReusableCell(withIdentifier: "OurMe2TableViewCell", for: indexPath) as! OurMe2TableViewCell

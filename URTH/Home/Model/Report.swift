@@ -16,6 +16,6 @@ struct Report: Codable {
 }
 
 struct ReportChallenge: Codable {
-    let image: String
+    let image: String?
     let userIdx, authChallengeIdx: Int
 }
