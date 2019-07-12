@@ -141,6 +141,8 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource{
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "UPCarouselCollectionViewCell", for: indexPath) as! UPCarouselCollectionViewCell
         let character = myFavoriteChallenges[(indexPath as NSIndexPath).row]
         cell.image.kf.setImage(with: URL(string: myFavoriteChallenges[indexPath.row].image), placeholder: UIImage())
+        cell.name.text = myFavoriteChallenges[indexPath.row].name
+        cell.name.sizeToFit()
         cellCenter = cell.center
         
         return cell
