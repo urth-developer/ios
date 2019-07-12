@@ -15,7 +15,7 @@ class OurViewController: ButtonBarPagerTabStripViewController {
         configureButtonBar()
         super.viewDidLoad()
 
-        self.navigationItem.title = "우리의 어스"
+        self.navigationItem.title = "히스토리"
         setNavigationBarClear()
         addFriendBarButton()
 

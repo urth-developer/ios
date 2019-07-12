@@ -183,6 +183,13 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "MagazineTableViewCell", for: indexPath) as! MagazineTableViewCell
+        if let image = todayChallenges[indexPath.row].image{
+            if image != ""{
+                cell.magazineImageView.kf.setImage(with: URL(string: image), placeholder: UIImage())
+            }else{
+                cell.magazineImageView.image = #imageLiteral(resourceName: "imgChalCertified")
+            }
+        }
         cell.title.text = todayChallenges[indexPath.row].name
         if let creator = todayChallenges[indexPath.row].creator{
             cell.name.text = creator

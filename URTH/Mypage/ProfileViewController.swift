@@ -10,6 +10,7 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
+    @IBOutlet weak var cameraButton: UIButton!
     @IBOutlet weak var profileId: UILabel!
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var profileNickname: UITextField!
@@ -27,12 +28,10 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         
         picker.delegate = self
-        
-        profileImage.image = image
-        profileNickname.text = nickname
-        profileId.text = id
+
         
         profileImage.layer.cornerRadius = profileImage.frame.height/2
+        cameraButton.layer.zPosition = 1
 
     }
     
@@ -43,6 +42,12 @@ class ProfileViewController: UIViewController {
         if let nick = userdefault.string(forKey: "nickname"){
             self.profileNickname.text = nick
         }
+        
+        profileImage.image = image
+        profileNickname.text = nickname
+        profileId.text = id
+        
+        changeImage = image
         
     }
     
@@ -78,7 +83,8 @@ extension ProfileViewController{
     func modifyProfile(){
         guard let myId = userdefault.string(forKey: "id") else {return}
         guard let myNickName = profileNickname.text else {return}
-        MyPageService.changeProfile(id: myId, nickname: myNickName, image: changeImage) { (message) in
+        print(self.changeImage)
+        MyPageService.changeProfile(id: myId, nickname: myNickName, image: self.changeImage) { (message) in
             if message == "success"{
                 let alert = UIAlertController(title: nil, message: "프로필 수정 성공!", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "확인", style: .default, handler: nil))

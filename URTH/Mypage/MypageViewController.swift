@@ -47,12 +47,14 @@ class MypageViewController: UIViewController {
         
         getInfo()
         
-        scrollView.setContentOffset(.zero, animated: false)
+        scrollView.setContentOffset(CGPoint(x: 0, y: -65), animated: false)
 
     }
     
     func imageRounded(){
         profileImage.layer.cornerRadius = profileImage.frame.height/2
+        profileImage.layer.borderColor = UIColor.white.cgColor
+        profileImage.layer.borderWidth = 2
     }
     
     @objc func editProfile(){

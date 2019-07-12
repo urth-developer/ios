@@ -18,7 +18,7 @@ struct Today: Codable {
 struct TodayData: Codable {
     let challengeIdx: Int
     let name: String
-    let image: String
+    let image: String?
     let creator: String?
     let count: Int
 }
