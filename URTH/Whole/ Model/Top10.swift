@@ -16,7 +16,7 @@ struct Top10: Codable {
 }
 
 struct Top10Challenge: Codable {
-    let image: String
+    let image: String?
     let name: String
     let count: Int
     let creator: String?

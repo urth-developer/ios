@@ -10,8 +10,8 @@ import UIKit
 
 class SearchTableViewController: UITableViewController {
     
-    var challenges: [Challenge] = []
-    var filteredChallenges: [Challenge] = []
+    var challenges: [Top10Challenge] = []
+    var filteredChallenges: [Top10Challenge] = []
     
     var searchBarIsEmpty: Bool{
         guard let text = searchController.searchBar.text else { return false }
@@ -66,15 +66,31 @@ class SearchTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SearchTableViewCell", for: indexPath) as! SearchTableViewCell
         
         if isFiltering{
-            cell.mainImage.image = filteredChallenges[indexPath.row].image
-            cell.titleLabel.text = filteredChallenges[indexPath.row].title
-            cell.nameLabel.text = filteredChallenges[indexPath.row].name
-            cell.countLabel.text = "총 \(filteredChallenges[indexPath.row].count)회"
+            if let image = filteredChallenges[indexPath.row].image{
+                cell.mainImage.kf.setImage(with: URL(string: image), placeholder: UIImage())
+            }else{
+                cell.mainImage.image = #imageLiteral(resourceName: "imgChalCertified")
+            }
+            cell.titleLabel.text = filteredChallenges[indexPath.row].name
+            if let creator = filteredChallenges[indexPath.row].creator{
+                cell.nameLabel.text = filteredChallenges[indexPath.row].creator
+            }else{
+                cell.nameLabel.text = "URTH"
+            }
+            //cell.countLabel.text = "총 \(filteredChallenges[indexPath.row].count)회"
         }else{
-            cell.mainImage.image = challenges[indexPath.row].image
-            cell.titleLabel.text = challenges[indexPath.row].title
-            cell.nameLabel.text = challenges[indexPath.row].name
-            cell.countLabel.text = "총 \(challenges[indexPath.row].count)회"
+            if let image = challenges[indexPath.row].image{
+                cell.mainImage.kf.setImage(with: URL(string: image), placeholder: UIImage())
+            }else{
+                cell.mainImage.image = #imageLiteral(resourceName: "imgChalCertified")
+            }
+            cell.titleLabel.text = challenges[indexPath.row].name
+            if let creator = challenges[indexPath.row].creator{
+                cell.nameLabel.text = challenges[indexPath.row].creator
+            }else{
+                cell.nameLabel.text = "URTH"
+            }
+            //cell.countLabel.text = "총 \(challenges[indexPath.row].count)회"
         }
         
         return cell
@@ -88,7 +104,7 @@ class SearchTableViewController: UITableViewController {
         if isFiltering{
             print(filteredChallenges[indexPath.row])
         }else{
-            print(challenges[indexPath.row].title)
+            print(challenges[indexPath.row].name)
         }
     }
     
@@ -138,7 +154,7 @@ extension SearchTableViewController: UISearchResultsUpdating{
     
     func filterContentForSearchText(_ searchText: String){
         filteredChallenges = challenges.filter({ (challenge) -> Bool in
-            let str = challenge.title
+            let str = challenge.name
             return str.lowercased().contains(searchText.lowercased())
         })
         

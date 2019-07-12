@@ -63,7 +63,7 @@ extension OurMeViewController: UITableViewDelegate, UITableViewDataSource{
                 cell.nickName.text = ""
             }
             //cell.count.text = "총 \(myInfo!.userSuccessCount)회 인증"
-            //cell.nickName.text = myTimeLines[indexPath.row]
+            //cell.level.text = "Level. \(myInfo!.level)"
             return cell
         }else{
             let cell = tableView.dequeueReusableCell(withIdentifier: "OurMe2TableViewCell", for: indexPath) as! OurMe2TableViewCell

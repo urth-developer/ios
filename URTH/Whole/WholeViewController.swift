@@ -74,8 +74,7 @@ class WholeViewController: UIViewController, FloatyDelegate {
     
     @objc func search(){
         let vc = storyboard?.instantiateViewController(withIdentifier: "SearchTableViewController") as! SearchTableViewController
-        //vc.challenges = challenges
-
+        vc.challenges = top10challenges
         
         self.navigationController?.pushViewController(vc, animated: true)
         
@@ -97,7 +96,11 @@ extension WholeViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PopularTableViewCell", for: indexPath) as! PopularTableViewCell
-        cell.mainImage.kf.setImage(with: URL(string: top10challenges[indexPath.row].image), placeholder: UIImage())
+        if let image = top10challenges[indexPath.row].image{
+            cell.mainImage.kf.setImage(with: URL(string: image), placeholder: UIImage())
+        }else{
+            cell.mainImage.image = #imageLiteral(resourceName: "imgChal")
+        }
         cell.titleLabel.text = top10challenges[indexPath.row].name
         if let creator = top10challenges[indexPath.row].creator{
             cell.nameLabel.text = creator
